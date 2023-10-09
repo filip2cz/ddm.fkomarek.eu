@@ -1,0 +1,16 @@
+.center {
+    text-align: center;
+}
+
+.nadpis {
+    position: static;
+    top: 40px;
+}
+
+body {
+    background-color: #121212 !important;
+}
+
+p{
+    font-size: larger;
+}

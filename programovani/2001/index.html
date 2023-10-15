@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang='cs' data-bs-theme="dark">
+
+<head>
+    <title>DDM - Filip Komárek</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <meta charset='utf-8'>
+</head>
+<!-- CSS a JavaScript -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="../../main.css">
+
+<body>
+
+    <!-- Support pro mobilní menu -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <div class="container">
+
+        <a href="../"><button class="btn btn-primary" type="button">Zpět</button></a>
+
+        <h1 class="nadpis">Úvod & Proměnné</h1>
+
+        <p>V této lekci se seznámíme s proměnými a s tím jak je využívat.</p>
+
+        <p>První si musíme ovšem vytvořit projekt. Otevřeme si Visual Studio a klikneme na tlačítko Vytvořit nový
+            projekt:</p>
+
+        <img src="1.png">
+
+        <p>Poté si vybereme, jaký typ projektu budeme dělat. Zatím začneme v klasické Konzolové Aplikaci:</p>
+
+        <img src="2.png">
+
+        <p>
+            Nespleťte si to s konzolovou aplikací .net framework. Funkčnost je velice podobná, ale je zde potřeba řešit
+            některé věci navíc a některé naopak nemusí fungovat stejným způsobem.
+        </p>
+
+        <p>Pokud dostaneme na výběr verzi .NET rozhraní, vybereme to s dlouhodobou podporou (Long Time Support) a dáme "pokračovat".</p>
+
+        <p>Poté se nám spustí grafické rozhraní, kde vidíme kód. Výchozí kód by měl vypadat nějak takto:</p>
+
+        <code>Console.WriteLine("Hello, World!");</code>
+
+        <p>Tento kód můžeme spustit pomocí tlačítka nahoře:</p>
+
+        <img src="3.png">
+
+        <p>Poté se nám spustí okno s naším programem, kde můžeme vidět nápis "Hello World!".</p>
+
+        <img src="4.png">
+
+        <p>V tomto kódu můžeme upravit, co se má do konzole vypsat. Aby to ovšem zůstalo jako text, musí to zůstat v uvozovkách, například:</p>
+
+        <code>
+            Console.WriteLine("Ahoj, Světe!");
+        </code>
+
+        <p>Do tohoto kódu můžeme také napsat matematický příklad, je ovšem potřeba odstranit uvozovky, jinak to bude program brát jako text:</p>
+
+        <code>
+            Console.WriteLine(1+2);
+        </code>
+
+        <p>Zapisování čísel do kódu tímto způsobem je ovšem docela těžkopádné, proto využíváme tzv. proměnné.</p>
+
+        <p>
+            Proměnná je věc, do které můžeme uložit nějakou hodnotu a poté s ní pracovat.
+            Existuje spoustu typů proměnných, ukážeme si některé z nich:
+        </p>
+
+        <p>
+            <code>int</code> je číslo bez (desetiných míst)<br>
+            <code>string</code> je text<br>
+            Existuje jich mnohem více, ale ukážeme si je později.
+        </p>
+
+    </div>
+
+</body>
+
+</html>

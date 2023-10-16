@@ -47,7 +47,7 @@
         <p>Poté se nám spustí grafické rozhraní, kde vidíme kód. Výchozí kód by měl vypadat nějak takto:</p>
 
         <pre class="vs-code">
-            Console.WriteLine("Hello, World!");
+Console.WriteLine("Hello, World!");
         </pre>
 
         <p>Tento kód můžeme spustit pomocí tlačítka nahoře:</p>
@@ -68,14 +68,14 @@ Press any key to close this window . . .
             uvozovkách, například:</p>
 
         <pre class="vs-code">
-            Console.WriteLine("Ahoj, Světe!");
+Console.WriteLine("Ahoj, Světe!");
         </pre>
 
         <p>Do tohoto kódu můžeme také napsat matematický příklad, je ovšem potřeba odstranit uvozovky, jinak to bude
             program brát jako text:</p>
 
         <pre class="vs-code">
-            Console.WriteLine(1+2);
+Console.WriteLine(1+2);
         </pre>
 
         <p>Zapisování čísel do kódu tímto způsobem je ovšem docela těžkopádné, proto využíváme tzv. proměnné.</p>
@@ -98,24 +98,24 @@ Press any key to close this window . . .
         </p>
 
         <pre class="vs-code">
-            int prvniCislo;
-            int druheCislo;
-            prvniCislo = 5;
-            druheCislo = 4;
+int prvniCislo;
+int druheCislo;
+prvniCislo = 5;
+druheCislo = 4;
 
-            string text;
-            text = "Součet dvou čísel je: ";
+ string text;
+ text = "Součet dvou čísel je: ";
 
-            Console.Write(text);
-            Console.WriteLine(prvniCislo + druheCislo);
+Console.Write(text);
+Console.WriteLine(prvniCislo + druheCislo);
 
-            Console.WriteLine(text + " čísel " + prvniCislo + " a " + druheCislo + " je " + (prvniCislo + druheCislo));
+Console.WriteLine(text + " čísel " + prvniCislo + " a " + druheCislo + " je " + (prvniCislo + druheCislo));
         </pre>
 
         <p>Tento kód můžeme trochu zkrátit tím, že výpis obou proměnných dáme na jeden řádek.</p>
 
         <pre class="vs-code">
-            Console.WriteLine(text + (prvniCislo + druheCislo));
+Console.WriteLine(text + (prvniCislo + druheCislo));
         </pre>
 
         <p>
@@ -129,25 +129,25 @@ Press any key to close this window . . .
         </p>
 
         <pre class="vs-code">
-            Console.Write("Zadejte vaše jméno: ");
-            string jmeno = Console.ReadLine();
-            Console.WriteLine("Vaše jméno je: " + jmeno);
+Console.Write("Zadejte vaše jméno: ");
+string jmeno = Console.ReadLine();
+Console.WriteLine("Vaše jméno je: " + jmeno);
         </pre>
 
         <p>Výstup by měl vypadat nějak takto:</p>
 
         <pre class="output">
-            Zadejte vaše jméno: Filip
-            Vaše jméno je: Filip
+Zadejte vaše jméno: Filip
+Vaše jméno je: Filip
         </pre>
 
         <p>Pokud budeme brát číslo, musíme ho první převést z textu na číslo:</p>
 
         <pre class="vs-code">
-            Console.Write("Zadejte váš věk: ");
-            int cislo = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Váš věk je: " + cislo);
-            Console.WriteLine("Za dva roky váš věk bude: " + (cislo + 2));
+Console.Write("Zadejte váš věk: ");
+int cislo = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Váš věk je: " + cislo);
+Console.WriteLine("Za dva roky váš věk bude: " + (cislo + 2));
         </pre>
 
         <!-- <p>Další věc, která je naprosto základní pro programování jsou podmínky.</p> -->

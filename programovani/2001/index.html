@@ -41,11 +41,14 @@
             některé věci navíc a některé naopak nemusí fungovat stejným způsobem.
         </p>
 
-        <p>Pokud dostaneme na výběr verzi .NET rozhraní, vybereme to s dlouhodobou podporou (Long Time Support) a dáme "pokračovat".</p>
+        <p>Pokud dostaneme na výběr verzi .NET rozhraní, vybereme to s dlouhodobou podporou (Long Time Support) a dáme
+            "pokračovat".</p>
 
         <p>Poté se nám spustí grafické rozhraní, kde vidíme kód. Výchozí kód by měl vypadat nějak takto:</p>
 
-        <code>Console.WriteLine("Hello, World!");</code>
+        <pre class="vs-code">
+            Console.WriteLine("Hello, World!");
+        </pre>
 
         <p>Tento kód můžeme spustit pomocí tlačítka nahoře:</p>
 
@@ -53,19 +56,27 @@
 
         <p>Poté se nám spustí okno s naším programem, kde můžeme vidět nápis "Hello World!".</p>
 
-        <img src="4.png">
+        <pre class="output">
+Hello, World!
 
-        <p>V tomto kódu můžeme upravit, co se má do konzole vypsat. Aby to ovšem zůstalo jako text, musí to zůstat v uvozovkách, například:</p>
+C:\Users\fkomarek\source\repos\playground\bin\Debug\net6.0\playground.exe (process 17816) exited with code 0.
+To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+Press any key to close this window . . .
+        </pre>
 
-        <code>
+        <p>V tomto kódu můžeme upravit, co se má do konzole vypsat. Aby to ovšem zůstalo jako text, musí to zůstat v
+            uvozovkách, například:</p>
+
+        <pre class="vs-code">
             Console.WriteLine("Ahoj, Světe!");
-        </code>
+        </pre>
 
-        <p>Do tohoto kódu můžeme také napsat matematický příklad, je ovšem potřeba odstranit uvozovky, jinak to bude program brát jako text:</p>
+        <p>Do tohoto kódu můžeme také napsat matematický příklad, je ovšem potřeba odstranit uvozovky, jinak to bude
+            program brát jako text:</p>
 
-        <code>
+        <pre class="vs-code">
             Console.WriteLine(1+2);
-        </code>
+        </pre>
 
         <p>Zapisování čísel do kódu tímto způsobem je ovšem docela těžkopádné, proto využíváme tzv. proměnné.</p>
 
@@ -75,10 +86,71 @@
         </p>
 
         <p>
-            <code>int</code> je číslo bez (desetiných míst)<br>
+            <code>int</code> je číslo (bez desetiných míst)<br>
             <code>string</code> je text<br>
             Existuje jich mnohem více, ale ukážeme si je později.
         </p>
+
+        <p>
+            První je třeba proměnou vytvořit, uděláme to pomocí kódu <code>int/string [název];</code>
+            a poté ho nastavíme na nějaké číslo pomocí <code>[název] [hodnota]</code>.
+            Zkusíme si to na následujícím kódu:
+        </p>
+
+        <pre class="vs-code">
+            int prvniCislo;
+            int druheCislo;
+            prvniCislo = 5;
+            druheCislo = 4;
+
+            string text;
+            text = "Součet dvou čísel je: ";
+
+            Console.Write(text);
+            Console.WriteLine(prvniCislo + druheCislo);
+
+            Console.WriteLine(text + " čísel " + prvniCislo + " a " + druheCislo + " je " + (prvniCislo + druheCislo));
+        </pre>
+
+        <p>Tento kód můžeme trochu zkrátit tím, že výpis obou proměnných dáme na jeden řádek.</p>
+
+        <pre class="vs-code">
+            Console.WriteLine(text + (prvniCislo + druheCislo));
+        </pre>
+
+        <p>
+            Všimněte si, že pokud dáte vnitřní závorku pryč
+            (<code>Console.WriteLine(text + prvniCislo + druheCislo);</code>), program je nesečte,
+            ale napíše je vedle sebe, protože se k nim bude kvůli tomu stringu předtím chovat jako text a ne jako číslo.
+        </p>
+
+        <p>
+            Dále můžeme brát výstup od uživatele a zapisovat ho do proměnné, můžeme si to ukázat na tomto kódu:
+        </p>
+
+        <pre class="vs-code">
+            Console.Write("Zadejte vaše jméno: ");
+            string jmeno = Console.ReadLine();
+            Console.WriteLine("Vaše jméno je: " + jmeno);
+        </pre>
+
+        <p>Výstup by měl vypadat nějak takto:</p>
+
+        <pre class="output">
+            Zadejte vaše jméno: Filip
+            Vaše jméno je: Filip
+        </pre>
+
+        <p>Pokud budeme brát číslo, musíme ho první převést z textu na číslo:</p>
+
+        <pre class="vs-code">
+            Console.Write("Zadejte váš věk: ");
+            int cislo = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Váš věk je: " + cislo);
+            Console.WriteLine("Za dva roky váš věk bude: " + (cislo + 2));
+        </pre>
+
+        <!-- <p>Další věc, která je naprosto základní pro programování jsou podmínky.</p> -->
 
     </div>
 

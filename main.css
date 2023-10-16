@@ -18,40 +18,27 @@ p {
 pre.output {
     background-color: #000;
     color: white;
-    /* Barva textu v cmd.exe je obvykle světle zelená */
     font-family: Consolas, monospace;
-    /* Písmo podobné Consolas (použité v cmd.exe) */
     font-size: 14px;
-    /* Velikost písma */
     line-height: 1.5;
-    /* Výška řádku */
     padding: 10px;
-    /* Odsazení uvnitř prvku <pre> */
     border: 2px solid white;
-    /* Okraj selené barvy */
     border-radius: 5px;
-    /* Zakulacené rohy */
     white-space: pre-wrap;
-    /* Umožní zalamování dlouhých řádků */
 }
 
 pre.vs-code {
     background-color: #333;
-    /* Barva pozadí, tmavý šedý */
     color: #fff;
-    /* Barva textu, bílá */
     font-family: 'Consolas', 'Monaco', monospace;
-    /* Písmo podobné Consolas nebo Monaco */
     font-size: 14px;
-    /* Velikost písma */
     line-height: 1.5;
-    /* Výška řádku */
     padding: 10px;
-    /* Odsazení uvnitř prvku <pre> */
     border: 1px solid #444;
-    /* Okraj kolem prvku */
     border-radius: 5px;
-    /* Zakulacené rohy */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    /* Stín pro efekt hloubky */
+}
+
+button{
+    margin-bottom: 20px;
 }

@@ -23,7 +23,7 @@
 
         <a href="../"><button class="btn btn-primary" type="button">Zpět</button></a>
 
-        <h1 class="nadpis">Úvod do C#, proměnné a podmínky</h1>
+        <h1 class="nadpis">Úvod do C# a proměnné</h1>
 
         <div class="alert alert-warning d-md-none">
             Upozornění: Tato stránka není optimalizována pro mobilní telefony a pro zařízení
@@ -156,117 +156,6 @@ int cislo = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Váš věk je: " + cislo);
 Console.WriteLine("Za dva roky váš věk bude: " + (cislo + 2));
         </pre>
-
-        <p>Další věc, která je naprosto základní pro programování jsou podmínky.</p>
-
-        <p>
-            Podmínka je věc, která se vyhodnotí na pravda nebo nepravda a podle toho se provede nějaký kód.
-            V C# se to dělá pomocí <code>if</code> a <code>else</code>.
-            Ukážeme si to na následujících příkladech:
-        </p>
-
-        <p>Tento kód získá věk uživatele a poté zjistí, jestli je mladší nebo starší 18 let:</p>
-
-        <pre class="vs-code">
-Console.Write("Zadejte váš věk: ");
-int cislo = Convert.ToInt32(Console.ReadLine());
-if (cislo >= 18)
-{
-    Console.WriteLine("Je vám více než 18 let.");
-}
-else
-{
-    Console.WriteLine("Jste mladší 18 let.");
-}
-        </pre>
-
-        <p>Tento kód se vás zeptá na heslo a poté porovná pomocí podmínek heslo se dvoumi proměnnými:</p>
-
-        <pre class="vs-code">
-string hesloHonza = "Mojeheslo1";
-string hesloFilip = "Filipjebuh123";
-            
-Console.Write("Zadejte heslo: ");
-string hesloUzivatel = Console.ReadLine();
-            
-if (hesloUzivatel == hesloHonza)
-{
-    Console.WriteLine("Vítej Honzo.");
-}
-else if (hesloUzivatel == hesloFilip)
-{
-    Console.WriteLine("Vítej Filipe.");
-}
-else
-{
-    Console.WriteLine("Špatné heslo!");
-}
-        </pre>
-
-        <h2>Zadání</h2>
-
-        <p>
-            Vytvořte kalkulačku, která se zeptá uživatele na dvě čísla a poté se zeptá,
-            jestli je chtějí sečíst, odečíst, vynásobit nebo vydělit. Příklad výstupu:
-        </p>
-
-        <pre class="output">
-Zadejte první číslo: 5
-Zadejte druhé číslo: 4
-Zadejte operaci: +
-Součet čísel 5 a 4 je 9.
-        </pre>
-
-        <p>Sčítání, odčítání, násobení, dělení se dělá následujícím způsobem:</p>
-
-        <pre class="vs-code">
-int cislo1 = 5;
-int cislo2 = 4;
-int scitani = cislo1 + cislo2;
-int odcitani = cislo1 - cislo2;
-int nasobeni = cislo1 * cislo2;
-int deleni = cislo1 / cislo2;
-        </pre>
-
-        <p>Pokud budete mít jakékoliv otázky nebo problémy, nebojte se na mě obrátit.</p>
-
-        <script>
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'kalkulacka.cs', true);
-            xhr.onreadystatechange = function () {
-                if (this.readyState !== 4) return;
-                if (this.status !== 200) return; // or whatever error handling you want
-                document.getElementById('kalkulacka').innerHTML = this.responseText;
-            };
-            xhr.send();
-        </script>
-
-        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#reseniCollapse1">řešení</button>
-        <div id="reseniCollapse1" class="collapse mt-3">
-            <pre class="vs-code" id="kalkulacka">
-Nepodařilo se načíst kód. Máte povolený JavaScript?
-            </pre>
-        </div>
-
-        <p>Pokud máte hotovo, zkuste ošetřit, aby nešlo dělit nulou.</p>
-
-        <script>
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'kalkulacka2.cs', true);
-            xhr.onreadystatechange = function () {
-                if (this.readyState !== 4) return;
-                if (this.status !== 200) return; // or whatever error handling you want
-                document.getElementById('kalkulacka2').innerHTML = this.responseText;
-            };
-            xhr.send();
-        </script>
-
-        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#reseniCollapse2">řešení</button>
-        <div id="reseniCollapse2" class="collapse mt-3">
-            <pre class="vs-code" id="kalkulacka2">
-Nepodařilo se načíst kód. Máte povolený JavaScript?
-            </pre>
-        </div>
 
         <h2>Příliš snadné?</h2>
 

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang='cs' data-bs-theme="dark">
+
+<head>
+    <title>DDM - Filip Komárek</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <meta charset='utf-8'>
+</head>
+<!-- CSS a JavaScript -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="../../main.css">
+
+<body>
+
+    <!-- Support pro mobilní menu -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <div class="container">
+
+        <a href="../"><button class="btn btn-primary" type="button">Zpět</button></a>
+
+        <h1 class="nadpis">Síťování</h1>
+
+        <p>
+            V této kapitole si ukážeme síťování v C# pomocí HTTP nebo HTTPS protokolu. Hodí se nám to, pokud potřebujeme
+            získávat nějaká data
+            z internetu, většinou data co se mohou měnit.
+        </p>
+
+        <div class="alert alert-primary" role="alert">
+            <b>Co je to HTTP a HTTPS protokol?</b><br>
+            HTTP je protokol, který slouží k načítání webových stránek. Většina uživatelů se s ním setká, když načítají
+            webovou stránku.
+            Techničtější uživatelé se s ním mohou setkat, pokud chtějí použít nějaké API, což je jednoduchá stránka co
+            říká
+            programům nějaká data ve strojovém formátu, například
+            <a href="http://worldtimeapi.org/api/timezone/Europe/Prague" target="_blank">WorldTimeAPI</a> vám ukáže
+            aktuální čas v Praze
+            ve strojovém formátu.
+        </div>
+
+        <p>
+            Kód, který nám stáhne obsah nějakého odkazu může vypadat například následujícím způsobem:
+        </p>
+
+        <script>
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'networkinfoverdlouhe.cs', true);
+            xhr.onreadystatechange = function () {
+                if (this.readyState !== 4) return;
+                if (this.status !== 200) return; // or whatever error handling you want
+                document.getElementById('networkinfoverdlouhe').innerHTML = this.responseText;
+            };
+            xhr.send();
+        </script>
+
+        <pre class="vs-code" id="networkinfoverdlouhe">
+Nepodařilo se načíst kód. Máte povolený JavaScript?
+        </pre>
+
+        <div class="alert alert-warning" role="alert">
+            Pokud vám kód nefunguje, přesvěčte se, že máte na začátku vašeho kódu (v horní oblasti na prvních několika
+            řádcích) kód <code>using System.Net;</code>
+        </div>
+
+        <p>
+            Tento kód dělá následující věci:<br>
+            <code>int latestVersion;</code> vytvoří proměnou typu int s názvem latestVersion<br>
+            <code>WebClient client = new WebClient()</code> tímto způsobem spustíme webový client obsažený v C#, jenž
+            nám umožní
+            stahovat data z internetu pomocí http nebo https protokolu.
+            Instanci tohoto webového clientu, kterou jsme si vytvořili, jsme pojmenovali <code>client</code>, může se
+            jmenovat dle vašeho uvážení.<br>
+            <code>text = await client.DownloadStringTaskAsync("https://raw.githubusercontent.com/filip2cz/network-info/main/ver");</code>
+            uloží do proměnné <code>text</code> obsah stránky v kódu. Všimněte si, že pomocí <code>await</code>
+            počkáme, dokud není obsah stažen.<br>
+            <code>cislo = int.Parse(text);</code> převede již dříve stažený obsah stránky, neboli proměnnou
+            <code>text</code> do int, abychom s ním mohli počítat jako s číslem.<br>
+            <code>Console.WriteLine(cislo - 1);</code> nakonec vypíšeme číslo, které jsme stáhli z internetu o jedno
+            menší.
+        </p>
+
+        <p>
+            Pro úsporu textu se dá tento kód zkrátit následujícím způsobem:
+        </p>
+
+        <script>
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'networkinfoverkratke.cs', true);
+            xhr.onreadystatechange = function () {
+                if (this.readyState !== 4) return;
+                if (this.status !== 200) return; // or whatever error handling you want
+                document.getElementById('networkinfoverkratke').innerHTML = this.responseText;
+            };
+            xhr.send();
+        </script>
+
+        <pre class="vs-code" id="networkinfoverkratke">
+Nepodařilo se načíst kód. Máte povolený JavaScript?
+        </pre>
+
+        <h2>Zadání</h2>
+        <p>
+            Zkuste ze stránky <a
+                href="https://www.random.org/integers/?num=1&min=10&max=60&col=1&base=10&format=plain&rnd=new"
+                target="_blank">https://www.random.org/integers/?num=1&min=10&max=60&col=1&base=10&format=plain&rnd=new</a>
+            stáhnout číslo a po té ho vydělit číslem ze stránky <a
+                href="https://www.random.org/integers/?num=1&min=1&max=6&col=1&base=10&format=plain&rnd=new"
+                target="_blank">https://www.random.org/integers/?num=1&min=1&max=6&col=1&base=10&format=plain&rnd=new</a>.
+            Nezapomeňte, že výsledek nemusí být celé číslo, takže je vhodné použít jiný datový typ než int.
+        </p>
+
+        <h2>Příliš snadné?</h2>
+        <p>
+            Doplňující úloha je dneska logického charakteru.
+            Můžete ji dělat v jakékoliv jazyku chcete, pokud preferujete něco jiného než C#,
+            ale možná vám nebudu poté schopen pomoct se řešením nebo s problémy, pokud si vyberete něco co neznám.
+
+            Máte dvě číselné proměnné X a Y. Úkol je prohodit je bez toho, aby jste použili jinou proměnnou, ukládání do souboru, nebo jakýkoliv
+            jiný způsob ukládání dat kamkoliv a jakkoliv, než jsou tyto dvě proměnné.
+        </p>
+
+        <script>
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'prohozeni.cs', true);
+            xhr.onreadystatechange = function () {
+                if (this.readyState !== 4) return;
+                if (this.status !== 200) return; // or whatever error handling you want
+                document.getElementById('prohozeni').innerHTML = this.responseText;
+            };
+            xhr.send();
+        </script>
+
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#reseniCollapse3">řešení</button>
+        <div id="reseniCollapse3" class="collapse mt-3">
+            <pre class="vs-code" id="prohozeni">
+Nepodařilo se načíst kód. Řešení pravděpodobně ještě nebylo uvolněno, nebo nemáte povolený JavaScript.
+            </pre>
+        </div>
+    </div>
+
+</body>
+
+</html>

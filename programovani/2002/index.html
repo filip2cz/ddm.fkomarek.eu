@@ -144,42 +144,29 @@ Nepodařilo se načíst kód. Máte povolený JavaScript?
         <h2>Příliš snadné?</h2>
 
         <p>
-            Doplním
+            Doplňující úloha je dneska logického charakteru.
+            Můžete ji dělat v jakékoliv jazyku chcete, pokud preferujete něco jiného než C#,
+            ale možná vám nebudu poté schopen pomoct se řešením nebo s problémy, pokud si vyberete něco co neznám.
+
+            Máte dvě číselné proměnné X a Y. Úkol je prohodit je bez toho, aby jste použili jinou proměnnou, ukládání do souboru, nebo jakýkoliv
+            jiný způsob ukládání dat kamkoliv a jakkoliv, než jsou tyto dvě proměnné.
         </p>
 
         <script>
             var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'kalkulacka3.cs', true);
+            xhr.open('GET', 'prohozeni.cs', true);
             xhr.onreadystatechange = function () {
                 if (this.readyState !== 4) return;
                 if (this.status !== 200) return; // or whatever error handling you want
-                document.getElementById('kalkulacka3').innerHTML = this.responseText;
+                document.getElementById('prohozeni').innerHTML = this.responseText;
             };
             xhr.send();
         </script>
 
-        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#reseniCollapse3">řešení #1 - použití již existující funkce</button>
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#reseniCollapse3">řešení</button>
         <div id="reseniCollapse3" class="collapse mt-3">
-            <pre class="vs-code" id="kalkulacka3">
-Nepodařilo se načíst kód. Máte povolený JavaScript?
-            </pre>
-        </div>
-
-        <script>
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'kalkulacka4.cs', true);
-            xhr.onreadystatechange = function () {
-                if (this.readyState !== 4) return;
-                if (this.status !== 200) return; // or whatever error handling you want
-                document.getElementById('kalkulacka4').innerHTML = this.responseText;
-            };
-            xhr.send();
-        </script>
-
-        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#reseniCollapse4">řešení #2 - použití spousty podmínek</button>
-        <div id="reseniCollapse4" class="collapse mt-3">
-            <pre class="vs-code" id="kalkulacka4">
-Nepodařilo se načíst kód. Máte povolený JavaScript?
+            <pre class="vs-code" id="prohozeni">
+Nepodařilo se načíst kód. Řešení pravděpodobně ještě nebylo uvolněno, nebo nemáte povolený JavaScript.
             </pre>
         </div>
 

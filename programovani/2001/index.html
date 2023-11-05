@@ -35,57 +35,128 @@
         <p>První si musíme ovšem vytvořit projekt. Otevřeme si Visual Studio a klikneme na tlačítko Vytvořit nový
             projekt:</p>
 
-        <img src="1.png">
+        <img src="1.png" style="max-width: 50%;">
 
-        <p>Poté si vybereme, jaký typ projektu budeme dělat. Zatím začneme v klasické Konzolové Aplikaci:</p>
+        <p>Poté si vybereme, jaký typ projektu budeme dělat. Zatím začneme v klasické Konzolové aplikaci typu .NET
+            Framework:</p>
 
-        <img src="2.png">
-
-        <p>
-            Nespleťte si to s konzolovou aplikací .net framework. Funkčnost je velice podobná, ale je zde potřeba řešit
-            některé věci navíc a některé naopak nemusí fungovat stejným způsobem.
-        </p>
+        <img src="2.png" style="max-width: 50%;">
 
         <p>
-            Pokud dostaneme na výběr verzi .NET Framework rozhraní, vybereme verzi <code>.NET 6.0 (Dlouhodobá podpora)</code> a dáme
-            "pokračovat".
+            Pozor, aby tam bylo to <code>.NET Framework</code>. Verze bez .NET Frameworku bude fungovat podobně, ale
+            některé věci nemusí fungovat stejně.
         </p>
 
         <p>Poté se nám spustí grafické rozhraní, kde vidíme kód. Výchozí kód by měl vypadat nějak takto:</p>
 
         <pre class="vs-code">
-Console.WriteLine("Hello, World!");
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace playground_dotnet_framework
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+        }
+    }
+}
+        </pre>
+
+        <p>Vidíme zde již nějaký předepsaný kód. Náš kód budeme psát do funkce Main. První kód, co přidáme bude
+            <code>Console.WriteLine("Hello World!");</code>.
+        </p>
+
+        <p>Náš kód by měl vypadat nějak takto:</p>
+
+        <pre class="vs-code">
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace playground_dotnet_framework
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+        }
+    }
+}
         </pre>
 
         <p>Tento kód můžeme spustit pomocí tlačítka nahoře:</p>
 
         <img src="3.png">
 
-        <p>Poté se nám spustí okno s naším programem, kde můžeme vidět nápis "Hello World!".</p>
+        <p>
+            Všimněte si, že když to spustíme, problikne nám okno, ale nic moc nevidíme. Kód totiž vykonal příkaz
+            <code>Console.WriteLine("Hello World!");</code>, jenž vypíše do konzole text "Hello World!" a po té se
+            ukončil. Abychom něco viděli, musíme do kódu přidat <code>Console.ReadLine();</code>, čímž programu řekneme,
+            že má vyčkat na vstup od uživatele.
+        </p>
+
+        <pre class="vs-code">
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace playground_dotnet_framework
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+            Console.ReadLine();
+        }
+    }
+}            
+        </pre>
+
+        <p>
+            Poté se nám spustí okno s naším programem, kde můžeme vidět nápis "Hello World!". Když pak dáme ENTER,
+            program se ukončí.
+        </p>
 
         <pre class="output">
 Hello, World!
-
-C:\Users\fkomarek\source\repos\playground\bin\Debug\net6.0\playground.exe (process 17816) exited with code 0.
-To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
-Press any key to close this window . . .
         </pre>
 
-        <p>V tomto kódu můžeme upravit, co se má do konzole vypsat. Aby to ovšem zůstalo jako text, musí to zůstat v
-            uvozovkách, například:</p>
+        <p><b>Další kód bude už bez ostatního kódu kolem, neboli pouze vnitřek funkce Main.</b></p>
+
+        <p>
+            V tomto kódu můžeme upravit, co se má do konzole vypsat. Aby to ovšem zůstalo jako text, musí to zůstat v
+            uvozovkách, například:
+        </p>
 
         <pre class="vs-code">
 Console.WriteLine("Ahoj, Světe!");
+Console.ReadLine();
         </pre>
 
-        <p>Do tohoto kódu můžeme také napsat matematický příklad, je ovšem potřeba odstranit uvozovky, jinak to bude
-            program brát jako text:</p>
+        <p>
+            Do tohoto kódu můžeme také napsat matematický příklad, je ovšem potřeba odstranit uvozovky, jinak to bude
+            program brát jako text:
+        </p>
 
         <pre class="vs-code">
 Console.WriteLine(1+2);
+Console.ReadLine();
         </pre>
 
-        <p>Zapisování čísel do kódu tímto způsobem je ovšem docela těžkopádné, proto využíváme tzv. proměnné.</p>
+        <p>
+            Zapisování čísel do kódu tímto způsobem je ovšem docela těžkopádné, proto využíváme tzv. proměnné.
+        </p>
 
         <p>
             Proměnná je věc, do které můžeme uložit nějakou hodnotu a poté s ní pracovat.
@@ -110,25 +181,23 @@ int druheCislo;
 prvniCislo = 5;
 druheCislo = 4;
 
- string text;
- text = "Součet dvou čísel je: ";
+string text;
+text = "Součet dvou čísel je: ";
 
 Console.Write(text);
 Console.WriteLine(prvniCislo + druheCislo);
 
-Console.WriteLine(text + " čísel " + prvniCislo + " a " + druheCislo + " je " + (prvniCislo + druheCislo));
+Console.ReadLine();
         </pre>
 
         <p>Tento kód můžeme trochu zkrátit tím, že výpis obou proměnných dáme na jeden řádek.</p>
 
         <pre class="vs-code">
-Console.WriteLine(text + (prvniCislo + druheCislo));
+Console.WriteLine($"{text}{prvniCislo + druheCislo}");
         </pre>
 
         <p>
-            Všimněte si, že pokud dáte vnitřní závorku pryč
-            (<code>Console.WriteLine(text + prvniCislo + druheCislo);</code>), program je nesečte,
-            ale napíše je vedle sebe, protože se k nim bude kvůli tomu stringu předtím chovat jako text a ne jako číslo.
+            Console.WriteLine výše funguje tak, že funguje jako text, ovšem to co je uvnitř {} se spustí jako kód.
         </p>
 
         <p>
@@ -138,7 +207,8 @@ Console.WriteLine(text + (prvniCislo + druheCislo));
         <pre class="vs-code">
 Console.Write("Zadejte vaše jméno: ");
 string jmeno = Console.ReadLine();
-Console.WriteLine("Vaše jméno je: " + jmeno);
+Console.WriteLine($"Vaše jméno je: {jmeno}");
+Console.ReadLine();
         </pre>
 
         <p>Výstup by měl vypadat nějak takto:</p>
@@ -153,8 +223,17 @@ Vaše jméno je: Filip
         <pre class="vs-code">
 Console.Write("Zadejte váš věk: ");
 int cislo = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Váš věk je: " + cislo);
-Console.WriteLine("Za dva roky váš věk bude: " + (cislo + 2));
+Console.WriteLine($"Váš věk je: {cislo}");
+Console.WriteLine($"Za dva roky váš věk bude: {cislo + 2}");
+Console.ReadLine();
+        </pre>
+
+        <p>Výstup bude vypadat takto:</p>
+
+        <pre class="output">
+Zadejte váš věk: 16
+Váš věk je: 16
+Za dva roky váš věk bude: 18
         </pre>
 
         <h2>Příliš snadné?</h2>
@@ -176,7 +255,8 @@ Console.WriteLine("Za dva roky váš věk bude: " + (cislo + 2));
             xhr.send();
         </script>
 
-        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#reseniCollapse3">řešení #1 - použití již existující funkce</button>
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#reseniCollapse3">řešení #1 - použití
+            již existující funkce</button>
         <div id="reseniCollapse3" class="collapse mt-3">
             <pre class="vs-code" id="kalkulacka3">
 Nepodařilo se načíst kód. Máte povolený JavaScript?
@@ -194,7 +274,8 @@ Nepodařilo se načíst kód. Máte povolený JavaScript?
             xhr.send();
         </script>
 
-        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#reseniCollapse4">řešení #2 - použití spousty podmínek</button>
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#reseniCollapse4">řešení #2 - použití
+            spousty podmínek</button>
         <div id="reseniCollapse4" class="collapse mt-3">
             <pre class="vs-code" id="kalkulacka4">
 Nepodařilo se načíst kód. Máte povolený JavaScript?

@@ -51,13 +51,14 @@ else
 {
     Console.WriteLine("Jste mladší 18 let.");
 }
+Console.ReadLine();
         </pre>
 
         <p>Tento kód se vás zeptá na heslo a poté porovná pomocí podmínek heslo se dvoumi proměnnými:</p>
 
         <pre class="vs-code">
 string hesloHonza = "Mojeheslo1";
-string hesloFilip = "Filipjebuh123";
+string hesloFilip = "password1234";
             
 Console.Write("Zadejte heslo: ");
 string hesloUzivatel = Console.ReadLine();
@@ -74,6 +75,7 @@ else
 {
     Console.WriteLine("Špatné heslo!");
 }
+Console.ReadLine();
         </pre>
 
         <h2>Zadání</h2>
@@ -93,8 +95,6 @@ Součet čísel 5 a 4 je 9.
         <p>Sčítání, odčítání, násobení, dělení se dělá následujícím způsobem:</p>
 
         <pre class="vs-code">
-int cislo1 = 5;
-int cislo2 = 4;
 int scitani = cislo1 + cislo2;
 int odcitani = cislo1 - cislo2;
 int nasobeni = cislo1 * cislo2;

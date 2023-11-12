@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='cs' data-bs-theme="dark">
+
+<head>
+    <title>DDM - Filip Komárek</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <meta charset='utf-8'>
+</head>
+<!-- CSS a JavaScript -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="../../main.css">
+
+<body>
+
+    <!-- Support pro mobilní menu -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <div class="container">
+
+        <a href="../"><button class="btn btn-primary" type="button">Zpět</button></a>
+
+        <h1 class="nadpis">Zadání: Bankomat</h1>
+
+        <p>
+            Zadání: vytvořte program pro bankomat, jenž se uživatele zeptá, kolik chce vybrat a po té mu vydá peníze v
+            co nejméně bankovkách/mincích.
+        </p>
+
+        <p>
+            Zde je příklad výstupu:
+        </p>
+
+        <pre class="output">
+Zadejte částku: 7151
+
+5000
+2000
+100
+50
+1
+        </pre>
+
+        <script>
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'bankomat.cs', true);
+            xhr.onreadystatechange = function () {
+                if (this.readyState !== 4) return;
+                if (this.status !== 200) return; // or whatever error handling you want
+                document.getElementById('bankomat').innerHTML = this.responseText;
+            };
+            xhr.send();
+        </script>
+
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#resenibankomat">řešení</button>
+        <div id="resenibankomat" class="collapse mt-3">
+            <pre class="vs-code" id="bankomat">
+Nepodařilo se načíst kód. Řešení pravděpodobně ještě nebylo uvolněno, nebo nemáte povolený JavaScript.
+            </pre>
+        </div>
+
+        <h2>Příliš snadné?</h2>
+
+        <p>
+            Udělejte program pro bankomat, který si bude pamatovat částku uloženou u uživatele. Po spuštění se zobrazí,
+            kolik má uživatel na účtu a bankomat mu umožní vložit peníze nebo vybrat peníze. Vložení peněz bude fungovat
+            tak, že uživatel napíše kolik vkládá. Výběr bude fungovat stejně jako v zadání výše. Po provedení operace se
+            program neukončí, ale zeptá se znova co má dělat.
+        </p>
+
+        <script>
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'bankomat2.cs', true);
+            xhr.onreadystatechange = function () {
+                if (this.readyState !== 4) return;
+                if (this.status !== 200) return; // or whatever error handling you want
+                document.getElementById('bankomat2').innerHTML = this.responseText;
+            };
+            xhr.send();
+        </script>
+
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#resenibankomat2">řešení</button>
+        <div id="resenibankomat2" class="collapse mt-3">
+            <pre class="vs-code" id="bankomat2">
+Nepodařilo se načíst kód. Řešení pravděpodobně ještě nebylo uvolněno, nebo nemáte povolený JavaScript.
+            </pre>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

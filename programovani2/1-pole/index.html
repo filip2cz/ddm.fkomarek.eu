@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang='cs' data-bs-theme="dark">
+
+<head>
+    <title>DDM - Filip Komárek</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <meta charset='utf-8'>
+</head>
+
+<body>
+    <!-- CSS a JavaScript -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    <!-- Support pro mobilní menu -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <div class="container">
+
+        <a href="../"><button class="btn btn-primary" type="button">Zpět</button></a>
+
+        <h1 class="nadpis">Pole</h1>
+
+        <p>
+            Jak jistě víte, v C# máme proměnné, kam můžeme ukládat hodnoty. Co se ale může hodit jsou pole hodnot, kdy
+            ukládáme do jednoho pole více hodnot. Může se to hodit například pokud nevíme, kolik těch hodnot budeme
+            zpracovávat.
+        </p>
+
+        <p>
+            Zde je příklad, jak vytvořit pole s přepsanými hodnotami:
+        </p>
+
+        <pre class="vs-code">
+string[] monthsOfTheYear = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+        </pre>
+
+        <div class="alert alert-warning" role="alert">
+            Ve většině programovacích jazycích, včetně C#, se začíná počítat od 0. V tomto poli se tedy
+            monthsOfTheYear[0] = "January" a monthsOfTheYear[11] = "December". Použití monthsOfTheYear[12] vyústí v
+            error, protože dvanáctý prvek pole neexistuje.
+        </div>
+
+        <p>
+            S těmito hodnotami můžeme pracovat podobně jako se stringy:
+        </p>
+
+        <pre class="vs-code">
+monthsOfTheYear[7] = "Srpen";
+monthsOfTheYear[8] = string.Empty;
+monthsOfTheYear[9] = Console.ReadLine();
+        </pre>
+
+        <p>
+            Pokud chceme pracovat s každým jedním prvkem pole, můžeme použít <code>foreach</code>. Následující příklad
+            vypíše všechny měsíce z pole výše.
+        </p>
+
+        <pre class="vs-code">
+foreach (var item in monthsOfTheYear)
+{
+    Console.WriteLine(item);
+}
+        </pre>
+
+        <p>
+            <code>foreach</code> funguje tak, že do vnitřní proměnné <code>item</code> (může se jmenovat jakkoliv) vloží
+            první prvek z pole, udělá s ním to co je uvnitř hranatých závorek (v našem případě ho vypíše) a po té udělá
+            to samé s dalším a dalším prvkem.
+        </p>
+
+        <p>
+            Pokud chceme vytvořit prázné pole znaků, vytvoříme ho následujícím způsobem:
+        </p>
+
+        <pre class="vs-code">
+string[] pole = new string[x];
+        </pre>
+
+        <p>
+            V tomto kódu musíme x nahradit celým číslem, které vyjadřuje velikost pole. Z tohoto se dá odvodit, že pole
+            má přesně určenou velikost. Tuto velikost můžeme změnit pomocí následujícího kódu:
+        </p>
+
+        <pre class="vs-code">
+string[] pole = new string[5];
+Console.WriteLine($"Velikost pole: {pole.Length}");
+
+Array.Resize(ref pole, 10 );
+Console.WriteLine($"Nová velikost pole: {pole.Length}");
+        </pre>
+
+        <p>
+            <code>string[]</code> není samozřejmě jediný typ pole, co můžeme použít. Od každého typu proměnné existuje
+            typ pole. Můžeme tam použít například <code>int[]</code> pro pole celých čísel, <code>double[]</code> pro
+            pole čísel s možností desetinných míst, nebo třeba <code>bool[]</code> pro pole true/false.
+        </p>
+
+        <p>
+            Zadání: vytvořte program, který si od uživatele vyžádá jím určený počet čísel a po té je sečte.
+        </p>
+
+        <script>
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'soucet.cs', true);
+            xhr.onreadystatechange = function () {
+                if (this.readyState !== 4) return;
+                if (this.status !== 200) return; // or whatever error handling you want
+                document.getElementById('soucet').innerHTML = this.responseText;
+            };
+            xhr.send();
+        </script>
+
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#reseni-soucet">řešení</button>
+        <div id="reseni-soucet" class="collapse mt-3">
+            <pre class="vs-code" id="soucet">
+Nepodařilo se načíst kód. Řešení pravděpodobně ještě nebylo uvolněno, nebo nemáte povolený JavaScript.
+            </pre>
+        </div>
+
+        <h2>Příliš snadné?</h2>
+
+        <p>
+            Vytvořte program zvaný stack, který uživateli dovolí spustit následující příkazy:<br>
+            <code>Push</code> ukládá znak na konec pole
+            <code>Pop</code> vrací znak z konce pole a odstraňuje jej z pole
+            <code>Peek</code> vrací znak na na konci pole (nechává jej v poli)
+            <code>IsEmpty</code> vrací true/false podle toho, zda je či není pole prázdné
+            <code>PrintStack</code> vypíše na konzoli všechny hodnoty v poli
+        </p>
+
+        <p>
+            Zde máte program, který funguje stejně: <a href="https://github.com/filip2cz/mvop-3-stack/releases/download/v1.0/stack-win64.exe" target="_blank">stack-win64.exe</a>
+        </p>
+
+        <script>
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'https://raw.githubusercontent.com/filip2cz/mvop-3-stack/master/Program.cs', true);
+            xhr.onreadystatechange = function () {
+                return;
+                if (this.readyState !== 4) return;
+                if (this.status !== 200) return; // or whatever error handling you want
+                document.getElementById('stack').innerHTML = this.responseText;
+            };
+            xhr.send();
+        </script>
+
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#reseni-stack">řešení</button>
+        <div id="reseni-stack" class="collapse mt-3">
+            <pre class="vs-code" id="stack">
+Nepodařilo se načíst kód. Řešení pravděpodobně ještě nebylo uvolněno, nebo nemáte povolený JavaScript.
+            </pre>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

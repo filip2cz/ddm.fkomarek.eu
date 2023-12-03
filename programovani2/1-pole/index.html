@@ -141,7 +141,6 @@ Nepodařilo se načíst kód. Řešení pravděpodobně ještě nebylo uvolněno
             var xhr = new XMLHttpRequest();
             xhr.open('GET', 'https://raw.githubusercontent.com/filip2cz/mvop-3-stack/master/Program.cs', true);
             xhr.onreadystatechange = function () {
-                return;
                 if (this.readyState !== 4) return;
                 if (this.status !== 200) return; // or whatever error handling you want
                 document.getElementById('stack').innerHTML = this.responseText;

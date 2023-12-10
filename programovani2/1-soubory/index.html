@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang='cs' data-bs-theme="dark">
+
+<head>
+    <title>DDM - Filip Komárek</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <meta charset='utf-8'>
+</head>
+
+<body>
+    <!-- CSS a JavaScript -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    <!-- Support pro mobilní menu -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <div class="container">
+
+        <a href="../"><button class="btn btn-primary" type="button">Zpět</button></a>
+
+        <h1 class="nadpis">Práce se soubory</h1>
+
+        <p>
+            Práce se soubory je důležitou částí velkého množství programů. Soubory se dají načítat následujícím
+            způsobem:
+        </p>
+
+        <pre class="vs-code">
+string filePath = "C:\\cesta\\k\\souboru";
+string fileContent = File.ReadAllText(filePath);
+        </pre>
+
+        <div class="alert alert-warning" role="alert">
+            Cesta k souboru obsahuje dvě lomítka místo jednoho, i přesto že ve Windows se používá jedno. Je to z toho
+            důvodu, že jedno lomítko je speciální znak.
+        </div>
+
+        <p>
+            Do souboru samozřejmě můžeme také zapisovat, a to několika způsoby:
+        </p>
+
+        <p>
+            V prvním způsobu nahradíme celý soubor novým textem, čímž se smaže aktuální obsah souboru:
+        </p>
+
+        <pre class="vs-code">
+string input = "Nový obsah souboru";
+string filePath = "C:\\cesta\\k\\souboru";
+File.WriteAllText(filePath, input);
+        </pre>
+
+        <p>
+            Pokud chceme jen přidat text na konec souboru, můžeme to udělat následujícím způsobem:
+        </p>
+
+        <pre class="vs-code">
+string input = "Další obsah souboru";
+string filePath = "C:\\cesta\\k\\souboru";
+
+using (StreamWriter writer = File.AppendText(filePath))
+{
+    writer.WriteLine(input);
+}
+        </pre>
+
+        <p>
+            Co se nám může stát je, že se text přidá na konec souboru, ale na stejný řádek jako už je jiný text. Jako
+            řešení může být obsáhnout další řádek do text, například
+            <code>string input = "\nDalší obsah souboru";</code>. Oba předchozí příklady po použitá zanechají nový
+            prázdný řádek na konci.
+        </p>
+
+        <h2>Zadání:</h2>
+
+        <p>
+            Vytvořte program, který si z internetu stáhne obsah souboru 
+            <a href="https://ddm.fkomarek.eu/programovani2/1-soubory/number.txt">https://ddm.fkomarek.eu/programovani2/1-soubory/number.txt</a>,
+            přičte k němu 8 a uloží soubor na plochu.
+        </p>
+
+        <script>
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'soubor.cs', true);
+            xhr.onreadystatechange = function () {
+                if (this.readyState !== 4) return;
+                if (this.status !== 200) return; // or whatever error handling you want
+                document.getElementById('soubor').innerHTML = this.responseText;
+            };
+            xhr.send();
+        </script>
+
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#reseni-soubor">řešení</button>
+        <div id="reseni-soubor" class="collapse mt-3">
+            <pre class="vs-code" id="soubor">
+Nepodařilo se načíst kód. Řešení pravděpodobně ještě nebylo uvolněno, nebo nemáte povolený JavaScript.
+            </pre>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

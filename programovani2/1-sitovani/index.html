@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='cs' data-bs-theme="dark">
+
+<head>
+    <title>DDM - Filip Komárek</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <meta charset='utf-8'>
+</head>
+
+<body>
+    <!-- CSS a JavaScript -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    <!-- Support pro mobilní menu -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <div class="container">
+
+        <a href="../"><button class="btn btn-primary" type="button">Zpět</button></a>
+
+        <h1 class="nadpis">Síťování</h1>
+
+        <p>
+            Již jsme si ukázali, jakým způsobem můžeme interagovat s webovými stránkami. Internet ale je více než webové
+            stránky. Abychom mohli komunikovat s webovou aplikací, musíme zdát ip adresu nebo doménu a k tomu port. IP
+            adresa slouží k intentifikaci stroje, na kterého něco posíláme, zatím co port slouží k identifikaci služby
+            na zařízení, na které se připojujeme. Když se teda připojuji na ip adresu 203.0.113.4 a na něm na port 667,
+            pomocí internetu se dostane to co na něj pošlu k zařízení s touto ip adresou a vleze to do portu 667 na něm,
+            díky čemuž počítač ví, kterému programu tato data patří.
+        </p>
+
+        <p>
+            Připojení se na vzdálený server.
+        </p>
+
+        <p>
+            V našem příkladu se budeme připojovat na server <code>ssfs.fkomarek.eu</code> a na něm na port
+            <code>4444</code>. Zde je kód, díky kterému se můžeme připojit k serveru, získat a vypsat text:
+        </p>
+
+        <script>
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'request.cs', true);
+            xhr.onreadystatechange = function () {
+                if (this.readyState !== 4) return;
+                if (this.status !== 200) return; // or whatever error handling you want
+                document.getElementById('request').innerHTML = this.responseText;
+            };
+            xhr.send();
+        </script>
+
+        <pre class="vs-code" id="request">
+Nepodařilo se načíst kód. Máte povolený JavaScript?
+        </pre>
+    </div>
+
+</body>
+
+</html>

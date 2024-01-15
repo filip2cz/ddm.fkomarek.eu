@@ -33,15 +33,17 @@
             pomocí internetu se dostane to co na něj pošlu k zařízení s touto ip adresou a vleze to do portu 667 na něm,
             díky čemuž počítač ví, kterému programu tato data patří.
         </p>
-
-        <p>
-            Připojení se na vzdálený server.
         </p>
 
         <p>
             V našem příkladu se budeme připojovat na server <code>ssfs.fkomarek.eu</code> a na něm na port
-            <code>4444</code>. Zde je kód, díky kterému se můžeme připojit k serveru, získat a vypsat text:
+            <code>4445</code>. Zde je kód, díky kterému se můžeme připojit k serveru, získat a vypsat text:
         </p>
+
+        <div class="alert alert-warning" role="alert">
+            Pokud vám kód nefunguje, přesvěčte se, že máte na začátku vašeho kódu (v horní oblasti na prvních několika
+            řádcích) kód <code>using System.Net.Sockets;</code>
+        </div>
 
         <script>
             var xhr = new XMLHttpRequest();
@@ -57,6 +59,52 @@
         <pre class="vs-code" id="request">
 Nepodařilo se načíst kód. Máte povolený JavaScript?
         </pre>
+
+        <p>
+            Nyní již umíme přijímat text ze serveru. Hodí se nám ale také možnost nějaký text odesílat. Následujícím
+            kódem na server odešleme text a získáme od něj odpověď. V našem případě odesíláme text "5" na server
+            <code>ssfs.fkomarek.eu</code> na port <code>4447</code>.
+        </p>
+
+        <script>
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'five.cs', true);
+            xhr.onreadystatechange = function () {
+                if (this.readyState !== 4) return;
+                if (this.status !== 200) return; // or whatever error handling you want
+                document.getElementById('five').innerHTML = this.responseText;
+            };
+            xhr.send();
+        </script>
+
+        <pre class="vs-code" id="five">
+Nepodařilo se načíst kód. Máte povolený JavaScript?
+        </pre>
+
+        <p>
+            Nyní pro vás mám menší zadání. Na serveru <code>ssfs.fkomarek.eu</code> na portu <code>4446</code> běží
+            server. Tento server funguje tak, že mu pošlete dvě čísla oddělená mezerou, on je sečte a pošle vám
+            výsledek. Udělejte aplikaci, kde uživatel zadá dvě čísla, aplikace je pak pošle na server a vrátí výsledek.
+        </p>
+
+        <script>
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'scitani.cs', true);
+            xhr.onreadystatechange = function () {
+                if (this.readyState !== 4) return;
+                if (this.status !== 200) return; // or whatever error handling you want
+                document.getElementById('scitani').innerHTML = this.responseText;
+            };
+            xhr.send();
+        </script>
+
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#reseni-scitani">řešení</button>
+        <div id="reseni-scitani" class="collapse mt-3">
+            <pre class="vs-code" id="scitani">
+Nepodařilo se načíst kód. Řešení pravděpodobně ještě nebylo uvolněno, nebo nemáte povolený JavaScript.
+            </pre>
+        </div>
+
     </div>
 
 </body>

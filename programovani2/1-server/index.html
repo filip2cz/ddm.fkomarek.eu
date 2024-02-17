@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='cs' data-bs-theme="dark">
+
+<head>
+    <title>DDM - Filip Komárek</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <meta charset='utf-8'>
+</head>
+
+<body>
+    <!-- CSS a JavaScript -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    <!-- Support pro mobilní menu -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <div class="container">
+
+        <a href="../"><button class="btn btn-primary" type="button">Zpět</button></a>
+
+        <h1 class="nadpis">Síťování: server side</h1>
+
+        <p>
+            V minulosti jsme si vytvořili program, který se dokázal připojit na server a číst z něho data. Dnes si
+            vytvoříme server.
+        </p>
+
+        <p>
+            Na našem příkladu si ukážeme server, kam se uživatel připojí, odešle zprávu a server mu ji vrátí. Pro
+            otestování můžete použít program netcat, který jsme si dříve ukazovali.
+        </p>
+
+        <script>
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'example.cs', true);
+            xhr.onreadystatechange = function () {
+                if (this.readyState !== 4) return;
+                if (this.status !== 200) return; // or whatever error handling you want
+                document.getElementById('example').innerHTML = this.responseText;
+            };
+            xhr.send();
+        </script>
+
+        <pre class="vs-code" id="example">
+Nepodařilo se načíst kód. Máte povolený JavaScript?
+        </pre>
+
+        <h2>Zadání</h2>
+
+        <p>
+            Vytvořte podobný server, kam se uživatel připojí a odešle dvě čísla oddělená mezerou. Server mu vrátí
+            součet.
+        </p>
+
+        <h2>Příliš snadné?</h2>
+
+        <p>
+            Zkuste vymyslet a vytvořit nějaký zajímavý projekt, který bude běžet jako server. Pokud to bude funkční, a
+            budete chtít, můžu vám ho nechat běžet na serveru.
+        </p>
+
+    </div>
+
+</body>
+
+</html>

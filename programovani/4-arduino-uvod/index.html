@@ -3,21 +3,28 @@
 
 <head>
     <title>DDM - Filip Komárek</title>
-    <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <meta charset='utf-8'>
 </head>
 
 <body>
-    <!-- CSS a JavaScript -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '/src/link.html', true);
+        xhr.onreadystatechange = function () {
+            if (this.readyState !== 4) return;
+            if (this.status !== 200) return; // or whatever error handling you want
+            document.getElementById('backend-link').innerHTML = this.responseText;
+        };
+        xhr.send();
+    </script>
+    <div id="backend-link"></div>
+    <script src="/css/highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="../../main.css">
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+    </script>
 
-    <!-- Support pro mobilní menu -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <p class="test-link">ERROR loading link.html, enable javascript please</p>
 
     <div class="container">
 
@@ -73,20 +80,17 @@
             provedeme následovně:
         </p>
 
-        <script>
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'helloworld.ino', true);
-            xhr.onreadystatechange = function () {
-                if (this.readyState !== 4) return;
-                if (this.status !== 200) return; // or whatever error handling you want
-                document.getElementById('helloworld').innerHTML = this.responseText;
-            };
-            xhr.send();
-        </script>
+        <pre><code class="language-arduino">void setup() {
+    // put your setup code here, to run once:
+    Serial.begin(9600);
+    Serial.println("Hello wolrd!");
 
-        <pre class="vs-code" id="helloworld">
-Nepodařilo se načíst kód. Máte povolený JavaScript?
-        </pre>
+  }
+
+  void loop() {
+    // put your main code here, to run repeatedly:
+
+  }</code></pre>
 
         <p>Když se nyní podíváme do naší sériové konzole, měli bychom vidět nápis <code>Hello World!</code></p>
 
@@ -97,15 +101,14 @@ Nepodařilo se načíst kód. Máte povolený JavaScript?
             <code>loop</code> části.
         </p>
 
-        <pre class="vs-code">
-void setup() {
+        <pre><code class="language-arduino">void setup() {
     // put your setup code here, to run once:
     Serial.begin(9600);
 }
 void loop() {
     // put your main code here, to run repeatedly:
     Serial.println("Hello world!");
-}</pre>
+}</code></pre>
 
         <pre class="output">
 Hello world!
@@ -122,20 +125,17 @@ Hello world!</pre>
 
         <p>Můžeme také rovnou například zkusit sečíst dvě čísla, kód bude vypadat následovně:</p>
 
-        <script>
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'secteni.ino', true);
-            xhr.onreadystatechange = function () {
-                if (this.readyState !== 4) return;
-                if (this.status !== 200) return; // or whatever error handling you want
-                document.getElementById('secteni').innerHTML = this.responseText;
-            };
-            xhr.send();
-        </script>
+        <pre><code class="language-arduino">void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  Serial.println("Hello wolrd!");
+  Serial.println(6 + 1);
+}
 
-        <pre class="vs-code" id="secteni">
-Nepodařilo se načíst kód. Máte povolený JavaScript?
-        </pre>
+void loop() {
+  // put your main code here, to run repeatedly:
+
+}</code></pre>
 
         <p>Při takovém kódu dostaneme následující výstup:</p>
 
@@ -148,8 +148,7 @@ Hello wolrd!
             řádek, stačí nám použít <code>Serial.print();</code> místo <code>Serial.println();</code> .
         </p>
 
-        <pre class="vs-code">
-void setup() {
+        <pre><code class="language-arduino">void setup() {
     // put your setup code here, to run once:
     Serial.begin(9600);
     Serial.print("Součet čísel 6 a 1 = ");
@@ -159,7 +158,7 @@ void setup() {
 void loop() {
     // put your main code here, to run repeatedly:
 
-}</pre>
+}</code></pre>
 
         <pre class="output">Součet čísel 6 a 1 = 7</pre>
 
@@ -170,8 +169,7 @@ void loop() {
             následovně:
         </p>
 
-        <pre class="vs-code">
-void setup() {
+        <pre><code class="language-arduino">void setup() {
     // put your setup code here, to run once:
     Serial.begin(9600);
 
@@ -184,7 +182,7 @@ void setup() {
 void loop() {
     // put your main code here, to run repeatedly:
 
-}</pre>
+}</code></pre>
 
         <pre class="output">7</pre>
 
@@ -192,8 +190,7 @@ void loop() {
             Můžeme také sečíst dvě čísla a uložit je do proměnné.
         </p>
 
-        <pre class="vs-code">
-void setup() {
+        <pre><code class="language-arduino">void setup() {
     // put your setup code here, to run once:
     Serial.begin(9600);
 
@@ -207,7 +204,7 @@ void setup() {
 void loop() {
     // put your main code here, to run repeatedly:
 
-}</pre>
+}</code></pre>
 
         <pre class="output">7</pre>
 
@@ -217,8 +214,7 @@ void loop() {
             Můžeme si definovat text jako <code>String</code>.
         </p>
 
-        <pre class="vs-code">
-void setup() {
+        <pre><code class="language-arduino">void setup() {
     // put your setup code here, to run once:
     Serial.begin(9600);
 
@@ -235,9 +231,49 @@ void setup() {
 void loop() {
     // put your main code here, to run repeatedly:
 
-}</pre>
+}</code></pre>
 
         <pre class="output">Součet čísel 6 a 1 = 7</pre>
+
+        <h2>Úkol</h2>
+        <p>
+            Vytvořte program, který vypíše čísla od 1 do 15 bez toho, aby jste použili <code>while</code>. Použijte <code>void loop()</code>.
+        </p>
+
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#reseni">řešení</button>
+        <div id="reseni" class="collapse mt-3">
+            <pre><code class="language-arduino">int x = 1;
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  if (x &lt;= 15) {
+    Serial.println(x);
+    x++;
+  }
+}</code></pre>
+
+        <pre class="output">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+        </pre>
+        </div>
 
     </div>
 

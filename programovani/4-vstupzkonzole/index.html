@@ -234,6 +234,26 @@ void loop() {
             vstupu do konzole.
         </p>
 
+        <p>
+            Pokud chceme od uživatele získat číslo, musíme od něj první získat <code>String</code> a poté ho převést na
+            <code>int</code>. Provedeme to následovně:
+        </p>
+
+        <pre><code class="language-arduino">void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  String input;
+  while (input.length() &lt; 1) {
+    input = Serial.readStringUntil('\n');
+  }
+  int cislo = input.toInt();
+  Serial.println(cislo + 2);
+}</code></pre>
+
         <h2>Zadání:</h2>
 
         <p>
@@ -242,7 +262,8 @@ void loop() {
         </p>
 
         <p>
-            Nezapomeňte odevzdat váš kód na Google Classroom: <a href="https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/NjcxMTY5MzQ0NjQ1/details">https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/NjcxMTY5MzQ0NjQ1/details</a>
+            Nezapomeňte odevzdat váš kód na Google Classroom: <a
+                href="https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/NjcxMTY5MzQ0NjQ1/details">https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/NjcxMTY5MzQ0NjQ1/details</a>
         </p>
 
     </div>

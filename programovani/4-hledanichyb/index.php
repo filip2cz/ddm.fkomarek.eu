@@ -66,7 +66,7 @@
         </p>
 
         <p>
-            Opravený kód vkládejte do následujícího zadání na Google učebně: <a href="https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/Njc1NDY5MzIyMjUz/details" target="_blank">https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/Njc1NDY5MzIyMjUz/details</a>
+            Opravený kód vkládejte do následujícího zadání na Google učebně: <a href="https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/NjUyODUzNDkzMjAy/details" target="_blank">https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/NjUyODUzNDkzMjAy/details</a>
         </p>
 
         <ol>

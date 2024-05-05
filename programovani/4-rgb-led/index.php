@@ -71,22 +71,22 @@
             Začněme jednoduchým kódem, kdy na naší RGB diodě rozsvítíme jen červenou:
         </p>
 
-        <pre><code class="language-arduino">#define RED 9
-#define GREEN 5
-#define BLUE 6
+        <pre><code class="language-arduino">#define rgb_red 9
+#define rgb_green 5
+#define rgb_blue 6
 
 void setup() {
   // put your setup code here, to run once:
 
   // Nastaven&iacute; odporů na diodě
-  pinMode(RED,OUTPUT);
-  pinMode(GREEN,OUTPUT);
-  pinMode(BLUE,OUTPUT);
+  pinMode(rgb_red,OUTPUT);
+  pinMode(rgb_green,OUTPUT);
+  pinMode(rgb_blue,OUTPUT);
 
   // Nastaven&iacute; barvy
-  digitalWrite(RED, LOW);
-  digitalWrite(GREEN, HIGH);
-  digitalWrite(BLUE, HIGH);
+  digitalWrite(rgb_red, LOW);
+  digitalWrite(rgb_green, HIGH);
+  digitalWrite(rgb_blue, HIGH);
 }
 
 void loop() {
@@ -94,25 +94,25 @@ void loop() {
 }</code></pre>
 
         <p>
-            Pokud chceme rozsvítit zelenou, můžeme prostě nastavit <code>GREEN</code> na <code>LOW</code> a všechny ostatní barvy (<code>RED</code> a <code>BLUE</code>) nastavit na <code>HIGH</code>.
+            Pokud chceme rozsvítit zelenou, můžeme prostě nastavit <code>rgb_green</code> na <code>LOW</code> a všechny ostatní barvy (<code>rgb_red</code> a <code>rgb_blue</code>) nastavit na <code>HIGH</code>.
         </p>
 
-        <pre><code class="language-arduino">#define RED 9
-#define GREEN 5
-#define BLUE 6
+        <pre><code class="language-arduino">#define rgb_red 9
+#define rgb_green 5
+#define rgb_blue 6
 
 void setup() {
   // put your setup code here, to run once:
 
   // Nastaven&iacute; odporů na diodě
-  pinMode(RED,OUTPUT);
-  pinMode(GREEN,OUTPUT);
-  pinMode(BLUE,OUTPUT);
+  pinMode(rgb_red,OUTPUT);
+  pinMode(rgb_green,OUTPUT);
+  pinMode(rgb_blue,OUTPUT);
 
   // Nastaven&iacute; barvy
-  digitalWrite(RED, HIGH);
-  digitalWrite(GREEN, LOW);
-  digitalWrite(BLUE, HIGH);
+  digitalWrite(rgb_red, HIGH);
+  digitalWrite(rgb_green, LOW);
+  digitalWrite(rgb_blue, HIGH);
 }
 
 void loop() {

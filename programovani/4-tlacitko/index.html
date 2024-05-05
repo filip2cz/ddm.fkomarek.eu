@@ -87,17 +87,17 @@
             není, bude se nám vypisovat číslo 1.
         </p>
 
-        <pre><code class="language-arduino">#define BUTTON 2
+        <pre><code class="language-arduino">#define button 2
 
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
-  pinMode(BUTTON,INPUT_PULLUP);
+  pinMode(button,INPUT_PULLUP);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  int b = digitalRead(BUTTON);
+  int b = digitalRead(button);
   Serial.println(b);
 }</code></pre>
 
@@ -105,8 +105,8 @@ void loop() {
         <div id="popis1" class="collapse mt-3">
             <ul>
                 <li>
-                    <code>#define BUTTON 2</code> nám nastaví, že na pinu číslo 2 máme tlačítko. Díky tomuto můžeme pak
-                    rovnou použít <code>BUTTON</code> místo čísla pinu.
+                    <code>#define button 2</code> nám nastaví, že na pinu číslo 2 máme tlačítko. Díky tomuto můžeme pak
+                    rovnou použít <code>button</code> místo čísla pinu.
                 </li>
 
                 <br>
@@ -117,10 +117,10 @@ void loop() {
                 </li>
 
                 <li>
-                    <code>pinMode(BUTTON,INPUT_PULLUP);</code> nám nastaví tlačítko. Podrobný a pro nás nedůležitý
+                    <code>pinMode(button,INPUT_PULLUP);</code> nám nastaví tlačítko. Podrobný a pro nás nedůležitý
                     popis:<br>
                     <i>
-                        Tento kód v jazyce Arduino nastavuje pin s označením "BUTTON" jako vstupní s interním pull-up
+                        Tento kód v jazyce Arduino nastavuje pin s označením "button" jako vstupní s interním pull-up
                         odporem. To znamená, že pin bude připojen k napájecímu napětí (typicky +5V) přes pull-up odpor,
                         což pomůže eliminovat vlivy vnějších rušení a zajistí, že pin bude mít definovanou hodnotu
                         (HIGH), když na něj nebude připojeno nic jiného. Tento kód je často používán při připojení
@@ -132,7 +132,7 @@ void loop() {
                 <h5>void loop()</h5>
 
                 <li>
-                    <code>int b = digitalRead(BUTTON);</code> nám vytvoří proměnnou typu int (číslo), do které budeme
+                    <code>int b = digitalRead(button);</code> nám vytvoří proměnnou typu int (číslo), do které budeme
                     ukládat stav tlačítka. 1 = tlačítko není stisknuto, 0 = tlačítko je stisknuto.
                 </li>
 
@@ -147,17 +147,17 @@ void loop() {
             můžeme si pomocí podmínky výstup trochu zpřehlednit.
         </p>
 
-        <pre><code class="language-arduino">#define BUTTON 2
+        <pre><code class="language-arduino">#define button 2
 
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
-  pinMode(BUTTON, INPUT_PULLUP);
+  pinMode(button, INPUT_PULLUP);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  int b = digitalRead(BUTTON);
+  int b = digitalRead(button);
 
   if (b == 0) {
     Serial.println(&quot;Tlač&iacute;tko bylo stisknuto&quot;);
@@ -171,8 +171,8 @@ void loop() {
         <div id="popis2" class="collapse mt-3">
             <ul>
                 <li>
-                    <code>#define BUTTON 2</code> nám nastaví, že na pinu číslo 2 máme tlačítko. Díky tomuto můžeme pak
-                    rovnou použít <code>BUTTON</code> místo čísla pinu.
+                    <code>#define button 2</code> nám nastaví, že na pinu číslo 2 máme tlačítko. Díky tomuto můžeme pak
+                    rovnou použít <code>button</code> místo čísla pinu.
                 </li>
 
                 <br>
@@ -183,10 +183,10 @@ void loop() {
                 </li>
 
                 <li>
-                    <code>pinMode(BUTTON,INPUT_PULLUP);</code> nám nastaví tlačítko. Podrobný a pro nás nedůležitý
+                    <code>pinMode(button,INPUT_PULLUP);</code> nám nastaví tlačítko. Podrobný a pro nás nedůležitý
                     popis:<br>
                     <i>
-                        Tento kód v jazyce Arduino nastavuje pin s označením "BUTTON" jako vstupní s interním pull-up
+                        Tento kód v jazyce Arduino nastavuje pin s označením "button" jako vstupní s interním pull-up
                         odporem. To znamená, že pin bude připojen k napájecímu napětí (typicky +5V) přes pull-up odpor,
                         což pomůže eliminovat vlivy vnějších rušení a zajistí, že pin bude mít definovanou hodnotu
                         (HIGH), když na něj nebude připojeno nic jiného. Tento kód je často používán při připojení
@@ -198,7 +198,7 @@ void loop() {
                 <h5>void loop()</h5>
 
                 <li>
-                    <code>int b = digitalRead(BUTTON);</code> nám vytvoří proměnnou typu int (číslo), do které budeme
+                    <code>int b = digitalRead(button);</code> nám vytvoří proměnnou typu int (číslo), do které budeme
                     ukládat stav tlačítka. 1 = tlačítko není stisknuto, 0 = tlačítko je stisknuto.
                 </li>
 
@@ -215,18 +215,18 @@ void loop() {
             stavu:
         </p>
 
-        <pre><code class="language-arduino">#define BUTTON 2
+        <pre><code class="language-arduino">#define button 2
 int lastState = 1;
 
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
-  pinMode(BUTTON,INPUT_PULLUP);
+  pinMode(button,INPUT_PULLUP);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  int b = digitalRead(BUTTON);
+  int b = digitalRead(button);
 
   if (lastState != b){
     if (b == 0) {
@@ -243,8 +243,8 @@ void loop() {
         <div id="popis3" class="collapse mt-3">
             <ul>
                 <li>
-                    <code>#define BUTTON 2</code> nám nastaví, že na pinu číslo 2 máme tlačítko. Díky tomuto můžeme pak
-                    rovnou použít <code>BUTTON</code> místo čísla pinu.
+                    <code>#define button 2</code> nám nastaví, že na pinu číslo 2 máme tlačítko. Díky tomuto můžeme pak
+                    rovnou použít <code>button</code> místo čísla pinu.
                 </li>
 
                 <li>
@@ -261,10 +261,10 @@ void loop() {
                 </li>
 
                 <li>
-                    <code>pinMode(BUTTON,INPUT_PULLUP);</code> nám nastaví tlačítko. Podrobný a pro nás nedůležitý
+                    <code>pinMode(button,INPUT_PULLUP);</code> nám nastaví tlačítko. Podrobný a pro nás nedůležitý
                     popis:<br>
                     <i>
-                        Tento kód v jazyce Arduino nastavuje pin s označením "BUTTON" jako vstupní s interním pull-up
+                        Tento kód v jazyce Arduino nastavuje pin s označením "button" jako vstupní s interním pull-up
                         odporem. To znamená, že pin bude připojen k napájecímu napětí (typicky +5V) přes pull-up odpor,
                         což pomůže eliminovat vlivy vnějších rušení a zajistí, že pin bude mít definovanou hodnotu
                         (HIGH), když na něj nebude připojeno nic jiného. Tento kód je často používán při připojení
@@ -276,7 +276,7 @@ void loop() {
                 <h5>void loop()</h5>
 
                 <li>
-                    <code>int b = digitalRead(BUTTON);</code> nám vytvoří proměnnou typu int (číslo), do které budeme
+                    <code>int b = digitalRead(button);</code> nám vytvoří proměnnou typu int (číslo), do které budeme
                     ukládat stav tlačítka. 1 = tlačítko není stisknuto, 0 = tlačítko je stisknuto.
                 </li>
 

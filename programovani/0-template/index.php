@@ -14,6 +14,8 @@
 
         <a href="../"><button class="btn btn-primary" type="button">Zpět</button></a>
 
+        <p class="test-link">ERROR: načtení souboru link.html bylo neúspěšné</p>
+
         <h1 class="nadpis">Název</h1>
 
         <!--

@@ -145,6 +145,12 @@ void loop() {
   Display.num4(12,13,14,15);
   delay(1000);
 
+  Display.num(1,0);
+  Display.num(2,1);
+  Display.num(3,2);
+  Display.num(4,3);
+  delay(1000);
+
   Serial.println(&quot;Begin...&quot;);
   Display.set4(0x80,0x80,0x80,0x80);
   Serial.println(&quot;End...&quot;);

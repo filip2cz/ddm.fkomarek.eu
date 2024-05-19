@@ -78,10 +78,28 @@
         </p>
 
         <p><b>
+                Nezapomeňte odevzdat vaše řešení na Google učebnu: <a href="" target="_blank"></a>
+        </b></p>
+
+        <h2>Ovládání LED diod tlačítkem</h2>
+        <p>
+            Vytvořte program, pomocí kterého budete moci ovládat, jaká led dioda svítí. Udělejte tento program tak, že po zmáčknutí tlačítka se vymění. Na začátku nesvítí žádná.
+        </p>
+
+        <p><b>
+                Nezapomeňte odevzdat vaše řešení na Google učebnu: <a href="" target="_blank"></a>
+        </b></p>
+
+        <h2>Ovládání LED diod tlačítkem 2</h2>
+        <p>
+            Vytvořte program, pomocí kterého budete moci ovládat, jaká led dioda svítí. Udělejte tento program tak, že pokud uživatel zmáčkne tlačítko jednou, rozsvítí se zelená. Pokud dvakrát, rozsvítí se červená a pokud třikrát, rozsvítí se žlutá. Diodu zhasnu tím, že ji znova aktivuji. Například pokud zmáčknu tlačítko dvakrát, rozsvítí se červená a bude svítít, pokud ho znova nezmáčknu dvakrát.
+        </p>
+
+        <p><b>
             Nezapomeňte odevzdat vaše řešení na Google učebnu: <a href="" target="_blank"></a>
         </b></p>
 
-        <h3>Poznámka: další úlohy doplním během několika hodin, nepozději do dnešního večera.</h3>
+        <h3>Poznámka: další úlohy ještě doplním nejpozději před začátkem kroužku</h3>
 
     </div>
 

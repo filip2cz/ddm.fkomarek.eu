@@ -78,7 +78,7 @@
         </p>
 
         <p><b>
-                Nezapomeňte odevzdat vaše řešení na Google učebnu: <a href="" target="_blank"></a>
+                Nezapomeňte odevzdat vaše řešení na Google učebnu: <a href="https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/NjkyMTE0MzIzODg0/details" target="_blank">https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/NjkyMTE0MzIzODg0/details</a>
         </b></p>
 
         <h2>Ovládání LED diod tlačítkem</h2>
@@ -87,7 +87,7 @@
         </p>
 
         <p><b>
-                Nezapomeňte odevzdat vaše řešení na Google učebnu: <a href="" target="_blank"></a>
+                Nezapomeňte odevzdat vaše řešení na Google učebnu: <a href="https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/NjgwMzA4MTA5MTM4/details" target="_blank">https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/NjgwMzA4MTA5MTM4/details</a>
         </b></p>
 
         <h2>Ovládání LED diod tlačítkem 2</h2>
@@ -96,7 +96,7 @@
         </p>
 
         <p><b>
-            Nezapomeňte odevzdat vaše řešení na Google učebnu: <a href="" target="_blank"></a>
+            Nezapomeňte odevzdat vaše řešení na Google učebnu: <a href="https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/NjkyMTE3MDAyMzUy/details" target="_blank">https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/NjkyMTE3MDAyMzUy/details</a>
         </b></p>
 
     </div>

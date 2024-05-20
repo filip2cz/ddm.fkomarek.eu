@@ -99,8 +99,6 @@
             Nezapomeňte odevzdat vaše řešení na Google učebnu: <a href="" target="_blank"></a>
         </b></p>
 
-        <h3>Poznámka: další úlohy ještě doplním nejpozději před začátkem kroužku</h3>
-
     </div>
 
 </body>

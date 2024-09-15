@@ -14,7 +14,7 @@
 
         <a href="../"><button class="btn btn-primary" type="button">Zpět</button></a>
 
-        <h1 class="nadpis">Pravidla na kroužku robotiky</h1>
+        <h1 class="nadpis">Pravidla na kroužku programování</h1>
 
         <ol>
 
@@ -23,17 +23,7 @@
             <h2>Pravidla specifická pro tento kroužek</h2>
 
             <li>
-                Počítače používáme pouze k účelům kroužku, pokud nám není dovoleno jinak (např. nehrajeme videohry,
-                nevyhledáváme nevhodný obsah).
-            </li>
-
-            <li>
-                Na konci kroužku si zkontrolujeme, jestli na zemi nezbyli kostičky. Pokud učitel najde kostičky na zemi
-                po odchodu žáků, další hodinu nebude LEGO.
-            </li>
-
-            <li>
-                Na konci hodiny vracíme počítače a LEGO na určená místa (typicky místo, odkud jste si je mohli vzít).
+                Na konci hodiny vracíme případné další příslušenství (např. Arduina nebo kabely) na určená místa (typicky místo, odkud jste si je mohli vzít).
             </li>
 
             <br>

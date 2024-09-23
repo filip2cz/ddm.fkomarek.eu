@@ -86,6 +86,10 @@
 
         <img src="./heslo.png" style="max-width: 100%">
 
+        <h2>Zadání</h2>
+
+        Vytvořte algoritmus, který se bude starat o zálévání kytek. Pokud je kytka suchá, tak ji zalije.
+
         <h2>Příliš snadné?</h2>
 
         Nakreslete algoritmus pro bankomat. Bankomat bude fungovat tak, že uživateli dá peníze v co nejvyšších

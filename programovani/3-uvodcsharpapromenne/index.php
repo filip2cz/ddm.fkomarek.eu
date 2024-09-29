@@ -254,6 +254,19 @@ Váš věk je: 16
 Za dva roky váš věk bude: 18
 </pre>
 
+        <h2>Zadání</h2>
+
+        <p>
+            Vytvořte kalkulačku, do které uživatel napíše dvě hodnoty a program mu vypíše součet (+), rozdíl(-),
+            násobek(*) a podíl(/) těchto čísel.
+        </p>
+
+        <h2>Příliš snadné?</h2>
+
+        <p>
+            Použijte internet a zkuste do této kalkulačky přidat mocninu (například 2 na 3 = 8).
+        </p>
+
     </div>
 
 </body>

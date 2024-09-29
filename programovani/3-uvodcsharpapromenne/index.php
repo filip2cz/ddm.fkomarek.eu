@@ -6,29 +6,61 @@
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <meta charset='utf-8'>
 </head>
-<!-- CSS a JavaScript -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="../../main.css">
 
 <body>
-
-    <!-- Support pro mobilní menu -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php include("../../src/link.html"); ?>
 
     <div class="container">
 
         <a href="../"><button class="btn btn-primary" type="button">Zpět</button></a>
 
+        <p class="test-link">ERROR: načtení souboru link.html bylo neúspěšné</p>
+
         <h1 class="nadpis">Úvod do C# a proměnné</h1>
 
-        <div class="alert alert-warning d-md-none">
-            Upozornění: Tato stránka není optimalizována pro mobilní telefony a pro zařízení
-            s menší obrazovkou. Některé prvky mohou být příliš malé nebo jinak nefunkční.
+        <!--
+
+        <p>
+            Mauris elementum mauris vitae tortor. Nullam rhoncus aliquam metus. Nullam dapibus fermentum ipsum.
+        </p>
+
+        https://www.freeformatter.com/html-escape.html
+
+        <pre><code class="language-csharp">C# kód</code></pre>
+
+        <pre><code class="language-arduino">Arduino kód</code></pre>
+
+        <p class="output">Výstup z konzole</p>
+
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#reseni1">řešení</button>
+        <div id="reseni1" class="collapse mt-3">
+            <pre>řešení</pre>
         </div>
+
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#popis1">Podrobný popis kódu</button>
+        <div id="popis1" class="collapse mt-3">
+            <ul>
+                <li>
+                    Nějaký popis
+                </li>
+
+                <br>
+                <h5>První část:</h5>
+
+                <li>
+                    Popis první části
+                </li>
+
+                <br>
+                <h5>Druhá část:</h5>
+
+                <li>
+                    Popis druhé části
+                </li>
+            </ul>
+        </div>
+
+        -->
 
         <p>V této lekci se seznámíme s proměnnými a s tím jak je využívat.</p>
 
@@ -49,8 +81,7 @@
 
         <p>Poté se nám spustí grafické rozhraní, kde vidíme kód. Výchozí kód by měl vypadat nějak takto:</p>
 
-        <pre class="vs-code">
-using System;
+        <pre><code class="language-csharp">using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -64,17 +95,16 @@ namespace playground_dotnet_framework
         {
         }
     }
-}
-        </pre>
+}</code></pre>
 
-        <p>Vidíme zde již nějaký předepsaný kód. Náš kód budeme psát do funkce Main. První kód, co přidáme bude
+        <p>
+            Vidíme zde již nějaký předepsaný kód. Náš kód budeme psát do funkce Main. První kód, co přidáme bude
             <code>Console.WriteLine("Hello World!");</code>.
         </p>
 
         <p>Náš kód by měl vypadat nějak takto:</p>
 
-        <pre class="vs-code">
-using System;
+        <pre><code class="language-csharp">using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -89,8 +119,7 @@ namespace playground_dotnet_framework
             Console.WriteLine("Hello World!");
         }
     }
-}
-        </pre>
+}</code></pre>
 
         <p>Tento kód můžeme spustit pomocí tlačítka nahoře:</p>
 
@@ -103,8 +132,7 @@ namespace playground_dotnet_framework
             že má vyčkat na vstup od uživatele.
         </p>
 
-        <pre class="vs-code">
-using System;
+        <pre><code class="language-csharp">using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -120,8 +148,7 @@ namespace playground_dotnet_framework
             Console.ReadLine();
         }
     }
-}            
-        </pre>
+}</code></pre>
 
         <p>
             Poté se nám spustí okno s naším programem, kde můžeme vidět nápis "Hello World!". Když pak dáme ENTER,
@@ -139,20 +166,16 @@ Hello, World!
             uvozovkách, například:
         </p>
 
-        <pre class="vs-code">
-Console.WriteLine("Ahoj, Světe!");
-Console.ReadLine();
-        </pre>
+        <pre><code class="language-csharp">Console.WriteLine("Ahoj, Světe!");
+        Console.ReadLine();</code></pre>
 
         <p>
             Do tohoto kódu můžeme také napsat matematický příklad, je ovšem potřeba odstranit uvozovky, jinak to bude
             program brát jako text:
         </p>
 
-        <pre class="vs-code">
-Console.WriteLine(1+2);
-Console.ReadLine();
-        </pre>
+        <pre><code class="language-csharp">Console.WriteLine(1+2);
+        Console.ReadLine();</code></pre>
 
         <p>
             Zapisování čísel do kódu tímto způsobem je ovšem docela těžkopádné, proto využíváme tzv. proměnné.
@@ -175,8 +198,7 @@ Console.ReadLine();
             Zkusíme si to na následujícím kódu:
         </p>
 
-        <pre class="vs-code">
-int prvniCislo;
+        <pre><code class="language-csharp">int prvniCislo;
 int druheCislo;
 prvniCislo = 5;
 druheCislo = 4;
@@ -187,14 +209,11 @@ text = "Součet dvou čísel je: ";
 Console.Write(text);
 Console.WriteLine(prvniCislo + druheCislo);
 
-Console.ReadLine();
-        </pre>
+Console.ReadLine();</code></pre>
 
         <p>Tento kód můžeme trochu zkrátit tím, že výpis obou proměnných dáme na jeden řádek.</p>
 
-        <pre class="vs-code">
-Console.WriteLine($"{text}{prvniCislo + druheCislo}");
-        </pre>
+        <pre><code class="language-csharp">Console.WriteLine($"{text}{prvniCislo + druheCislo}");</code></pre>
 
         <p>
             Console.WriteLine výše funguje tak, že funguje jako text, ovšem to co je uvnitř {} se spustí jako kód.
@@ -204,29 +223,25 @@ Console.WriteLine($"{text}{prvniCislo + druheCislo}");
             Dále můžeme brát výstup od uživatele a zapisovat ho do proměnné, můžeme si to ukázat na tomto kódu:
         </p>
 
-        <pre class="vs-code">
-Console.Write("Zadejte vaše jméno: ");
+        <pre><code class="language-csharp">Console.Write("Zadejte vaše jméno: ");
 string jmeno = Console.ReadLine();
 Console.WriteLine($"Vaše jméno je: {jmeno}");
-Console.ReadLine();
-        </pre>
+Console.ReadLine();</code></pre>
 
         <p>Výstup by měl vypadat nějak takto:</p>
 
         <pre class="output">
 Zadejte vaše jméno: Filip
 Vaše jméno je: Filip
-        </pre>
+</pre>
 
         <p>Pokud budeme brát číslo, musíme ho první převést z textu na číslo:</p>
 
-        <pre class="vs-code">
-Console.Write("Zadejte váš věk: ");
+        <pre><code class="language-csharp">Console.Write("Zadejte váš věk: ");
 int cislo = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine($"Váš věk je: {cislo}");
 Console.WriteLine($"Za dva roky váš věk bude: {cislo + 2}");
-Console.ReadLine();
-        </pre>
+Console.ReadLine();</code></pre>
 
         <p>Výstup bude vypadat takto:</p>
 
@@ -234,17 +249,17 @@ Console.ReadLine();
 Zadejte váš věk: 16
 Váš věk je: 16
 Za dva roky váš věk bude: 18
-        </pre>
+</pre>
 
-        <h2>Příliš snadné?</h2>
+<h2>Příliš snadné?</h2>
 
-        <p>
-            Zadání pro zkušenější programátory, jenž programovali už někdy dříve před tímto kroužkem:
-            Vytvořte kalkulačku, kde bude uživatel zadávat celý příklad na jednom řádku.
-            Nebojte se si cokoliv najít na internetu / vygooglit.
-        </p>
+<p>
+    Zadání pro zkušenější programátory, jenž programovali už někdy dříve před tímto kroužkem:
+    Vytvořte kalkulačku, kde bude uživatel zadávat celý příklad na jednom řádku.
+    Nebojte se si cokoliv najít na internetu / vygooglit.
+</p>
 
-        <script>
+<script>
             var xhr = new XMLHttpRequest();
             xhr.open('GET', 'kalkulacka3.cs', true);
             xhr.onreadystatechange = function () {

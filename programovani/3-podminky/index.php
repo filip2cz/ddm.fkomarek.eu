@@ -6,18 +6,9 @@
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <meta charset='utf-8'>
 </head>
-<!-- CSS a JavaScript -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="../../main.css">
 
 <body>
-
-    <!-- Support pro mobilní menu -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php include ("../../src/link.html"); ?>
 
     <div class="container">
 
@@ -40,8 +31,7 @@
 
         <p>Tento kód získá věk uživatele a poté zjistí, jestli je mladší nebo starší 18 let:</p>
 
-        <pre class="vs-code">
-Console.Write("Zadejte váš věk: ");
+        <pre><code class="language-csharp">Console.Write("Zadejte váš věk: ");
 int cislo = Convert.ToInt32(Console.ReadLine());
 if (cislo >= 18)
 {
@@ -51,13 +41,11 @@ else
 {
     Console.WriteLine("Jste mladší 18 let.");
 }
-Console.ReadLine();
-        </pre>
+Console.ReadLine();</code></pre>
 
         <p>Tento kód se vás zeptá na heslo a poté porovná pomocí podmínek heslo se dvoumi proměnnými:</p>
 
-        <pre class="vs-code">
-string hesloHonza = "Mojeheslo1";
+        <pre><code class="language-csharp">string hesloHonza = "Mojeheslo1";
 string hesloFilip = "password1234";
             
 Console.Write("Zadejte heslo: ");
@@ -75,8 +63,7 @@ else
 {
     Console.WriteLine("Špatné heslo!");
 }
-Console.ReadLine();
-        </pre>
+Console.ReadLine();</code></pre>
 
         <h2>Zadání</h2>
 
@@ -92,16 +79,16 @@ Zadejte operaci: +
 Součet čísel 5 a 4 je 9.
         </pre>
 
-        <p>Sčítání, odčítání, násobení, dělení se dělá následujícím způsobem:</p>
+        <p>Pro připomenutí: sčítání, odčítání, násobení, dělení se dělá následujícím způsobem:</p>
 
-        <pre class="vs-code">
-int scitani = cislo1 + cislo2;
+        <pre><code class="language-csharp">int scitani = cislo1 + cislo2;
 int odcitani = cislo1 - cislo2;
 int nasobeni = cislo1 * cislo2;
-int deleni = cislo1 / cislo2;
-        </pre>
+int deleni = cislo1 / cislo2;</code></pre>
 
         <p>Pokud budete mít jakékoliv otázky nebo problémy, nebojte se na mě obrátit.</p>
+
+        <!--
 
         <script>
             var xhr = new XMLHttpRequest();
@@ -121,7 +108,11 @@ Nepodařilo se načíst kód. Máte povolený JavaScript?
             </pre>
         </div>
 
+        -->
+
         <p>Pokud máte hotovo, zkuste ošetřit, aby nešlo dělit nulou.</p>
+
+        <!--
 
         <script>
             var xhr = new XMLHttpRequest();
@@ -140,6 +131,8 @@ Nepodařilo se načíst kód. Máte povolený JavaScript?
 Nepodařilo se načíst kód. Máte povolený JavaScript?
             </pre>
         </div>
+
+        -->
 
         <h2>Příliš snadné?</h2>
         <p>

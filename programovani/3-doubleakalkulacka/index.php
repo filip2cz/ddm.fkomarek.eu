@@ -6,18 +6,9 @@
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <meta charset='utf-8'>
 </head>
-<!-- CSS a JavaScript -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="../../main.css">
 
 <body>
-
-    <!-- Support pro mobilní menu -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php include ("../../src/link.html"); ?>
 
     <div class="container">
 
@@ -33,15 +24,13 @@
             Zde je menší příklad funkčnosti:
         </p>
 
-        <pre class="vs-code">
-int x = 51;
+        <pre><code class="language-csharp">int x = 51;
 int y = 7;
 Console.WriteLine(x/y);
 
 double z = 51;
 double w = 7;
-Console.WriteLine(z/w);
-        </pre>
+Console.WriteLine(z/w);</code></pre>
 
         <p>
             Výstup by měl vypadat nějak takto:
@@ -56,10 +45,8 @@ Console.WriteLine(z/w);
             Pokud chceme číst vstup od uživatele a ukládat ho do double, musíme ho podobně jako u <code>int</code> konvertovat ze stringu do double. To se dělá následujícím způsobem:
         </p>
 
-        <pre class="vs-code">
-double x;
-x = Convert.ToDouble(Console.ReadLine());
-        </pre>
+        <pre><code class="language-csharp">double x;
+x = Convert.ToDouble(Console.ReadLine());</code></pre>
 
         <h1 class="nadpis">Zadání: Kalkulačka</h1>
 
@@ -99,6 +86,8 @@ Zadejte operaci (+,-,*,/): /
 Výsledek: 7,28571428571429
         </pre>
 
+        <!--
+
         <script>
             var xhr = new XMLHttpRequest();
             xhr.open('GET', 'kalkulacka.cs', true);
@@ -116,6 +105,8 @@ Výsledek: 7,28571428571429
 Nepodařilo se načíst kód. Řešení pravděpodobně ještě nebylo uvolněno, nebo nemáte povolený JavaScript.
             </pre>
         </div>
+
+        -->
 
     </div>
 

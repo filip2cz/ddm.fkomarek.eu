@@ -5,7 +5,7 @@ class Program
     {
         int i = 16;
 
-        while (i &lt;= 64)
+        while (i <= 64)
         {
             Console.WriteLine(i);
             i++;

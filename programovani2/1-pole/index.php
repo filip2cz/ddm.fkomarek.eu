@@ -1,3 +1,30 @@
+<?php
+// Cesta k souboru, který chcete načíst
+$kod_soucet_file_path = 'soucet.cs';
+
+// Kontrola, zda soubor existuje a lze ho načíst
+if (file_exists($kod_soucet_file_path) && is_readable($kod_soucet_file_path)) {
+    // Načte obsah souboru
+    $contentsoucet = file_get_contents($kod_soucet_file_path);
+} else {
+    // Nastaví chybovou zprávu, pokud soubor neexistuje nebo nelze načíst
+    $contentsoucet = "Nepodařilo se načíst kód. Řešení pravděpodobně ještě nebylo uvolněno.";
+}
+
+
+// Cesta k souboru, který chcete načíst
+$kod_stack_file_path = 'https://raw.githubusercontent.com/filip2cz/mvop-3-stack/master/Program.cs';
+
+if (ini_get('allow_url_fopen')) {
+    $contentstack = @file_get_contents($kod_stack_file_path);
+    if ($contentstack === false) {
+        $contentstack = "Nepodařilo se načíst kód. Řešení pravděpodobně ještě nebylo uvolněno.";
+    }
+} else {
+    $contentstack = "Načítání souborů z URL není na serveru povoleno.";
+}
+?>
+
 <!DOCTYPE html>
 <html lang='cs' data-bs-theme="dark">
 
@@ -8,16 +35,7 @@
 </head>
 
 <body>
-    <!-- CSS a JavaScript -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="../../main.css">
-
-    <!-- Support pro mobilní menu -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php include ("../../src/link.html"); ?>
 
     <div class="container">
 
@@ -27,17 +45,15 @@
 
         <p>
             Jak jistě víte, v C# máme proměnné, kam můžeme ukládat hodnoty. Co se ale může hodit jsou pole hodnot, kdy
-            ukládáme do jednoho pole více hodnot. Může se to hodit například pokud nevíme, kolik těch hodnot budeme
+            ukládáme do jednoho pole více hodnot. Může se to hodit například, pokud nevíme, kolik těch hodnot budeme
             zpracovávat.
         </p>
 
         <p>
-            Zde je příklad, jak vytvořit pole s přepsanými hodnotami:
+            Zde je příklad, jak vytvořit pole s předepsanými hodnotami:
         </p>
 
-        <pre class="vs-code">
-string[] monthsOfTheYear = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
-        </pre>
+        <pre><code class="language-csharp">string[] monthsOfTheYear = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};</code></pre>
 
         <div class="alert alert-warning" role="alert">
             Ve většině programovacích jazycích, včetně C#, se začíná počítat od 0. V tomto poli se tedy
@@ -49,23 +65,19 @@ string[] monthsOfTheYear = { "January", "February", "March", "April", "May", "Ju
             S těmito hodnotami můžeme pracovat podobně jako se stringy:
         </p>
 
-        <pre class="vs-code">
-monthsOfTheYear[7] = "Srpen";
+        <pre><code class="language-csharp">monthsOfTheYear[7] = "Srpen";
 monthsOfTheYear[8] = string.Empty;
-monthsOfTheYear[9] = Console.ReadLine();
-        </pre>
+monthsOfTheYear[9] = Console.ReadLine();</code></pre>
 
         <p>
             Pokud chceme pracovat s každým jedním prvkem pole, můžeme použít <code>foreach</code>. Následující příklad
             vypíše všechny měsíce z pole výše.
         </p>
-
-        <pre class="vs-code">
-foreach (var item in monthsOfTheYear)
+        
+        <pre><code class="language-csharp">foreach (var item in monthsOfTheYear)
 {
     Console.WriteLine(item);
-}
-        </pre>
+}</code></pre>
 
         <p>
             <code>foreach</code> funguje tak, že do vnitřní proměnné <code>item</code> (může se jmenovat jakkoliv) vloží
@@ -76,23 +88,19 @@ foreach (var item in monthsOfTheYear)
         <p>
             Pokud chceme vytvořit prázné pole znaků, vytvoříme ho následujícím způsobem:
         </p>
-
-        <pre class="vs-code">
-string[] pole = new string[x];
-        </pre>
+        
+        <pre><code class="language-csharp">string[] pole = new string[x];</code></pre>
 
         <p>
             V tomto kódu musíme <code>x</code> nahradit celým číslem, které vyjadřuje velikost pole. Z tohoto se dá odvodit, že pole
             má přesně určenou velikost. Tuto velikost můžeme změnit pomocí následujícího kódu:
         </p>
 
-        <pre class="vs-code">
-string[] pole = new string[5];
+        <pre><code class="language-csharp">string[] pole = new string[5];
 Console.WriteLine($"Velikost pole: {pole.Length}");
 
 Array.Resize(ref pole, 10 );
-Console.WriteLine($"Nová velikost pole: {pole.Length}");
-        </pre>
+Console.WriteLine($"Nová velikost pole: {pole.Length}");</code></pre>
 
         <p>
             <code>string[]</code> není samozřejmě jediný typ pole, co můžeme použít. Od každého typu proměnné existuje
@@ -101,25 +109,12 @@ Console.WriteLine($"Nová velikost pole: {pole.Length}");
         </p>
 
         <p>
-            Zadání: vytvořte program, který si od uživatele vyžádá jím určený počet čísel a po té je sečte.
+            Zadání: vytvořte program, který si od uživatele vyžádá jím určený počet čísel a poté je sečte.
         </p>
-
-        <script>
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'soucet.cs', true);
-            xhr.onreadystatechange = function () {
-                if (this.readyState !== 4) return;
-                if (this.status !== 200) return; // or whatever error handling you want
-                document.getElementById('soucet').innerHTML = this.responseText;
-            };
-            xhr.send();
-        </script>
 
         <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#reseni-soucet">řešení</button>
         <div id="reseni-soucet" class="collapse mt-3">
-            <pre class="vs-code" id="soucet">
-Nepodařilo se načíst kód. Řešení pravděpodobně ještě nebylo uvolněno, nebo nemáte povolený JavaScript.
-            </pre>
+            <pre><code class="language-csharp" id="soucet"><?php echo htmlspecialchars($contentsoucet, ENT_QUOTES, 'UTF-8'); ?></code></pre>
         </div>
 
         <h2>Příliš snadné?</h2>
@@ -137,22 +132,9 @@ Nepodařilo se načíst kód. Řešení pravděpodobně ještě nebylo uvolněno
             Zde máte program, který funguje stejně: <a href="https://github.com/filip2cz/mvop-3-stack/releases/download/v1.1/stack-win64.exe" target="_blank">stack-win64.exe</a>
         </p>
 
-        <script>
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'https://raw.githubusercontent.com/filip2cz/mvop-3-stack/master/Program.cs', true);
-            xhr.onreadystatechange = function () {
-                if (this.readyState !== 4) return;
-                if (this.status !== 200) return; // or whatever error handling you want
-                document.getElementById('stack').innerHTML = this.responseText;
-            };
-            xhr.send();
-        </script>
-
         <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#reseni-stack">řešení</button>
         <div id="reseni-stack" class="collapse mt-3">
-            <pre class="vs-code" id="stack">
-Nepodařilo se načíst kód. Řešení pravděpodobně ještě nebylo uvolněno, nebo nemáte povolený JavaScript.
-            </pre>
+            <pre><code class="language-csharp" id="stack"><?php echo htmlspecialchars($contentstack, ENT_QUOTES, 'UTF-8'); ?></cod/pre>
         </div>
 
     </div>

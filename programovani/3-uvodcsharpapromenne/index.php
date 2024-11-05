@@ -218,8 +218,7 @@ Console.ReadLine();</code></pre>
         <pre><code class="language-csharp">Console.WriteLine($"{text}{prvniCislo + druheCislo}");</code></pre>
 
         <p>
-            Console.WriteLine se znakem $ výše funguje tak, že funguje jako text, ovšem to co je uvnitř {} se spustí
-            jako kód.
+            Console.WriteLine se znakem $ výše funguje tak, že funguje jako text, ovšem to co je uvnitř {} se spustí jako kód.
         </p>
 
         <p>
@@ -253,6 +252,52 @@ Zadejte váš věk: 16
 Váš věk je: 16
 Za dva roky váš věk bude: 18
 </pre>
+
+<h2>Příliš snadné?</h2>
+
+<p>
+    Zadání pro zkušenější programátory, jenž programovali už někdy dříve před tímto kroužkem:
+    Vytvořte kalkulačku, kde bude uživatel zadávat celý příklad na jednom řádku.
+    Nebojte se si cokoliv najít na internetu / vygooglit.
+</p>
+
+<script>
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'kalkulacka3.cs', true);
+            xhr.onreadystatechange = function () {
+                if (this.readyState !== 4) return;
+                if (this.status !== 200) return; // or whatever error handling you want
+                document.getElementById('kalkulacka3').innerHTML = this.responseText;
+            };
+            xhr.send();
+        </script>
+
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#reseniCollapse3">řešení #1 - použití
+            již existující funkce</button>
+        <div id="reseniCollapse3" class="collapse mt-3">
+            <pre class="vs-code" id="kalkulacka3">
+Nepodařilo se načíst kód. Máte povolený JavaScript?
+            </pre>
+        </div>
+
+        <script>
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'kalkulacka4.cs', true);
+            xhr.onreadystatechange = function () {
+                if (this.readyState !== 4) return;
+                if (this.status !== 200) return; // or whatever error handling you want
+                document.getElementById('kalkulacka4').innerHTML = this.responseText;
+            };
+            xhr.send();
+        </script>
+
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#reseniCollapse4">řešení #2 - použití
+            spousty podmínek</button>
+        <div id="reseniCollapse4" class="collapse mt-3">
+            <pre class="vs-code" id="kalkulacka4">
+Nepodařilo se načíst kód. Máte povolený JavaScript?
+            </pre>
+        </div>
 
     </div>
 

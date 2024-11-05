@@ -17,8 +17,53 @@
         <h1 class="nadpis">Pravidla na kroužku robotiky</h1>
 
         <ol>
+            <h2>Obecná pravidla</h2>
+            <li>
+                Všichni se řídí vnitřním řádem školského zařízení Dům dětí a mládeže Horní Počernice, dostupný zde:
+                <a href="https://drive.google.com/file/d/145U8GavW5t-8hAOELS1Up-SWbqMIp4hw/view"
+                    target="_blank">https://drive.google.com/file/d/145U8GavW5t-8hAOELS1Up-SWbqMIp4hw/view</a>
+            </li>
 
-            <?php include("../../src/sdilena-pravidla.html"); ?>
+            <li>
+                Všichni se řídí BOZP, o kterém byli všichni poučeni na začátku školního roku.
+
+            <li>
+                O každé závadě informujeme učitele.
+            </li>
+
+            <li>
+                Pokud učitel nedorazí do hodiny do 15 minut od začátku výuky, informujeme zaměstnance DDM na recepci.
+            </li>
+
+            <li>
+                Na konci hodiny pečlivě uklidíme naše pracovní místo, zasuneme židle.
+            </li>
+
+            <li>
+                Jakýkoliv úraz je nutné nahlásit učiteli.
+            </li>
+
+            <h2>Mravnostní pravidla</h2>
+
+            <li>
+                Nepoužíváme vybavení učebny, které nepatří k našemu kroužku (např. herní konzole, kytary).
+            </li>
+
+            <li>
+                Nemluvíme sprostě.
+            </li>
+
+            <li>
+                Nepouštíme nahlas hudbu nebo jiné zvuky bez dovolení.
+            </li>
+
+            <li>
+                Opuštění prostor kroužku bez dovolení je nepřípustné.
+            </li>
+
+            <li>
+                Neničíme majetek DDM, ani majetek ostatních žáků.
+            </li>
 
             <h2>Pravidla specifická pro tento kroužek</h2>
 

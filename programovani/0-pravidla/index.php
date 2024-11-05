@@ -23,11 +23,7 @@
             <h2>Pravidla specifická pro tento kroužek</h2>
 
             <li>
-                Na konci hodiny vracíme případné další příslušenství (např. Arduina a kabely) na určená místa (typicky místo, odkud jste si je mohli vzít).
-            </li>
-
-            <li>
-                Pokud je některý z žáků pokročilejší v programování, zkontroluje si základní zadání a pokud má jistotu, že mu rozumí, může místo něho pracovat na pokročilejším zadání v záložce <b>Programování 2</b>
+                Na konci hodiny vracíme případné další příslušenství (např. Arduina nebo kabely) na určená místa (typicky místo, odkud jste si je mohli vzít).
             </li>
 
             <br>

@@ -5,7 +5,7 @@ class Program
     {
         int i = 0;
 
-        while (i <= 100)
+        while (i &lt;= 100)
         {
             Console.WriteLine(i);
             i += 2;

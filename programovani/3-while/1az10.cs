@@ -3,9 +3,9 @@ class Program
 {
     static void Main()
     {
-        int i = 16;
+        int i = 1;
 
-        while (i &lt;= 64)
+        while (i &lt;= 10)
         {
             Console.WriteLine(i);
             i++;
@@ -13,4 +13,4 @@ class Program
 
         Console.ReadLine();
     }
-}
+}     

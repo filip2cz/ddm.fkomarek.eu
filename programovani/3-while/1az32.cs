@@ -5,7 +5,7 @@ class Program
     {
         int i = 1;
 
-        while (i <= 32)
+        while (i &lt;= 32)
         {
             Console.WriteLine(i);
             i++;

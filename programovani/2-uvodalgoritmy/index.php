@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <?php include ("../../src/link.html"); ?>
+    <?php include("../../src/link.html"); ?>
 
     <div class="container">
 
@@ -85,18 +85,6 @@
         </p>
 
         <img src="./heslo.png" style="max-width: 100%">
-
-        <h2>Příliš snadné?</h2>
-
-        Nakreslete algoritmus pro bankomat. Bankomat bude fungovat tak, že uživateli dá peníze v co nejvyšších
-        bankovkách a mincích. Pokud tedy uživatel zadá částku 8321 Kč, bankomatu mu vydá:<br>
-        5000<br>
-        2000<br>
-        1000<br>
-        200<br>
-        100<br>
-        20<br>
-        1<br>
 
         <h3>BONUS: Sheldon Cooper aplikující svůj "Algoritmus na tvorbu přátelství":</h3>
 

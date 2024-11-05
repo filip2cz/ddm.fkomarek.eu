@@ -14,7 +14,7 @@
 
         <a href="../"><button class="btn btn-primary" type="button">Zpět</button></a>
 
-        <h1 class="nadpis">Poznávání barev</h1>
+        <h1 class="nadpis">Název</h1>
 
         <!--
 

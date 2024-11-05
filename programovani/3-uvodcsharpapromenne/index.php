@@ -213,8 +213,6 @@ Console.WriteLine(prvniCislo + druheCislo);
 
 Console.ReadLine();</code></pre>
 
-        <!--
-
         <p>Tento kód můžeme trochu zkrátit tím, že výpis obou proměnných dáme na jeden řádek.</p>
 
         <pre><code class="language-csharp">Console.WriteLine($"{text}{prvniCislo + druheCislo}");</code></pre>
@@ -256,12 +254,10 @@ Váš věk je: 16
 Za dva roky váš věk bude: 18
 </pre>
 
-        -->
-
         <h2>Zadání</h2>
 
         <p>
-            Vytvořte kalkulačku, které vezmě dvě číselné proměnné a a program vypíše součet (+), rozdíl(-),
+            Vytvořte kalkulačku, do které uživatel napíše dvě hodnoty a program mu vypíše součet (+), rozdíl(-),
             násobek(*) a podíl(/) těchto čísel.
         </p>
 

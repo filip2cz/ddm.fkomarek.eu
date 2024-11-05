@@ -4,7 +4,7 @@ int[] input = new int[size];
 
 Console.WriteLine("Zadejte čísla:");
 int zadano = 0;
-while (zadano < input.Length)
+while (zadano &lt; input.Length)
 {
     input[zadano] = Convert.ToInt32(Console.ReadLine());
     zadano++;

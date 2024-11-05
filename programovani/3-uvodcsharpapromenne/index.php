@@ -159,7 +159,7 @@ namespace playground_dotnet_framework
 Hello, World!
         </pre>
 
-        <p><b>Další kód už sem budu psát bez ostatního kódu kolem, neboli pouze vnitřek funkce Main.</b></p>
+        <p><b>Další kód bude už bez ostatního kódu kolem, neboli pouze vnitřek funkce Main.</b></p>
 
         <p>
             V tomto kódu můžeme upravit, co se má do konzole vypsat. Aby to ovšem zůstalo jako text, musí to zůstat v
@@ -167,7 +167,7 @@ Hello, World!
         </p>
 
         <pre><code class="language-csharp">Console.WriteLine("Ahoj, Světe!");
-Console.ReadLine();</code></pre>
+        Console.ReadLine();</code></pre>
 
         <p>
             Do tohoto kódu můžeme také napsat matematický příklad, je ovšem potřeba odstranit uvozovky, jinak to bude
@@ -175,13 +175,11 @@ Console.ReadLine();</code></pre>
         </p>
 
         <pre><code class="language-csharp">Console.WriteLine(1+2);
-Console.ReadLine();</code></pre>
+        Console.ReadLine();</code></pre>
 
         <p>
             Zapisování čísel do kódu tímto způsobem je ovšem docela těžkopádné, proto využíváme tzv. proměnné.
         </p>
-
-        <h1>Proměnné</h1>
 
         <p>
             Proměnná je věc, do které můžeme uložit nějakou hodnotu a poté s ní pracovat.
@@ -196,7 +194,7 @@ Console.ReadLine();</code></pre>
 
         <p>
             První je třeba proměnnou vytvořit, uděláme to pomocí kódu <code>int/string [název];</code>
-            a poté ho nastavíme na nějaké číslo pomocí <code>[název] = [hodnota];</code>.
+            a poté ho nastavíme na nějaké číslo pomocí <code>[název] [hodnota]</code>.
             Zkusíme si to na následujícím kódu:
         </p>
 
@@ -218,7 +216,7 @@ Console.ReadLine();</code></pre>
         <pre><code class="language-csharp">Console.WriteLine($"{text}{prvniCislo + druheCislo}");</code></pre>
 
         <p>
-            Console.WriteLine se znakem $ výše funguje tak, že funguje jako text, ovšem to co je uvnitř {} se spustí jako kód.
+            Console.WriteLine výše funguje tak, že funguje jako text, ovšem to co je uvnitř {} se spustí jako kód.
         </p>
 
         <p>

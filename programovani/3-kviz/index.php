@@ -23,7 +23,7 @@
         </p>
 
         <p>
-            Kód nezapomeňte uložit na google učebnu.
+            Kód nezapomeňte uložit na <a href="https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzMwMjg2Mzg3MTc4/details" target="_blank">Google Učebnu</a>.
         </p>
 
     </div>

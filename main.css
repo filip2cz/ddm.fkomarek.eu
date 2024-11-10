@@ -40,7 +40,7 @@ pre.vs-code {
 }
 
 button{
-    margin-bottom: 20px !important; 
+    margin-bottom: 20px !important;
 }
 
 img {
@@ -57,4 +57,13 @@ code.language-csharp, code.language-arduino {
     -moz-user-select: none; /* Old versions of Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+#allowCopy {
+    -webkit-touch-callout: auto !important; /* iOS Safari */
+    -webkit-user-select: auto !important; /* Safari */
+    -khtml-user-select: auto !important; /* Konqueror HTML */
+    -moz-user-select: auto !important; /* Old versions of Firefox */
+    -ms-user-select: auto !important; /* Internet Explorer/Edge */
+    user-select: auto !important; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }

@@ -6,18 +6,9 @@
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <meta charset='utf-8'>
 </head>
-<!-- CSS a JavaScript -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="../../main.css">
 
 <body>
-
-    <!-- Support pro mobilní menu -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php include ("../../src/link.html"); ?>
 
     <div class="container">
 
@@ -40,9 +31,9 @@
             <b>Co je to HTTP a HTTPS protokol?</b><br>
             HTTP je protokol, který slouží k načítání webových stránek. Většina uživatelů se s ním setká, když načítají
             webovou stránku. Techničtější uživatelé se s ním mohou setkat, pokud chtějí použít nějaké API, což je
-            jednoduchá stránka co říká programům nějaká data ve strojovém formátu, například <a
-                href="http://worldtimeapi.org/api/timezone/Europe/Prague" target="_blank">WorldTimeAPI</a> vám ukáže
-            aktuální čas v Praze ve strojovém formátu. HTTPS protokol je šifrovaná verze HTTP, pro naše účely není třeba
+            jednoduchá stránka, co říká programům nějaká data ve strojovém formátu, například <a
+                href="https://www.timeapi.io/api/time/current/zone?timeZone=Europe%2FPrague" target="_blank">TimeAPI</a> vám ukáže
+            aktuální čas v Praze, a další informace, ve strojovém formátu. HTTPS protokol je šifrovaná verze HTTP, pro naše účely není třeba
             znát podrobnosti o tomto šifrování.
         </div>
 
@@ -50,20 +41,12 @@
             Kód, který nám stáhne obsah nějakého odkazu může vypadat například následujícím způsobem:
         </p>
 
-        <script>
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'networkinfoverdlouhe.cs', true);
-            xhr.onreadystatechange = function () {
-                if (this.readyState !== 4) return;
-                if (this.status !== 200) return; // or whatever error handling you want
-                document.getElementById('networkinfoverdlouhe').innerHTML = this.responseText;
-            };
-            xhr.send();
-        </script>
-
-        <pre class="vs-code" id="networkinfoverdlouhe">
-Nepodařilo se načíst kód. Máte povolený JavaScript?
-        </pre>
+        <pre><code class="language-csharp">string text;
+int cislo;
+HttpClient client = new HttpClient();
+text = client.GetStringAsync("https://raw.githubusercontent.com/filip2cz/network-info/main/ver").Result;
+cislo = int.Parse(text);
+Console.WriteLine(cislo - 1);</code></pre>
 
         <div class="alert alert-warning" role="alert">
             Pokud vám kód nefunguje, přesvěčte se, že máte na začátku vašeho kódu (v horní oblasti na prvních několika
@@ -82,27 +65,16 @@ Nepodařilo se načíst kód. Máte povolený JavaScript?
             uloží do proměnné <code>text</code> obsah stránky.<br>
             <code>cislo = int.Parse(text);</code> převede již dříve stažený obsah stránky, neboli proměnnou
             <code>text</code> do int, abychom s ním mohli počítat jako s číslem.<br>
-            <code>Console.WriteLine(cislo - 1);</code> nakonec vypíšeme číslo, které jsme stáhli z internetu o 1 menší.
+            <code>Console.WriteLine(cislo - 1);</code> nakonec vypíšeme číslo, které jsme stáhli z internetu, ale o 1 menší.
         </p>
 
         <p>
             Pro úsporu textu se dá tento kód zkrátit následujícím způsobem:
         </p>
 
-        <script>
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'networkinfoverkratke.cs', true);
-            xhr.onreadystatechange = function () {
-                if (this.readyState !== 4) return;
-                if (this.status !== 200) return; // or whatever error handling you want
-                document.getElementById('networkinfoverkratke').innerHTML = this.responseText;
-            };
-            xhr.send();
-        </script>
-
-        <pre class="vs-code" id="networkinfoverkratke">
-Nepodařilo se načíst kód. Máte povolený JavaScript?
-        </pre>
+        <pre><code class="language-csharp">HttpClient client = new HttpClient();
+int cislo = int.Parse(client.GetStringAsync("https://raw.githubusercontent.com/filip2cz/network-info/main/ver").Result);
+Console.WriteLine(cislo - 1);</code></pre>
 
         <h2>Zadání</h2>
         <p>
@@ -112,8 +84,10 @@ Nepodařilo se načíst kód. Máte povolený JavaScript?
             stáhnout číslo a po té ho vydělit číslem ze stránky <a
                 href="https://www.random.org/integers/?num=1&min=1&max=6&col=1&base=10&format=plain&rnd=new"
                 target="_blank">https://www.random.org/integers/?num=1&min=1&max=6&col=1&base=10&format=plain&rnd=new</a>.
-            Nezapomeňte, že výsledek nemusí být celé číslo, takže je vhodné použít jiný datový typ než int.
+            Nezapomeňte, že výsledek nemusí být celé číslo, takže je vhodné použít jiný datový typ, než int.
         </p>
+
+        <!--
 
         <h2>Příliš snadné?</h2>
         <p>
@@ -144,6 +118,9 @@ Nepodařilo se načíst kód. Máte povolený JavaScript?
 Nepodařilo se načíst kód. Řešení pravděpodobně ještě nebylo uvolněno, nebo nemáte povolený JavaScript.
             </pre>
         </div>
+
+        -->
+
     </div>
 
 </body>

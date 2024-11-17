@@ -28,6 +28,8 @@
 
         <pre><code class="language-csharp">C# kód</code></pre>
 
+        <pre><code class="language-csharp" id="allowCopy">C# kód</code></pre>
+
         <pre><code class="language-arduino">Arduino kód</code></pre>
 
         <p class="output">Výstup z konzole</p>

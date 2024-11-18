@@ -55,25 +55,6 @@
 Nepodařilo se načíst kód. Máte povolený JavaScript?
             </pre>
 
-            <script>
-                var xhr = new XMLHttpRequest();
-                xhr.open('GET', '1-solution.cs', true);
-                xhr.onreadystatechange = function () {
-                    if (this.readyState !== 4) return;
-                    if (this.status !== 200) return; // or whatever error handling you want
-                    document.getElementById('1-solution').innerHTML = this.responseText;
-                };
-                xhr.send();
-            </script>
-
-            <button class="btn btn-primary" data-bs-toggle="collapse"
-                data-bs-target="#reseni-1-solution">řešení</button>
-            <div id="reseni-1-solution" class="collapse mt-3">
-                <pre class="vs-code" id="1-solution">
-Nepodařilo se načíst kód. Řešení pravděpodobně ještě nebylo uvolněno, nebo nemáte povolený JavaScript.
-                </pre>
-            </div>
-
             <h2>
                 <li>Špatný typ proměnné</li>
             </h2>
@@ -98,25 +79,6 @@ Nepodařilo se načíst kód. Řešení pravděpodobně ještě nebylo uvolněno
 Nepodařilo se načíst kód. Máte povolený JavaScript?
             </pre>
 
-            <script>
-                var xhr = new XMLHttpRequest();
-                xhr.open('GET', '2-solution.cs', true);
-                xhr.onreadystatechange = function () {
-                    if (this.readyState !== 4) return;
-                    if (this.status !== 200) return; // or whatever error handling you want
-                    document.getElementById('2-solution').innerHTML = this.responseText;
-                };
-                xhr.send();
-            </script>
-
-            <button class="btn btn-primary" data-bs-toggle="collapse"
-                data-bs-target="#reseni-2-solution">řešení</button>
-            <div id="reseni-2-solution" class="collapse mt-3">
-                <pre class="vs-code" id="2-solution">
-Nepodařilo se načíst kód. Řešení pravděpodobně ještě nebylo uvolněno, nebo nemáte povolený JavaScript.
-                </pre>
-            </div>
-
             <h2>
                 <li>Rozbitý IF</li>
             </h2>
@@ -139,25 +101,6 @@ Nepodařilo se načíst kód. Řešení pravděpodobně ještě nebylo uvolněno
             <pre class="vs-code" id="3">
 Nepodařilo se načíst kód. Máte povolený JavaScript?
             </pre>
-
-            <script>
-                var xhr = new XMLHttpRequest();
-                xhr.open('GET', '3-solution.cs', true);
-                xhr.onreadystatechange = function () {
-                    if (this.readyState !== 4) return;
-                    if (this.status !== 200) return; // or whatever error handling you want
-                    document.getElementById('3-solution').innerHTML = this.responseText;
-                };
-                xhr.send();
-            </script>
-
-            <button class="btn btn-primary" data-bs-toggle="collapse"
-                data-bs-target="#reseni-3-solution">řešení</button>
-            <div id="reseni-3-solution" class="collapse mt-3">
-                <pre class="vs-code" id="3-solution">
-Nepodařilo se načíst kód. Řešení pravděpodobně ještě nebylo uvolněno, nebo nemáte povolený JavaScript.
-                </pre>
-            </div>
 
             <h2>
                 <li>Čísla od 1 do 99</li>
@@ -182,42 +125,6 @@ Nepodařilo se načíst kód. Řešení pravděpodobně ještě nebylo uvolněno
 Nepodařilo se načíst kód. Máte povolený JavaScript?
             </pre>
 
-            <script>
-                var xhr = new XMLHttpRequest();
-                xhr.open('GET', '4-solution.cs', true);
-                xhr.onreadystatechange = function () {
-                    if (this.readyState !== 4) return;
-                    if (this.status !== 200) return; // or whatever error handling you want
-                    document.getElementById('4-solution').innerHTML = this.responseText;
-                };
-                xhr.send();
-            </script>
-
-            <script>
-                var xhr = new XMLHttpRequest();
-                xhr.open('GET', '4-solution2.cs', true);
-                xhr.onreadystatechange = function () {
-                    if (this.readyState !== 4) return;
-                    if (this.status !== 200) return; // or whatever error handling you want
-                    document.getElementById('4-solution2').innerHTML = this.responseText;
-                };
-                xhr.send();
-            </script>
-
-            <button class="btn btn-primary" data-bs-toggle="collapse"
-                data-bs-target="#reseni-4-solution">řešení</button>
-            <div id="reseni-4-solution" class="collapse mt-4">
-                <pre class="vs-code" id="4-solution">
-Nepodařilo se načíst kód. Řešení pravděpodobně ještě nebylo uvolněno, nebo nemáte povolený JavaScript.
-                </pre>
-
-                <p>nebo ještě lépe:</p>
-
-                <pre class="vs-code" id="4-solution2">
-Nepodařilo se načíst kód. Řešení pravděpodobně ještě nebylo uvolněno, nebo nemáte povolený JavaScript.
-                </pre>
-            </div>
-
             <h2>
                 <li>Násobící program</li>
             </h2>
@@ -237,25 +144,6 @@ Výsledek: 10
 Zadejte číslo: 3,7
 Výsledek: 7,4
             </pre>
-
-            <script>
-                var xhr = new XMLHttpRequest();
-                xhr.open('GET', '5-solution.cs', true);
-                xhr.onreadystatechange = function () {
-                    if (this.readyState !== 4) return;
-                    if (this.status !== 200) return; // or whatever error handling you want
-                    document.getElementById('5-solution').innerHTML = this.responseText;
-                };
-                xhr.send();
-            </script>
-
-            <button class="btn btn-primary" data-bs-toggle="collapse"
-                data-bs-target="#reseni-5-solution">řešení</button>
-            <div id="reseni-5-solution" class="collapse mt-3">
-                <pre class="vs-code" id="5-solution">
-Nepodařilo se načíst kód. Řešení pravděpodobně ještě nebylo uvolněno, nebo nemáte povolený JavaScript.
-                </pre>
-            </div>
 
             <h2>
                 <li>Záhadná kalkulačka</li>
@@ -280,25 +168,6 @@ Zadejte b: 5,6
 Obvod: 18
 Obsah: 19,04
             </pre>
-
-            <script>
-                var xhr = new XMLHttpRequest();
-                xhr.open('GET', '6-solution.cs', true);
-                xhr.onreadystatechange = function () {
-                    if (this.readyState !== 4) return;
-                    if (this.status !== 200) return; // or whatever error handling you want
-                    document.getElementById('6-solution').innerHTML = this.responseText;
-                };
-                xhr.send();
-            </script>
-
-            <button class="btn btn-primary" data-bs-toggle="collapse"
-                data-bs-target="#reseni-6-solution">řešení</button>
-            <div id="reseni-6-solution" class="collapse mt-3">
-                <pre class="vs-code" id="6-solution">
-Nepodařilo se načíst kód. Řešení pravděpodobně ještě nebylo uvolněno, nebo nemáte povolený JavaScript.
-                </pre>
-            </div>
 
         </ol>
     </div>

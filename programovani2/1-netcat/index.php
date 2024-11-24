@@ -8,16 +8,7 @@
 </head>
 
 <body>
-    <!-- CSS a JavaScript -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="../../main.css">
-
-    <!-- Support pro mobilní menu -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php include("../../src/link.html"); ?>
 
     <div class="container">
 
@@ -40,7 +31,7 @@
         </p>
 
         <p>
-            Program netcat se používá jinak, než programy se kterými většina z vás již pracovala. Je používám z
+            Program netcat se používá jinak, než programy, se kterými většina z vás již pracovala. Je používán z
             příkazové řádky. První se musíte dostat do složky, kam jste netcat stáhli. Pokud jste ho uložili na plochu,
             dostanete se tam následujícím příkazem v PowerShellu:
         </p>
@@ -149,10 +140,20 @@ Ethernet adapter Ethernet:
 
         <h2>Zadání:</h2>
 
+        <!--
+
         <p>
             Utvořte dvojice. Jeden u sebe otevře nějaký port a druhý se na něj připojí. Pokud si nebudete vědět rady,
             nebojte se zeptat vašeho lektora. Pokud je vás lichý počet a není možné utvořit dvojice, můžete se
             prostřídat tak aby si to zkusili všichni.
+        </p>
+
+        -->
+
+        <p>
+            Spustěte si netcat dvakrát. Jednou jako server a jednou jako clienta, který se na ten server připojí.
+            Otestujte úspěšné spojení tak, že pošlete data z clienta na server a obráceně. Pokud si nebudete vědět rady,
+            nebojte se zeptat vašeho lektora.
         </p>
 
         <p>

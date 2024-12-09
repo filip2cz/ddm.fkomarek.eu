@@ -17,7 +17,11 @@
         <h1 class="nadpis">Automatická závora</h1>
 
         <p>
-            Vytvořte závoru, která se autometicky otevírá a zavírá. Závora se otevře pouze pro zelená auta. Závora se
+            Představte si, že vás najala firma provozující parkoviště pouze pro zelená auta. Mají na vás tento požadavek:
+        </p>
+
+        <p>
+            Vytvořte závoru, která se automaticky otevírá a zavírá. Závora se otevře pouze pro zelená auta. Závora se
             zavře, pokud již auto není v prostoru závory. Pokud se auto zastaví, závora čeká.
         </p>
 

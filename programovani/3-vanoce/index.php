@@ -24,7 +24,7 @@
 
         <h2>Barvičky</h2>
 
-        V naší konzoli si můžeme měnit barvičky textu. Můžeme to dělat například takto:
+        <p>V naší konzoli si můžeme měnit barvičky textu. Můžeme to dělat například takto:</p>
 
         <pre><code class="language-csharp" id="allowCopy">Console.ForegroundColor = ConsoleColor.Blue;
 Console.WriteLine(&quot;Modr&yacute; text&quot;);

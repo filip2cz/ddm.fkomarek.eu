@@ -26,7 +26,7 @@
 
         <p>V naší konzoli si můžeme měnit barvičky textu. Můžeme to dělat například takto:</p>
 
-        <pre><code class="language-csharp" id="allowCopy">Console.ForegroundColor = ConsoleColor.Blue;
+        <pre><code class="language-csharp">Console.ForegroundColor = ConsoleColor.Blue;
 Console.WriteLine(&quot;Modr&yacute; text&quot;);
 
 Console.BackgroundColor = ConsoleColor.Green;
@@ -43,7 +43,7 @@ Console.ReadLine();</code></pre>
             použít například takto:
         </p>
 
-        <pre><code class="language-csharp" id="allowCopy">DateTime datum = DateTime.Now;
+        <pre><code class="language-csharp">DateTime datum = DateTime.Now;
 
 Console.Write(&quot;Aktu&aacute;ln&iacute; rok je: &quot;);
 Console.WriteLine(datum.Year);
@@ -68,13 +68,13 @@ Console.WriteLine(&quot;. den v měs&iacute;ci&quot;);</code></pre>
             Vytvořte program, který vypíše uživateli, kolik dní žije. Budou se vám pro to hodit následující věci, které jsme zatím nezmínili:
         </p>
 
-        <pre><code class="language-csharp" id="allowCopy">// nastaví naši proměnnou typu DateTime na nějaké konkrétní datum
+        <pre><code class="language-csharp">// nastaví naši proměnnou typu DateTime na nějaké konkrétní datum
 DateTime narozeniny = DateTime.Parse("2004-09-14");</code></pre>
 
-        <pre><code class="language-csharp" id="allowCopy">// spočítá rozdíl mezi dvoumy DateTime
+        <pre><code class="language-csharp">// spočítá rozdíl mezi dvoumy DateTime
 TimeSpan rozdil = jinejDateTime - narozeniny;</code></pre>
 
-        <pre><code class="language-csharp" id="allowCopy">// vypíše TimeSpan, který jsme nastavili výše, ve dnech.
+        <pre><code class="language-csharp">// vypíše TimeSpan, který jsme nastavili výše, ve dnech.
 Console.WriteLine(rozdil.Days);</code></pre>
 
         <h3>Nezapomeňte odevzdat váš kód na Google Učebnu: <a target="_blank" href="https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzQxNDk4NTk0Nzk4/details">https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzQxNDk4NTk0Nzk4/details</a></h3>

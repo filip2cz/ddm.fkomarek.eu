@@ -3,26 +3,12 @@
 
 <head>
     <title>DDM - Filip Komárek</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <meta charset='utf-8'>
 </head>
 
 <body>
-    <script>
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', '/src/link.html', true);
-        xhr.onreadystatechange = function () {
-            if (this.readyState !== 4) return;
-            if (this.status !== 200) return; // or whatever error handling you want
-            document.getElementById('backend-link').innerHTML = this.responseText;
-        };
-        xhr.send();
-    </script>
-    <div id="backend-link"></div>
-    <script src="/css/highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
-    </script>
+    <?php include("../../src/link.html"); ?>
 
     <p class="test-link">ERROR loading link.html, enable javascript please</p>
 
@@ -33,13 +19,13 @@
         <h1 class="nadpis">Úvod do Arduina</h1>
 
         <p>
-            Vrchol našeho kroužku je práce s Arduiny. Přece jen, jsme programování hardware. Budeme pracovat s Arduino
+            Vrchol našeho kroužku je práce s Arduiny. Přece jen, jsme programování IOT. Budeme pracovat s Arduino
             Uno. V DDM je máme fyzicky a budeme používat program
             <a href="https://docs.arduino.cc/software/ide/#ide-v2" target="_blank">Arduino IDE V2</a>,
             doma si programování můžete zkoušet na simulátoru zde:
             <a href="https://wokwi.com/projects/new/arduino-uno"
                 target="_blank">https://wokwi.com/projects/new/arduino-uno</a>.
-            Arduino se neprogramuje v C#, na který jsme zvyklí, ale je programování v upraveném jazyce C++.
+            Arduino se neprogramuje v C#, na který jsme zvyklí, ale je programováno v upraveném jazyce C++.
         </p>
 
         <p>
@@ -235,10 +221,38 @@ void loop() {
 
         <pre class="output">Součet čísel 6 a 1 = 7</pre>
 
+        <h2>Použití proměnné v <code>setup()</code> a <code>loop()</code> zároveň</h2>
+
+        <p>Pokud chci použít proměnnou v <code>setup()</code> a v <code>loop()</code> zároveň, musím si ji definovat mimo tyto voidy.</p>
+
+        <pre><code class="language-arduino">int vysledek;
+
+void setup() {
+    // put your setup code here, to run once:
+    Serial.begin(9600);
+
+    String text = "Součet čísel 6 a 1 = ";
+
+    int cislo1 = 6;
+    int cislo2 = 1;
+    vysledek = cislo1 + cislo2;
+
+    Serial.print(text);
+}
+
+void loop() {
+    // put your main code here, to run repeatedly:
+    Serial.println(vysledek);
+
+}</code></pre>
+
         <h2>Úkol</h2>
         <p>
-            Vytvořte program, který vypíše čísla od 1 do 15 bez toho, aby jste použili <code>while</code>. Použijte <code>void loop()</code>.
+            Vytvořte program, který vypíše čísla od 1 do 15 bez toho, aby jste použili <code>while</code>. Použijte
+            <code>void loop()</code>. Vzpomeňte si na <code>if</code> ze C#, který zde funguje stejně.
         </p>
+
+        <!--
 
         <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#reseni">řešení</button>
         <div id="reseni" class="collapse mt-3">
@@ -274,6 +288,8 @@ void loop() {
 15
         </pre>
         </div>
+
+-->
 
     </div>
 

@@ -18,7 +18,7 @@
 
         <p>Zadání na dnešní dej vytvoření katapultu. Katapult bude fungovat tak, že po stisknutí tlačítka vypálí míček, kterým se trefí do cíle.</p>
 
-        <p>Pokud již máte hotovo, vytvořte robota, který pojede směrem k cíli a jakmile bude těsně u cíle, tak vloží míček do cíle.</p>
+        <p>Pokud již máte hotovo, vytvořte robota, který nabere míček, pojede směrem k cíli a jakmile bude těsně u cíle, tak do něj vloží míček.</p>
 
     </div>
 

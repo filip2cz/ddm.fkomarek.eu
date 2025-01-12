@@ -8,22 +8,7 @@
 </head>
 
 <body>
-    <script>
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', '/src/link.html', true);
-        xhr.onreadystatechange = function () {
-            if (this.readyState !== 4) return;
-            if (this.status !== 200) return; // or whatever error handling you want
-            document.getElementById('backend-link').innerHTML = this.responseText;
-        };
-        xhr.send();
-    </script>
-    <div id="backend-link"></div>
-    <script src="/css/highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
-        </script>
+    <?php include ("../../src/link.html"); ?>
 
     <div class="container">
 

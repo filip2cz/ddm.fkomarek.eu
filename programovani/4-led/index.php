@@ -8,26 +8,13 @@
 </head>
 
 <body>
-    <script>
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', '/src/link.html', true);
-        xhr.onreadystatechange = function () {
-            if (this.readyState !== 4) return;
-            if (this.status !== 200) return; // or whatever error handling you want
-            document.getElementById('backend-link').innerHTML = this.responseText;
-        };
-        xhr.send();
-    </script>
-    <div id="backend-link"></div>
-    <script src="/css/highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
-        </script>
+    <?php include ("../../src/link.html"); ?>
 
     <div class="container">
 
         <a href="../"><button class="btn btn-primary" type="button">Zpět</button></a>
+
+        <p class="test-link">ERROR: načtení souboru link.html bylo neúspěšné</p>
 
         <h1 class="nadpis">Práce s LED diodou</h1>
 
@@ -75,9 +62,11 @@
 
         -->
 
+        <h2><a href="https://wokwi.com/projects/new/arduino-uno" target="_blank">Simulátor</a></h2>
+
         <p>
-            Asi jste si všimli, že k Arduinu v našem símulátoru můžeme připojovat také další zařízení. Dneska si tam
-            zkusíme připojit LED diodu, což je vlastně taková "žárovička". Pokud jste v simulátoru, LED diodu můžete
+            Dneska budeme pracovat v simulátoru.
+            Zkusíme připojit LED diodu, což je vlastně taková "žárovička". Pokud jste v simulátoru, LED diodu můžete
             přidat pomocí tlačítka <code>+</code>. Zapojení bude vypadat takto:
         </p>
 

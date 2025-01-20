@@ -174,6 +174,11 @@ void loop() {
             semaforu. K tomu tam bude malý semafor pro chodce, který pustí chodce pokud budou mít auta červenou.
         </p>
 
+        <h3>
+            Nezapomeňte odevzdat váš kód na Google Učebnu:<br>
+            <a href="https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/Njg3OTM2ODc2Mjcx/details">https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/Njg3OTM2ODc2Mjcx/details</a>
+        </h3>
+
     </div>
 
 </body>

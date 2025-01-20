@@ -248,7 +248,7 @@ void loop() {
 
         <p>
             Nezapomeňte odevzdat váš kód na Google Classroom: <a
-                href="https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/NjcxMTY5MzQ0NjQ1/details">https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/NjcxMTY5MzQ0NjQ1/details</a>
+                href="https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/Njg3NzQ5NTEzNTI1/details">https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/Njg3NzQ5NTEzNTI1/details</a>
         </p>
 
     </div>

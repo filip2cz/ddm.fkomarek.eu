@@ -8,24 +8,11 @@
 </head>
 
 <body>
-    <script>
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', '/src/link.html', true);
-        xhr.onreadystatechange = function () {
-            if (this.readyState !== 4) return;
-            if (this.status !== 200) return; // or whatever error handling you want
-            document.getElementById('backend-link').innerHTML = this.responseText;
-        };
-        xhr.send();
-    </script>
-    <div id="backend-link"></div>
-    <script src="/css/highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
-        </script>
+    <?php include("../../src/link.html"); ?>
 
     <div class="container">
+
+        <p class="test-link">ERROR: načtení souboru link.html bylo neúspěšné</p>
 
         <a href="../"><button class="btn btn-primary" type="button">Zpět</button></a>
 
@@ -33,47 +20,47 @@
 
         <!--
 
-        <p>
-            Mauris elementum mauris vitae tortor. Nullam rhoncus aliquam metus. Nullam dapibus fermentum ipsum.
-        </p>
+<p>
+    Mauris elementum mauris vitae tortor. Nullam rhoncus aliquam metus. Nullam dapibus fermentum ipsum.
+</p>
 
-        https://www.freeformatter.com/html-escape.html
+https://www.freeformatter.com/html-escape.html
 
-        <pre><code class="language-csharp">C# kód</code></pre>
+<pre><code class="language-csharp">C# kód</code></pre>
 
-        <pre><code class="language-arduino">Arduino kód</code></pre>
+<pre><code class="language-arduino">Arduino kód</code></pre>
 
-        <p class="output">Výstup z konzole</p>
+<p class="output">Výstup z konzole</p>
 
-        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#reseni1">řešení</button>
-        <div id="reseni1" class="collapse mt-3">
-            <pre>řešení</pre>
-        </div>
+<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#reseni1">řešení</button>
+<div id="reseni1" class="collapse mt-3">
+    <pre>řešení</pre>
+</div>
 
-        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#popis1">Podrobný popis kódu</button>
-        <div id="popis1" class="collapse mt-3">
-            <ul>
-                <li>
-                    Nějaký popis
-                </li>
+<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#popis1">Podrobný popis kódu</button>
+<div id="popis1" class="collapse mt-3">
+    <ul>
+        <li>
+            Nějaký popis
+        </li>
 
-                <br>
-                <h5>První část:</h5>
+        <br>
+        <h5>První část:</h5>
 
-                <li>
-                    Popis první části
-                </li>
+        <li>
+            Popis první části
+        </li>
 
-                <br>
-                <h5>Druhá část:</h5>
+        <br>
+        <h5>Druhá část:</h5>
 
-                <li>
-                    Popis druhé části
-                </li>
-            </ul>
-        </div>
+        <li>
+            Popis druhé části
+        </li>
+    </ul>
+</div>
 
-        -->
+-->
 
         <p>
             V dnešní hodině si ukážeme, jak pracovat s tlačítky. V našem edushield je tlačítko na pinu číslo 2. Více
@@ -83,22 +70,22 @@
         </p>
 
         <p>
-            Následující kód nám zařídí, že se bude do konzole vypisovat číslo 0, pokud je tlačítko stisknutu. Pokud
+            Následující kód nám zařídí, že se bude do konzole vypisovat číslo 0, pokud je tlačítko stisknuto. Pokud
             není, bude se nám vypisovat číslo 1.
         </p>
 
         <pre><code class="language-arduino">#define button 2
 
 void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  pinMode(button,INPUT_PULLUP);
+    // put your setup code here, to run once:
+    Serial.begin(9600);
+    pinMode(button,INPUT_PULLUP);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  int b = digitalRead(button);
-  Serial.println(b);
+    // put your main code here, to run repeatedly:
+    int b = digitalRead(button);
+    Serial.println(b);
 }</code></pre>
 
         <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#popis1">Podrobný popis kódu</button>
@@ -113,7 +100,8 @@ void loop() {
                 <h5>void setup()</h5>
 
                 <li>
-                    <code>Serial.begin(9600);</code> nám spustí konzoli s datovým přenosem o rychlosti 9600 <a href="https://cs.wikipedia.org/wiki/Baud" target="_blank">baudů za sekundu</a>.
+                    <code>Serial.begin(9600);</code> nám spustí konzoli s datovým přenosem o rychlosti 9600 <a
+                        href="https://cs.wikipedia.org/wiki/Baud" target="_blank">baudů za sekundu</a>.
                 </li>
 
                 <li>
@@ -150,21 +138,21 @@ void loop() {
         <pre><code class="language-arduino">#define button 2
 
 void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  pinMode(button, INPUT_PULLUP);
+    // put your setup code here, to run once:
+    Serial.begin(9600);
+    pinMode(button, INPUT_PULLUP);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  int b = digitalRead(button);
+    // put your main code here, to run repeatedly:
+    int b = digitalRead(button);
 
-  if (b == 0) {
-    Serial.println(&quot;Tlač&iacute;tko bylo stisknuto&quot;);
-  }
-  else if (b == 1) {
-    Serial.println(&quot;Tlač&iacute;tko bylo pu&scaron;těno&quot;);
-  }
+    if (b == 0) {
+        Serial.println(&quot;Tlač&iacute;tko bylo stisknuto&quot;);
+    }
+    else if (b == 1) {
+        Serial.println(&quot;Tlač&iacute;tko bylo pu&scaron;těno&quot;);
+    }
 }</code></pre>
 
         <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#popis2">Podrobný popis kódu</button>
@@ -179,7 +167,8 @@ void loop() {
                 <h5>void setup()</h5>
 
                 <li>
-                    <code>Serial.begin(9600);</code> nám spustí konzoli s datovým přenosem o rychlosti 9600 <a href="https://cs.wikipedia.org/wiki/Baud" target="_blank">baudů za sekundu</a>.
+                    <code>Serial.begin(9600);</code> nám spustí konzoli s datovým přenosem o rychlosti 9600 <a
+                        href="https://cs.wikipedia.org/wiki/Baud" target="_blank">baudů za sekundu</a>.
                 </li>
 
                 <li>
@@ -219,24 +208,24 @@ void loop() {
 int lastState = 1;
 
 void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  pinMode(button,INPUT_PULLUP);
+    // put your setup code here, to run once:
+    Serial.begin(9600);
+    pinMode(button,INPUT_PULLUP);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  int b = digitalRead(button);
+    // put your main code here, to run repeatedly:
+    int b = digitalRead(button);
 
-  if (lastState != b){
-    if (b == 0) {
-      Serial.println(&quot;Tlač&iacute;tko bylo stisknuto&quot;);
+    if (lastState != b){
+        if (b == 0) {
+            Serial.println(&quot;Tlač&iacute;tko bylo stisknuto&quot;);
+        }
+        else if (b == 1) {
+            Serial.println(&quot;Tlač&iacute;tko bylo pu&scaron;těno&quot;);
+        }
+        lastState = b;
     }
-    else if (b == 1) {
-      Serial.println(&quot;Tlač&iacute;tko bylo pu&scaron;těno&quot;);
-    }
-    lastState = b;
-  }
 }</code></pre>
 
         <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#popis3">Podrobný popis kódu</button>
@@ -257,7 +246,8 @@ void loop() {
                 <h5>void setup()</h5>
 
                 <li>
-                    <code>Serial.begin(9600);</code> nám spustí konzoli s datovým přenosem o rychlosti 9600 <a href="https://cs.wikipedia.org/wiki/Baud" target="_blank">baudů za sekundu</a>.
+                    <code>Serial.begin(9600);</code> nám spustí konzoli s datovým přenosem o rychlosti 9600 <a
+                        href="https://cs.wikipedia.org/wiki/Baud" target="_blank">baudů za sekundu</a>.
                 </li>
 
                 <li>
@@ -312,7 +302,9 @@ void loop() {
         </p>
 
         <p>
-            Nezapomeňte odevzdat váš kód do Google Učebny: <a href="https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/Njc0MTQzNTQ2MTk2/details" target="_blank">https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/Njc0MTQzNTQ2MTk2/details</a>
+            Nezapomeňte odevzdat váš kód do Google Učebny: <a
+                href="https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/Njc0MTQzNTQ2MTk2/details"
+                target="_blank">https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/Njc0MTQzNTQ2MTk2/details</a>
         </p>
 
         <h2>Příliš snadné?</h2>

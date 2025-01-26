@@ -97,6 +97,7 @@ void loop() {
 
 void setup() {
   // put your setup code here, to run once:
+  pinMode(led_red,OUTPUT);
   digitalWrite(led_red, HIGH);
 }
 
@@ -115,6 +116,7 @@ void loop() {
 
 void setup() {
   // put your setup code here, to run once:
+  pinMode(led_red,OUTPUT);
 }
 
 void loop() {
@@ -145,6 +147,7 @@ void loop() {
 
 void setup() {
   // put your setup code here, to run once:
+  pinMode(led_red,OUTPUT);
 }
 
 void loop() {

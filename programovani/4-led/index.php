@@ -16,7 +16,7 @@
 
         <p class="test-link">ERROR: načtení souboru link.html bylo neúspěšné</p>
 
-        <h1 class="nadpis">Práce s LED diodou</h1>
+        <h1 class="nadpis">LED DIODA</h1>
 
         <!--
 

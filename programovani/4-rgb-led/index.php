@@ -131,7 +131,7 @@ void loop() {
         </p>
 
         <p>
-            Nezapomeňte odevzdat váš kód do Google Classroom: <a href="https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/Njc1NjAyNDAyMjY4/details" target="_blank">https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/Njc1NjAyNDAyMjY4/details</a>
+            Nezapomeňte odevzdat váš kód do Google Classroom: <a href="https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzQ4MjY5NDg0MTM1/details" target="_blank">https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzQ4MjY5NDg0MTM1/details</a>
         </p>
 
         <!--

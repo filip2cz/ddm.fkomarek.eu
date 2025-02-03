@@ -94,7 +94,7 @@ void loop() {
 }</code></pre>
 
         <p>
-            Pokud chceme rozsvítit zelenou, můžeme prostě nastavit <code>rgb_green</code> na <code>LOW</code> a všechny ostatní barvy (<code>rgb_red</code> a <code>rgb_blue</code>) nastavit na <code>HIGH</code>.
+            Pokud chceme rozsvítit zelenou, můžeme nastavit <code>rgb_green</code> na <code>LOW</code> a všechny ostatní barvy (<code>rgb_red</code> a <code>rgb_blue</code>) nastavit na <code>HIGH</code>.
         </p>
 
         <pre><code class="language-arduino">#define rgb_red 9
@@ -119,7 +119,7 @@ void loop() {
   // put your main code here, to run repeatedly:
 }</code></pre>
 
-        <h2>Zadání: vytvořte kód, který bude na diodě střídat</h2>
+        <h2>Zadání: vytvořte kód, který bude na diodě střídat barvy</h2>
 
         <p>
             Vytvořte program, který bude po nějakém časovém intervale (například vteřina) střídat všechny barvy.

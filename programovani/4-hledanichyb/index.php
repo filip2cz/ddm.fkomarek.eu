@@ -66,12 +66,16 @@
         </p>
 
         <p>
-            Opravený kód vkládejte do následujícího zadání na Google učebně: <a href="https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/NjUyODUzNDkzMjAy/details" target="_blank">https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/NjUyODUzNDkzMjAy/details</a>
+            Opravený kód vkládejte do následujícího zadání na Google učebně: <a href="https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzQ5NTY3NzMxMzEy/details" target="_blank">https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzQ5NTY3NzMxMzEy/details</a>
+        </p>
+
+        <p>
+          Pole níže je možné kopírovat.
         </p>
 
         <ol>
             <li>
-                <pre><code class="language-arduino">// V n&aacute;sleduj&iacute;c&iacute;m k&oacute;du se nach&aacute;z&iacute; 2 chyby
+                <pre><code class="language-arduino" id="allowCopy">// V n&aacute;sleduj&iacute;c&iacute;m k&oacute;du se nach&aacute;z&iacute; 2 chyby
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600)
@@ -81,12 +85,13 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 }
+
 // Oček&aacute;van&aacute; funkce k&oacute;du:
 // Vyp&iacute;&scaron;e do konzole text &quot;Hello wolrd!&quot;</code></pre>
             </li>
 
             <li>
-                <pre><code class="language-arduino">// V n&aacute;sleduj&iacute;c&iacute;m k&oacute;du se nach&aacute;z&iacute; 1 chyba
+                <pre><code class="language-arduino" id="allowCopy">// V n&aacute;sleduj&iacute;c&iacute;m k&oacute;du se nach&aacute;z&iacute; 1 chyba
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
@@ -102,12 +107,13 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 }
+
 // Oček&aacute;van&aacute; funkce k&oacute;du:
 // Vyp&iacute;&scaron;e, jestli proměnn&aacute; x je nebo nen&iacute; č&iacute;slo 10.</code></pre>
             </li>
 
             <li>
-                <pre><code class="language-arduino">// V n&aacute;sleduj&iacute;c&iacute;m k&oacute;du se nach&aacute;z&iacute; 2 chyby
+                <pre><code class="language-arduino" id="allowCopy">// V n&aacute;sleduj&iacute;c&iacute;m k&oacute;du se nach&aacute;z&iacute; 2 chyby
 void setup() {
   // put your setup code here, to run once:
   Serial.start(9600);
@@ -129,7 +135,7 @@ void loop() {
             </li>
 
             <li>
-                <pre><code class="language-arduino">// V n&aacute;sleduj&iacute;c&iacute;m k&oacute;du se nach&aacute;z&iacute; 4 chyby
+                <pre><code class="language-arduino" id="allowCopy">// V n&aacute;sleduj&iacute;c&iacute;m k&oacute;du se nach&aacute;z&iacute; 4 chyby
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
@@ -150,7 +156,7 @@ void loop() {
             </li>
 
             <li>
-                <pre><code class="language-arduino">// V n&aacute;sleduj&iacute;c&iacute;m k&oacute;du se nach&aacute;z&iacute; 4 chyby
+                <pre><code class="language-arduino" id="allowCopy">// V n&aacute;sleduj&iacute;c&iacute;m k&oacute;du se nach&aacute;z&iacute; 4 chyby
 #define led_yellow 17
 #define led_red 16
 void setup() {
@@ -169,7 +175,7 @@ void loop() {
             </li>
 
             <li>
-                <pre><code class="language-arduino">// V n&aacute;sleduj&iacute;c&iacute;m k&oacute;du se nach&aacute;z&iacute; 3 chyby
+                <pre><code class="language-arduino" id="allowCopy">// V n&aacute;sleduj&iacute;c&iacute;m k&oacute;du se nach&aacute;z&iacute; 3 chyby
 #define BUTTON 3
 int lastState = 1;
 

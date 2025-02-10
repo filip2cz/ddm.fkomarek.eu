@@ -171,7 +171,7 @@ void loop() {
   // put your main code here, to run repeatedly:
 }
 // Oček&aacute;van&aacute; funkce k&oacute;du:
-// Tento k&oacute;d by měl rozsv&iacute;tit žlutou a červenou led diodu na pinech 17 a 16</code></pre>
+// Tento k&oacute;d by měl rozsv&iacute;tit žlutou a červenou led diodu na pinech 4 a 7</code></pre>
             </li>
 
             <li>

@@ -96,7 +96,7 @@ void loop() {
 
     <p>
         <b>
-            Nezapomeňte váš kód odevzdat do Google učebny: <a href="https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/Njc3OTY0NTk5NDAw/details" target="_blank">https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/Njc3OTY0NTk5NDAw/details</a>
+            Nezapomeňte váš kód odevzdat do Google učebny: <a href="https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzYwNDEwMzQ0MjI4/details" target="_blank">https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzYwNDEwMzQ0MjI4/details</a>
         </b>
     </p>
 

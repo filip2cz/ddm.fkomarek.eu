@@ -24,9 +24,7 @@
         </p>
 
         <p><b>Textové pole níže jde kopírovat</b></p>
-        <pre><code class="language-arduino" id="allowCopy">
-#include &lt;edushield.h&gt;
-
+        <pre><code class="language-arduino" id="allowCopy">#include &lt;edushield.h&gt;
 
 void setup() {
   Serial.begin(9600);
@@ -90,10 +88,7 @@ void loop() {
 
         <h2>Nápověda k písmenkům</h2>
 
-        <pre><code class="language-arduino">Serial.println(&quot;Begin2...&quot;);
-Display.set4(0b00110111,0b00000110,0b00111001,0b10000000);
-Serial.println(&quot;End2...&quot;);
-delay(1000);</code></pre>
+        <pre><code class="language-arduino">Display.set4(0b00110111,0b00000110,0b00111001,0b10000000);</code></pre>
 
     <img src="https://raw.githubusercontent.com/arduino-edushield/edushield/refs/heads/master/extras/learning/course/cz/img/7segment.png" style=" max-width: 30% !important;">
 

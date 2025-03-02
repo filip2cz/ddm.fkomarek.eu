@@ -169,6 +169,10 @@ void loop() {
 
 }</code></pre>
 
+<p>
+    Tohle se vám může hodit: <a href="https://www.techsystemsembedded.com/ascii_table.php" target="_blank">ASCII Tabulka</a>
+</p>
+
         <h2>Zadání</h2>
 
         <p>

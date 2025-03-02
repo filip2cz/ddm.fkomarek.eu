@@ -118,7 +118,8 @@ void loop() {
 
         -->
 
-        <pre><code class="language-arduino">
+        <p><b>Textové pole níže jde kopírovat</b></p>
+        <pre><code class="language-arduino" id="allowCopy">
 // Zde můžete viděl všechny způsoby, jak se dají zapisovat znaky na displej. V hodině si některé z nich popíšeme.
 
 #include &lt;edushield.h&gt;

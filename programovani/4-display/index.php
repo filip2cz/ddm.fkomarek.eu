@@ -176,7 +176,7 @@ void loop() {
         </p>
 
         <p><b>
-                Nezapomeňte kód odevzdat na google učebnu: <a href="https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/NjgxOTg3ODg4MzQx/details" target="_blank">https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/NjgxOTg3ODg4MzQx/details</a>
+                Nezapomeňte kód odevzdat na google učebnu: <a href="https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzU2MjkyMzc5OTg4/details" target="_blank">https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzU2MjkyMzc5OTg4/details</a>
             </b></p>
 
         <h2>Příliš snadné?</h2>

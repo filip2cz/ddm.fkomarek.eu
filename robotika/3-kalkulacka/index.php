@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <?php include ("../../src/link.html"); ?>
+    <?php include("../../src/link.html"); ?>
 
     <div class="container">
 
@@ -29,6 +29,14 @@
         <p>
             Vytvořte na své lego spike kostce program, díky kterému budete moci vybrat dvě čísla a sečíst je.
         </p>
+
+        <video width="270" height="480" controls>
+            <source src="kalkulacka1.mp4" type="video/mp4">
+        </video>
+
+        <video width="270" height="480" controls>
+            <source src="kalkulacka2.mp4" type="video/mp4">
+        </video>
 
         <p>
             Příliš snadné? Přidejte odčítání (stačí i přičítání záporných čísel), násobení a dělení.

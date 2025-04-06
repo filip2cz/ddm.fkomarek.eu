@@ -30,7 +30,8 @@
             Vytvořte model zatáčení, jenž bude fungoval podobně, jako zatáčení u aut.
         </p>
 
-        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#imageCollapse101">řešení</button>
+        <button class="btn btn-primary js-only" data-bs-toggle="collapse"
+            data-bs-target="#imageCollapse101">řešení</button>
         <div id="imageCollapse101" class="collapse mt-3">
             <video width="270" height="480" controls>
                 <source src="auto1.mp4" type="video/mp4">
@@ -40,6 +41,17 @@
                 <source src="auto2.mp4" type="video/mp4">
             </video>
         </div>
+
+        <noscript>
+            <h2>Řešení</h2>
+            <video width="270" height="480" controls>
+                <source src="auto1.mp4" type="video/mp4">
+            </video>
+
+            <video width="270" height="480" controls>
+                <source src="auto2.mp4" type="video/mp4">
+            </video>
+        </noscript>
 
     </div>
 

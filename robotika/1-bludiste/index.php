@@ -35,87 +35,118 @@
         <h2>Řešení úloh</h2>
 
         <h3>Skládačka</h3>
-        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#imageCollapse101">řešení</button>
+        <button class="btn btn-primary js-only" data-bs-toggle="collapse"
+            data-bs-target="#imageCollapse101">řešení</button>
         <div id="imageCollapse101" class="collapse mt-3">
             <img src="./101.png" alt="Řešení zatím nebylo uvolněno k zobrazení">
         </div>
+        <noscript>
+            <img src="./101.png" alt="Řešení zatím nebylo uvolněno k zobrazení">
+        </noscript>
 
         <h3>Bludiště</h3>
         <ol>
             <li>
-                <button class="btn btn-primary" data-bs-toggle="collapse"
+                <button class="btn btn-primary js-only" data-bs-toggle="collapse"
                     data-bs-target="#imageCollapse201">řešení</button>
                 <div id="imageCollapse201" class="collapse mt-3">
                     <img src="./201.png" alt="Řešení zatím nebylo uvolněno k zobrazení">
                 </div>
+                <noscript>
+                    <img src="./201.png" alt="Řešení zatím nebylo uvolněno k zobrazení">
+                </noscript>
             </li>
 
             <li>
-                <button class="btn btn-primary" data-bs-toggle="collapse"
+                <button class="btn btn-primary js-only" data-bs-toggle="collapse"
                     data-bs-target="#imageCollapse202">řešení</button>
                 <div id="imageCollapse202" class="collapse mt-3">
                     <img src="./202.png" alt="Řešení zatím nebylo uvolněno k zobrazení">
                 </div>
+                <noscript>
+                    <img src="./202.png" alt="Řešení zatím nebylo uvolněno k zobrazení">
+                </noscript>
             </li>
 
             <li>
-                <button class="btn btn-primary" data-bs-toggle="collapse"
+                <button class="btn btn-primary js-only" data-bs-toggle="collapse"
                     data-bs-target="#imageCollapse203">řešení</button>
                 <div id="imageCollapse203" class="collapse mt-3">
                     <img src="./203.png" alt="Řešení zatím nebylo uvolněno k zobrazení">
                 </div>
+                <noscript>
+                    <img src="./203.png" alt="Řešení zatím nebylo uvolněno k zobrazení">
+                </noscript>
             </li>
 
             <li>
-                <button class="btn btn-primary" data-bs-toggle="collapse"
+                <button class="btn btn-primary js-only" data-bs-toggle="collapse"
                     data-bs-target="#imageCollapse204">řešení</button>
                 <div id="imageCollapse204" class="collapse mt-3">
                     <img src="./204.png" alt="Řešení zatím nebylo uvolněno k zobrazení">
                 </div>
+                <noscript>
+                    <img src="./204.png" alt="Řešení zatím nebylo uvolněno k zobrazení">
+                </noscript>
             </li>
 
             <li>
-                <button class="btn btn-primary" data-bs-toggle="collapse"
+                <button class="btn btn-primary js-only" data-bs-toggle="collapse"
                     data-bs-target="#imageCollapse205">řešení</button>
                 <div id="imageCollapse205" class="collapse mt-3">
                     <img src="./205.png" alt="Řešení zatím nebylo uvolněno k zobrazení">
                 </div>
+                <noscript>
+                    <img src="./205.png" alt="Řešení zatím nebylo uvolněno k zobrazení">
+                </noscript>
             </li>
 
             <li>
-                <button class="btn btn-primary" data-bs-toggle="collapse"
+                <button class="btn btn-primary js-only" data-bs-toggle="collapse"
                     data-bs-target="#imageCollapse206">řešení</button>
                 <div id="imageCollapse206" class="collapse mt-3">
                     <img src="./206.png" alt="Řešení zatím nebylo uvolněno k zobrazení">
                 </div>
+                <noscript>
+                    <img src="./206.png" alt="Řešení zatím nebylo uvolněno k zobrazení">
+                </noscript>
             </li>
 
             <li>
-                <button class="btn btn-primary" data-bs-toggle="collapse"
+                <button class="btn btn-primary js-only" data-bs-toggle="collapse"
                     data-bs-target="#imageCollapse207">řešení</button>
                 <div id="imageCollapse207" class="collapse mt-3">
                     <img src="./207.png" alt="Řešení zatím nebylo uvolněno k zobrazení">
                 </div>
+                <noscript>
+                    <img src="./207.png" alt="Řešení zatím nebylo uvolněno k zobrazení">
+                </noscript>
             </li>
 
             <li>
-                <button class="btn btn-primary" data-bs-toggle="collapse"
+                <button class="btn btn-primary js-only" data-bs-toggle="collapse"
                     data-bs-target="#imageCollapse208">řešení</button>
                 <div id="imageCollapse208" class="collapse mt-3">
                     <img src="./208.png" alt="Řešení zatím nebylo uvolněno k zobrazení">
                 </div>
+                <noscript>
+                    <img src="./208.png" alt="Řešení zatím nebylo uvolněno k zobrazení">
+                </noscript>
             </li>
 
             <li>
-                <button class="btn btn-primary" data-bs-toggle="collapse"
+                <button class="btn btn-primary js-only" data-bs-toggle="collapse"
                     data-bs-target="#imageCollapse209">řešení</button>
                 <div id="imageCollapse209" class="collapse mt-3">
                     <img src="./209.png" alt="Řešení zatím nebylo uvolněno k zobrazení">
                 </div>
+                <noscript>
+                    <img src="./209.png" alt="Řešení zatím nebylo uvolněno k zobrazení">
+                </noscript>
             </li>
 
             <li>
-                <button class="btn btn-primary" data-bs-toggle="collapse"
+                <button class="btn btn-primary js-only" data-bs-toggle="collapse"
                     data-bs-target="#imageCollapse210">řešení</button>
                 <div id="imageCollapse210" class="collapse mt-3">
                     <p>pro tento bod jsou tu dvě řešení, jedno které je perfektní z hlediska cesty a druhé má nejméně
@@ -125,6 +156,14 @@
                     <p>nebo</p>
                     <img src="./210-2.png" alt="Řešení zatím nebylo uvolněno k zobrazení">
                 </div>
+                <noscript>
+                    <p>pro tento bod jsou tu dvě řešení, jedno které je perfektní z hlediska cesty a druhé má nejméně
+                        bloků
+                        (druhé udělal Miky Honys)</p>
+                    <img src="./210.png" alt="Řešení zatím nebylo uvolněno k zobrazení">
+                    <p>nebo</p>
+                    <img src="./210-2.png" alt="Řešení zatím nebylo uvolněno k zobrazení">
+                </noscript>
             </li>
         </ol>
 

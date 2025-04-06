@@ -16,7 +16,7 @@
 
         <p class="test-link">ERROR: načtení souboru link.html bylo neúspěšné</p>
 
-        <h1 class="nadpis">Grafické aplikace ve Windows Forms</h1>
+        <h1 class="nadpis">Úvod do Windows Forms</h1>
 
         <!--
 

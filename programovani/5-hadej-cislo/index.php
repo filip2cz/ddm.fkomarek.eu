@@ -69,6 +69,12 @@
             číslo a program mu řekne, jestli je správná odpověď menší, větší, nebo správná.
         </p>
 
+        <p>
+            Nezapomeňte odevzdat váš kód do Google Učebny: <a
+                href="https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/Nzc2MTU3Mzg3NzI2/details"
+                target="_blank">https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/Nzc2MTU3Mzg3NzI2/details</a>
+        </p>
+
         <h2>
             Příliš snadné?
         </h2>

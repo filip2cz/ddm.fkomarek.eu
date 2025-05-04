@@ -70,32 +70,67 @@
         </p>
 
         <p>
-            Nyní si přetáhněme do našeho grafického rozhraní <code>Label</code>. Měli bychom mít zobrazené okénko <code>Vlastnosti</code>.
+            Nyní si přetáhněme do našeho grafického rozhraní <code>Label</code>. Měli bychom mít zobrazené okénko
+            <code>Vlastnosti</code>.
         </p>
 
         <img src="./1.png" style="width: 400px">
 
         <p>
             Zde je, jak se můžeme v tomto rozhraní pro nastavení vlastností orientovat:
-            <ol>
-                <li>
-                    Název prvku, který nastavujeme
-                </li>
-                <li>
-                    Název vlastnosti
-                </li>
-                <li>
-                    Aktuální nastavení vlastností
-                </li>
-                <li>
-                    Popis právě vybranné vlastnosti
-                </li>
-            </ol>
+        <ol>
+            <li>
+                Název prvku, který nastavujeme
+            </li>
+            <li>
+                Název vlastnosti
+            </li>
+            <li>
+                Aktuální nastavení vlastností
+            </li>
+            <li>
+                Popis právě vybranné vlastnosti
+            </li>
+        </ol>
         </p>
 
         <p>
             Zde v tomto okně můžeme nastavit všechny vlastnosti prvku, od polohy a obsahu až po barvičky.
         </p>
+
+        <h3>
+            Úprava vlastností v kódu
+        </h3>
+
+        <p>
+            Tyto vlastnosti můžeme a budeme upravovat taky v kódu, a to ve formátu:
+        </p>
+
+        <pre><code class="language-csharp" id="allowCopy">nazevPrvku.Vlastnost = nastavení;</code></pre>
+
+        <p>
+            Pokud bychom například chtěli změnit text našeho <b>Label</b>u, tak víme, že se jedná o text, neboli o
+            string. Můžeme ho tak nastavit buď přímo, nebo do něj můžeme uložit nějakej string.
+        </p>
+
+        <pre><code class="language-csharp" id="allowCopy">label1.Text = "text";
+
+string mujText = "Toto je text";
+label1.Text = mujText;</code></pre>
+
+        <p>
+            Každá ta vlastnost je v zásadě nějaká proměnná, a tím pádem s ní můžeme pracovat, jako s proměnnou, pokud
+            známe její typ. Např. můžeme porovnávat barvu textu:
+        </p>
+
+        <pre><code class="language-csharp" id="allowCopy">if (label1.ForeColor == Color.Red)
+{
+    label1.Text = "Toto je červený text";
+}
+else
+{
+    label1.Text = "Toto není červený text";
+}</code></pre>
 
         <h2>
             Zadání

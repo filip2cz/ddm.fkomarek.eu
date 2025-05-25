@@ -69,6 +69,16 @@
             dnešní hodině se zaměříme jen na plaintext data, na formátovaná data se podíváme v příští lekci.
         </p>
 
+        <div class="alert alert-primary" role="alert">
+            <b>Co je to HTTP a HTTPS protokol?</b><br>
+            HTTP je protokol, který slouží k načítání webových stránek. Většina uživatelů se s ním setká, když načítají
+            webovou stránku. Techničtější uživatelé se s ním mohou setkat, pokud chtějí použít nějaké API, což je
+            jednoduchá stránka, co říká programům nějaká data ve strojovém formátu, například <a
+                href="https://www.timeapi.io/api/time/current/zone?timeZone=Europe%2FPrague" target="_blank">TimeAPI</a> vám ukáže
+            aktuální čas v Praze, a další informace, ve strojovém formátu. HTTPS protokol je šifrovaná verze HTTP, pro naše účely není třeba
+            znát podrobnosti o tomto šifrování.
+        </div>
+
         <p>
             Řekněme, že máme URL, jenž zní
             <a href="http://v4.ipv6-test.com/api/myip.php" target="_blank">http://v4.ipv6-test.com/api/myip.php</a>.
@@ -83,6 +93,11 @@
 string url = "http://v4.ipv6-test.com/api/myip.php"; // vytvoření proměnné url, do které jsme uložili url adresu, co využijeme
 string data = client.GetStringAsync(url).Result; // dotazování se na url adresu v proměnné a uložení odpovědi do proměnné data
 label1.Text = data; //nastavení textu labelu1 na obsah proměnné data</code></pre>
+
+        <div class="alert alert-warning" role="alert">
+            Pokud vám kód nefunguje, přesvěčte se, že máte na začátku vašeho kódu (v horní oblasti na prvních několika
+            řádcích) kód <code>using System.Net.Http;</code>
+        </div>
 
         <p>
             Když se nám spustí tento kód, tak bychom měli v našem <code>label1</code> vidět naši IP adresu.

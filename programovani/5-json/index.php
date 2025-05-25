@@ -77,7 +77,7 @@
         </p>
 
         <p>
-            Můžeme si to ukázat například zde: https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY, kde tato stránka
+            Můžeme si to ukázat například zde: <a href="https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY" target="_blank">https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY</a>, kde tato stránka
             nám
             ukazuje url adresu na dnešní <b>Image of the Day</b> od NASA a další informace.
             Pro lepší zobrazení doporučuji otevírat tuto stránku v
@@ -142,6 +142,8 @@ string popisek = jsonObj["explanation"].Value<string>();
 
 // nastavení textu label1 na obsah proměnné popisek
 label1.Text = popisek;</code></pre>
+
+        <code>https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY</code>
 
         <h2>Zadání</h2>
 

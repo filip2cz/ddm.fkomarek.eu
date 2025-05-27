@@ -121,26 +121,41 @@
         </p>
         <img src="nuget4.png">
 
+        <h2>Získání API klíče</h2>
+
+        <p>
+            Některé API potřebují k funkčnosti API klíč. Jedná se o identifikátor, díky kterému API dokáže identifikovat uživatele.
+            Většinou se používá kvůli tomu, aby jeden uživatel nemohl příliš vytěžovat API.
+        </p>
+
+        <p>
+            API klíč je možné získat zde: <a href="https://api.nasa.gov/#signUp" target="_blank">https://api.nasa.gov/#signUp</a><br>
+            Můžete použít např. emailovou adresu, kterou jste dostali od DDM, nebo svoji osobní.
+        </p>
+
         <h2>Zpracování dat z JSON</h2>
 
         <p>
             Následující kód nám získá popisek dnešní fotky dne od NASA a vloží nám ho do <code>label1</code>.
         </p>
 
-        <pre><code class="language-csharp">// definování url, ze které stahujeme data
-string APIUrl = $"https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY";
+        <pre><code class="language-csharp">// Uložení api klíče do proměnné (sem vložte váš api klíč)
+string APIKey = "dlouheheslocodostanuvyse";
 
-// získání dat z API
+// definov&aacute;n&iacute; url, ze kter&eacute; stahujeme data
+string APIUrl = $&quot;https://api.nasa.gov/planetary/apod?api_key={APIKey}&quot;;
+
+// z&iacute;sk&aacute;n&iacute; dat z API
 HttpClient client = new HttpClient();
 string response = client.GetStringAsync(APIUrl).Result;
 
-// rozložení JSON na proměnné
-JObject jsonObj = JsonConvert.DeserializeObject<JObject>(response);
+// rozložen&iacute; JSON na proměnn&eacute;
+JObject jsonObj = JsonConvert.DeserializeObject&lt;JObject&gt;(response);
 
-// vytvoření proměnné popisek a uložení do ní obsah jsonu pod heslem explanation
-string popisek = jsonObj["explanation"].Value<string>();
+// vytvořen&iacute; proměnn&eacute; popisek a uložen&iacute; do n&iacute; obsah jsonu pod heslem explanation
+string popisek = jsonObj[&quot;explanation&quot;].Value&lt;string&gt;();
 
-// nastavení textu label1 na obsah proměnné popisek
+// nastaven&iacute; textu label1 na obsah proměnn&eacute; popisek
 label1.Text = popisek;</code></pre>
 
         <code>https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY</code>

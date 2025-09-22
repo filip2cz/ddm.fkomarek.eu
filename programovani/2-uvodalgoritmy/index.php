@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <?php include ("../../src/link.html"); ?>
+    <?php include("../../src/link.html"); ?>
 
     <div class="container">
 
@@ -86,21 +86,39 @@
 
         <img src="./heslo.png" style="max-width: 100%">
 
+        <h2>Další příklady algoritmů</h2>
+
+        <p>
+            Vstupní turniket na kartičku s červeným/zeleným světlem.
+        </p>
+
+        <p>
+            Algoritmus pro automat na čaj včetně ohřívání vody.
+        </p>
+
+        <p>
+            Algoritmus pro výtah, jenž pojede dolu nebo nahoru podle toho, v jakém jsme patře a které patro bylo zvoleno.
+        </p>
+
+        <p>
+            Algoritmus pro bankomat. Bankomat bude fungovat tak, že uživateli dá peníze v co nejvyšších
+            bankovkách a mincích. Pokud tedy uživatel zadá částku 8321 Kč, bankomatu mu vydá:<br>
+            200<br>
+            100<br>
+            50<br>
+            20<br>
+            1<br>
+        </p>
+
         <h2>Zadání</h2>
 
         Vytvořte algoritmus, který se bude starat o zálévání kytek. Pokud je kytka suchá, tak ji zalije.
 
         <h2>Příliš snadné?</h2>
 
-        Nakreslete algoritmus pro bankomat. Bankomat bude fungovat tak, že uživateli dá peníze v co nejvyšších
-        bankovkách a mincích. Pokud tedy uživatel zadá částku 8321 Kč, bankomatu mu vydá:<br>
-        5000<br>
-        2000<br>
-        1000<br>
-        200<br>
-        100<br>
-        20<br>
-        1<br>
+        <p>
+            Dostanete 5 náhodných čísel od 0 do 9. Vytvořte algoritmus, který tato čísla rozstřídí.
+        </p>
 
         <h3>BONUS: Sheldon Cooper aplikující svůj "Algoritmus na tvorbu přátelství":</h3>
 

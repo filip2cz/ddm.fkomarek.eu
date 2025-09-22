@@ -125,7 +125,7 @@
         </p>
 
         <h2>
-            Nezapomeňte odevzdat váš kód do Google Učebny:
+            Nezapomeňte odevzdat váš nákres do Google Učebny:
             <a href="https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODA4MjI5Nzg0ODk4/details" target="_blank">
                 https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODA4MjI5Nzg0ODk4/details
             </a>

@@ -97,7 +97,8 @@
         </p>
 
         <p>
-            Algoritmus pro výtah, jenž pojede dolu nebo nahoru podle toho, v jakém jsme patře a které patro bylo zvoleno.
+            Algoritmus pro výtah, jenž pojede dolu nebo nahoru podle toho, v jakém jsme patře a které patro bylo
+            zvoleno.
         </p>
 
         <p>
@@ -112,13 +113,25 @@
 
         <h2>Zadání</h2>
 
-        Vytvořte algoritmus, který se bude starat o zálévání kytek. Pokud je kytka suchá, tak ji zalije.
+        <p>
+            Vytvořte algoritmus, který se bude starat o zálévání kytek. Pokud je kytka suchá, tak ji zalije.
+        </p>
 
         <h2>Příliš snadné?</h2>
 
         <p>
-            Dostanete 5 náhodných čísel od 0 do 9. Vytvořte algoritmus, který tato čísla rozstřídí.
+            Dostanete 5 náhodných čísel od 0 do 9. Vytvořte algoritmus, který tato čísla seřadí od nejmenšího po
+            největší.
         </p>
+
+        <h2>
+            Nezapomeňte odevzdat váš kód do Google Učebny:
+            <a href="https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODA4MjI5Nzg0ODk4/details" target="_blank">
+                https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODA4MjI5Nzg0ODk4/details
+            </a>
+        </h2>
+
+        <br><br><br><br><br><br><br><br><br>
 
         <h3>BONUS: Sheldon Cooper aplikující svůj "Algoritmus na tvorbu přátelství":</h3>
 

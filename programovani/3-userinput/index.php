@@ -111,9 +111,10 @@ Za dva roky váš věk bude: 18
         <h2>Příliš snadné?</h2>
 
         <p>
-            Použijte internet a zkuste do této kalkulačky přidat mocninu (například 2 na 3 = 8), případně další
-            matematické operace.
+            Vytvořte geometrickou kalkulačku např. na čtverec nebo obdélník atd., která uživateli spočítá obvod a obsah tvaru.
         </p>
+
+        <h2>Nezapomeňte odevzdat váš kód do Google Učebny: <a href="https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODExMDYzOTI0MTY4/details" target="_blank">https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODExMDYzOTI0MTY4/details</a></h2>
 
     </div>
 

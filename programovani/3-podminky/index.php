@@ -47,10 +47,10 @@ Console.ReadLine();</code></pre>
 
         <pre><code class="language-csharp">string hesloHonza = "Mojeheslo1";
 string hesloFilip = "password1234";
-            
+
 Console.Write("Zadejte heslo: ");
 string hesloUzivatel = Console.ReadLine();
-            
+
 if (hesloUzivatel == hesloHonza)
 {
     Console.WriteLine("Vítej Honzo.");
@@ -112,6 +112,8 @@ Nepodařilo se načíst kód. Máte povolený JavaScript?
 
         <p>Pokud máte hotovo, zkuste ošetřit, aby nešlo dělit nulou.</p>
 
+        <h2>Nezapomeňte odevzdat váš kód do Google Učebny: <a href="https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODE1ODIzODQzNzUz/details" target="_blank">https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODE1ODIzODQzNzUz/details</a></h2>
+
         <!--
 
         <script>
@@ -138,14 +140,17 @@ Nepodařilo se načíst kód. Máte povolený JavaScript?
         <p>
             Doplňující úloha je dneska logického charakteru.
             Můžete ji dělat v jakémkoliv jazyku chcete, pokud preferujete něco jiného než C#,
-            ale možná vám nebudu poté schopen pomoct s řešením nebo s problémy, pokud si vyberete něco co neznám.
+            ale možná vám nebudu poté schopen pomoct s řešením nebo s problémy, pokud si vyberete něco co neznám.<br><br>
 
             Máte dvě číselné proměnné X a Y. Úkol je prohodit je bez toho, aby jste na to použili nějakou existující
             funkci, nebo aby jste použili jinou proměnnou, ukládání do
             souboru, nebo jakýkoliv jiný způsob ukládání dat kamkoliv a jakkoliv, než jsou tyto dvě proměnné. Řešení je
-            čistě matematická záležitost.
+            čistě matematická záležitost.<br><br>
+
+            Jo a negooglete si to prosím, zkuste na to přijít.
         </p>
 
+        <!--
         <script>
             var xhr = new XMLHttpRequest();
             xhr.open('GET', 'prohozeni.cs', true);
@@ -156,6 +161,7 @@ Nepodařilo se načíst kód. Máte povolený JavaScript?
             };
             xhr.send();
         </script>
+        -->
 
         <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#reseniCollapse3">řešení</button>
         <div id="reseniCollapse3" class="collapse mt-3">

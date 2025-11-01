@@ -84,8 +84,8 @@ Console.ReadLine();</code></pre>
 
         <h5>
             Nezapomeňte odevzdat všechny 3 zadání (je jedno, jestli v jednom souboru, nebo odděleně) na Google Učebnu:
-            <a href="https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzE2ODkxNzY1ODY4/details" target="_blank">
-                https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzE2ODkxNzY1ODY4/details
+            <a href="https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODIyMjA0MDY2NTIz/details" target="_blank">
+                https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODIyMjA0MDY2NTIz/details
             </a>
         </h5>
 

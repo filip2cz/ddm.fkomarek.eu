@@ -116,7 +116,8 @@ namespace playground_dotnet_framework
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Vyps&aacute;n&iacute; textu &quot;Hello World!&quot; do konzole
+            Console.WriteLine(&quot;Hello World!&quot;);
         }
     }
 }</code></pre>
@@ -133,6 +134,7 @@ namespace playground_dotnet_framework
         </p>
 
         <pre><code class="language-csharp">using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -144,7 +146,10 @@ namespace playground_dotnet_framework
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Vyps&aacute;n&iacute; textu &quot;Hello World!&quot; do konzole
+            Console.WriteLine(&quot;Hello World!&quot;);
+
+            // Vyčk&aacute;n&iacute; na vstup od uživatele, aby se n&aacute;m program okamžitě neukončil
             Console.ReadLine();
         }
     }
@@ -166,7 +171,10 @@ Hello, World!
             uvozovkách, například:
         </p>
 
-        <pre><code class="language-csharp">Console.WriteLine("Ahoj, Světe!");
+        <pre><code class="language-csharp">// Vyps&aacute;n&iacute; textu &quot;Hello World!&quot; do konzole
+Console.WriteLine("Ahoj světe!");
+
+// Vyčk&aacute;n&iacute; na vstup od uživatele, aby se n&aacute;m program okamžitě neukončil
 Console.ReadLine();</code></pre>
 
         <p>
@@ -174,7 +182,10 @@ Console.ReadLine();</code></pre>
             program brát jako text:
         </p>
 
-        <pre><code class="language-csharp">Console.WriteLine(1+2);
+        <pre><code class="language-csharp">// Vyps&aacute;n&iacute; součtu č&iacute;sel 1 a 2
+Console.WriteLine(1 + 2);
+
+// Vyčk&aacute;n&iacute; na vstup od uživatele, aby se n&aacute;m program okamžitě neukončil
 Console.ReadLine();</code></pre>
 
         <p>
@@ -200,17 +211,28 @@ Console.ReadLine();</code></pre>
             Zkusíme si to na následujícím kódu:
         </p>
 
-        <pre><code class="language-csharp">int prvniCislo;
+        <pre><code class="language-csharp">// Vytvořen&iacute; proměnn&eacute; typu int (č&iacute;slo) s n&aacute;zvem prvniCislo
+int prvniCislo;
+// Vytvořen&iacute; proměnn&eacute; typu int (č&iacute;slo) s n&aacute;zvem druheCislo
 int druheCislo;
+
+// Uložen&iacute; č&iacute;sla 5 do proměnn&eacute; prvniCislo
 prvniCislo = 5;
+// Uložen&iacute; č&iacute;sla 4 do proměnn&eacute; druheCislo
 druheCislo = 4;
 
+// Vytvořen&iacute; proměnn&eacute; typu string (text) s n&aacute;zvem text
 string text;
-text = "Součet dvou čísel je: ";
+// Uložen&iacute; textu &quot;Součet dvou č&iacute;sel je: &quot; do proměnn&eacute; text
+text = &quot;Součet dvou č&iacute;sel je: &quot;;
 
+// Vyps&aacute;n&iacute; proměnn&eacute; text do konzole (bez odř&aacute;dkov&aacute;n&iacute; na dal&scaron;&iacute; ř&aacute;dek)
 Console.Write(text);
+
+// Vyps&aacute;n&iacute; součtu proměnn&yacute;ch prvniCislo a druheCislo do konzole (s odř&aacute;dkov&aacute;n&iacute;m na dal&scaron;&iacute; ř&aacute;dek)
 Console.WriteLine(prvniCislo + druheCislo);
 
+// Vyčk&aacute;n&iacute; na vstup od uživatele, aby se n&aacute;m program okamžitě neukončil
 Console.ReadLine();</code></pre>
 
         <!--

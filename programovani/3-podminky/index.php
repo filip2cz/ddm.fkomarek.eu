@@ -31,41 +31,69 @@
 
         <p>Tento kód získá věk uživatele a poté zjistí, jestli je mladší nebo starší 18 let:</p>
 
-        <pre><code class="language-csharp">Console.Write(&quot;Zadejte v&aacute;&scaron; věk: &quot;);
+        <pre><code class="language-csharp">// Vyps&aacute;n&iacute; textu &quot;Zadejte v&aacute;&scaron; věk: &quot; do konzole
+Console.Write(&quot;Zadejte v&aacute;&scaron; věk: &quot;);
 
+// Vytvořen&iacute; proměnn&eacute; vstup typu string
 string vstup;
+// Uložen&iacute; vstupu od uživatele do proměnn&eacute; vstup
 vstup = Console.ReadLine();
 
-int cislo = Convert.ToInt32(vstup);
+// Vytvořen&iacute; proměnn&eacute; cislo typu int
+int cislo;
+// Konvertov&aacute;n&iacute; proměnn&eacute; vstup na č&iacute;slo a uložen&iacute; do proměnn&eacute; cislo
+cislo = Convert.ToInt32(vstup);
 
+// Pokud je proměnn&aacute; cislo vět&scaron;&iacute; nebo rovna 18
 if (cislo &gt;= 18)
 {
+    // Vyps&aacute;n&iacute; textu &quot;Je v&aacute;m v&iacute;ce než 18 let.&quot; do konzole
     Console.WriteLine(&quot;Je v&aacute;m v&iacute;ce než 18 let.&quot;);
 }
+// Pokud nebyla žádná předchozí podm&iacute;nka splněna
 else
 {
+    // Vyps&aacute;n&iacute; textu &quot;Jste mlad&scaron;&iacute; 18 let.&quot; do konzole
     Console.WriteLine(&quot;Jste mlad&scaron;&iacute; 18 let.&quot;);
 }</code></pre>
 
         <p>Tento kód se vás zeptá na heslo a poté porovná pomocí podmínek heslo se dvoumi proměnnými:</p>
 
-        <pre><code class="language-csharp">string hesloHonza = "Mojeheslo1";
-string hesloFilip = "password1234";
+        <pre><code class="language-csharp">// Vytvořen&iacute; proměnn&eacute; hesloHonza typu string
+string hesloHonza;
+// Uložen&iacute; textu &quot;Mojeheslo1&quot; do proměnn&eacute; hesloHonza
+hesloHonza = &quot;Mojeheslo1&quot;;
 
-Console.Write("Zadejte heslo: ");
-string hesloUzivatel = Console.ReadLine();
+// Vytvořen&iacute; proměnn&eacute; hesloFilip typu string
+string hesloFilip;
+// Uložen&iacute; textu &quot;password1234&quot; do proměnn&eacute; hesloFilip
+hesloFilip = &quot;password1234&quot;;
 
+// Vyps&aacute;n&iacute; textu &quot;Zadejte heslo: &quot; do konzole
+Console.Write(&quot;Zadejte heslo: &quot;);
+
+// Vytvořen&iacute; proměnn&eacute; hesloUzivatel typu string
+string hesloUzivatel;
+// Uložen&iacute; vstupu od uživatele do proměnn&eacute; hesloUzivatel
+hesloUzivatel = Console.ReadLine();
+
+// Pokud se hesloUzivatel rovn&aacute; hesloHonza
 if (hesloUzivatel == hesloHonza)
 {
-    Console.WriteLine("Vítej Honzo.");
+    // Vyps&aacute;n&iacute; textu v uvozovk&aacute;ch do konzole
+    Console.WriteLine(&quot;V&iacute;tej Honzo.&quot;);
 }
+// Pokud nebyla ž&aacute;dn&aacute; předchoz&iacute; podm&iacute;nka splněna a Pokud se hesloUzivatel rovn&aacute; hesloFilip
 else if (hesloUzivatel == hesloFilip)
 {
-    Console.WriteLine("Vítej Filipe.");
+    // Vyps&aacute;n&iacute; textu v uvozovk&aacute;ch do konzole
+    Console.WriteLine(&quot;V&iacute;tej Filipe.&quot;);
 }
+// Pokud nebyla ž&aacute;dn&aacute; předchoz&iacute; podm&iacute;nka splněna
 else
 {
-    Console.WriteLine("Špatné heslo!");
+    // Vyps&aacute;n&iacute; textu v uvozovk&aacute;ch do konzole
+    Console.WriteLine(&quot;&Scaron;patn&eacute; heslo!&quot;);
 }</code></pre>
 
         <h2>Zadání</h2>

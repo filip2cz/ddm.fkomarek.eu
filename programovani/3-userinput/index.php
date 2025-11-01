@@ -68,11 +68,20 @@
             uživatele a zapisovat ho do proměnné, můžeme si to ukázat na tomto kódu:
         </p>
 
-        <pre><code class="language-csharp">Console.Write("Zadejte vaše jméno: ");
+        <pre><code class="language-csharp">// Vyps&aacute;n&iacute; textu &quot;Zadejte va&scaron;e jm&eacute;no: &quot; do konzole
+Console.Write(&quot;Zadejte va&scaron;e jm&eacute;no: &quot;);
+
+// Vytvořen&iacute; proměnn&eacute; typu string jm&eacute;nem jmeno
 string jmeno;
+// Uložen&iacute; vstupu od uživatele pro proměnn&eacute; jmeno
 jmeno = Console.ReadLine();
-Console.Write("Vaše jméno je: ");
+
+// Vyps&aacute;n&iacute; textu &quot;Va&scaron;e jm&eacute;no je: &quot; do konzole bez odř&aacute;dkov&aacute;n&iacute;
+Console.Write(&quot;Va&scaron;e jm&eacute;no je: &quot;);
+// Vyps&aacute;n&iacute; obsahu proměnn&eacute; jmeno do konzole s odř&aacute;dkov&aacute;n&iacute;m
 Console.WriteLine(jmeno);
+
+// Vyčk&aacute;n&iacute; na vstup od uživatele, aby se n&aacute;m program okamžitě neukončil
 Console.ReadLine();</code></pre>
 
         <p>Výstup by měl vypadat nějak takto:</p>
@@ -84,15 +93,31 @@ Vaše jméno je: Filip
 
         <p>Pokud budeme brát číslo, musíme ho první převést z textu na číslo:</p>
 
-        <pre><code class="language-csharp">Console.Write(&quot;Zadejte v&aacute;&scaron; věk: &quot;);
-string vstup = Console.ReadLine();
+        <pre><code class="language-csharp">// Vyps&aacute;n&iacute; textu &quot;Zadejte v&aacute;&scaron; věk: &quot; do konzole
+Console.Write(&quot;Zadejte v&aacute;&scaron; věk: &quot;);
+
+// Vytvořen&iacute; proměnn&eacute; vstup typu string
+string vstup;
+// Uložen&iacute; vstupu od uživatele do proměnn&eacute; vstup
+vstup = Console.ReadLine();
+
+// Vytvořen&iacute; proměnn&eacute; cislo typu int
 int cislo;
+// Převeden&iacute; proměnn&eacute; vstup na č&iacute;slo a uložen&iacute; do proměnn&eacute; č&iacute;slo
 cislo = Convert.ToInt32(vstup);
+
+// Vyps&aacute;n&iacute; textu &quot;V&aacute;&scaron; věk je: &quot; do konzole
 Console.Write(&quot;V&aacute;&scaron; věk je: &quot;);
+// Vyps&aacute;n&iacute; proměnn&eacute; cislo do konzole
 Console.WriteLine(cislo);
+
+// Vyps&aacute;n&iacute; textu &quot;Za dva roky v&aacute;&scaron; věk bude: &quot; do konzole
 Console.Write(&quot;Za dva roky v&aacute;&scaron; věk bude: &quot;);
+// Vyps&aacute;n&iacute; součtu proměnn&eacute; cislo a č&iacute;sla 2 do konzole
 Console.WriteLine(cislo + 2);
-Console.ReadLine();</code></pre>
+
+// Vyčk&aacute;n&iacute; na vstup od uživatele, aby se n&aacute;m program okamžitě neukončil
+Console.ReadLine();</code></pre></code></pre>
 
         <p>Výstup bude vypadat takto:</p>
 

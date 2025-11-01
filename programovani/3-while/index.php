@@ -61,15 +61,19 @@ if (file_exists($kod_sude0az100_file_path) && is_readable($kod_sude0az100_file_p
             Následující příklad ukazuje, jak můžeme vypsat všechna čísla od 10.
         </p>
 
-        <pre><code class="language-csharp">int i = 1;
+        <pre><code class="language-csharp">// Vytvořen&iacute; proměnn&eacute; i typu int
+int i;
+// Uložen&iacute; č&iacute;sla 1 do proměnn&eacute; i
+i = 1;
 
+// Dokud je i men&scaron;&iacute; nebo rovno 10
 while (i &lt;= 10)
 {
+    // Vypi&scaron; do konzole i
     Console.WriteLine(i);
+    // Zvět&scaron;i i o jedno
     i++;
-}
-
-Console.ReadLine();</code></pre>
+}</code></pre>
 
         <p>
             Na začátku kódu si určíme proměnnout, v našem případě i, ze kterého začneme.

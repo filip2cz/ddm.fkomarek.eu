@@ -31,17 +31,21 @@
 
         <p>Tento kód získá věk uživatele a poté zjistí, jestli je mladší nebo starší 18 let:</p>
 
-        <pre><code class="language-csharp">Console.Write("Zadejte váš věk: ");
-int cislo = Convert.ToInt32(Console.ReadLine());
-if (cislo >= 18)
+        <pre><code class="language-csharp">Console.Write(&quot;Zadejte v&aacute;&scaron; věk: &quot;);
+
+string vstup;
+vstup = Console.ReadLine();
+
+int cislo = Convert.ToInt32(vstup);
+
+if (cislo &gt;= 18)
 {
-    Console.WriteLine("Je vám více než 18 let.");
+    Console.WriteLine(&quot;Je v&aacute;m v&iacute;ce než 18 let.&quot;);
 }
 else
 {
-    Console.WriteLine("Jste mladší 18 let.");
-}
-Console.ReadLine();</code></pre>
+    Console.WriteLine(&quot;Jste mlad&scaron;&iacute; 18 let.&quot;);
+}</code></pre>
 
         <p>Tento kód se vás zeptá na heslo a poté porovná pomocí podmínek heslo se dvoumi proměnnými:</p>
 
@@ -62,8 +66,7 @@ else if (hesloUzivatel == hesloFilip)
 else
 {
     Console.WriteLine("Špatné heslo!");
-}
-Console.ReadLine();</code></pre>
+}</code></pre>
 
         <h2>Zadání</h2>
 

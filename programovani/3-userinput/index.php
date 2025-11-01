@@ -84,12 +84,13 @@ Vaše jméno je: Filip
 
         <p>Pokud budeme brát číslo, musíme ho první převést z textu na číslo:</p>
 
-        <pre><code class="language-csharp">Console.Write("Zadejte váš věk: ");
+        <pre><code class="language-csharp">Console.Write(&quot;Zadejte v&aacute;&scaron; věk: &quot;);
+string vstup = Console.ReadLine();
 int cislo;
-cislo = Convert.ToInt32(Console.ReadLine());
-Console.Write("Váš věk je: ");
+cislo = Convert.ToInt32(vstup);
+Console.Write(&quot;V&aacute;&scaron; věk je: &quot;);
 Console.WriteLine(cislo);
-Console.Write("Za dva roky váš věk bude: ");
+Console.Write(&quot;Za dva roky v&aacute;&scaron; věk bude: &quot;);
 Console.WriteLine(cislo + 2);
 Console.ReadLine();</code></pre>
 

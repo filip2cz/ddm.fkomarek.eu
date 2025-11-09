@@ -86,7 +86,7 @@ Zadejte operaci (+,-,*,/): /
 Výsledek: 7,28571428571429
         </pre>
 
-        <a href="https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzE2NTM5ODcwMDUy/details" target="_blank"><h2>Nezapomeňte odezvdat na Google Učebnu:<br>https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzE2NTM5ODcwMDUy/details</h2></a>
+        <a href="https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODIzNjU3NDI3MTA5/details" target="_blank"><h2>Nezapomeňte odezvdat na Google Učebnu:<br>https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODIzNjU3NDI3MTA5/details</h2></a>
 
         <!--
 

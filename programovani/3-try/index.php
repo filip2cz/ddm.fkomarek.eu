@@ -42,6 +42,7 @@ try
     // Vypsání textu "Váš věk je" a proměnné cislo
     Console.WriteLine($"Váš věk je {cislo}");
 }
+// "Pokud se pokus nepodařil..."
 catch (Exception)
 {
     Console.WriteLine("Zadaný text není číslo");
@@ -72,6 +73,7 @@ try
     // Vypsání textu "Váš věk je" a proměnné cislo
     Console.WriteLine($"Váš věk je {cislo}");
 }
+// "Pokud se pokus nepodařil..."
 catch (Exception ex)
 {
     Console.WriteLine("Zadaný text není číslo");

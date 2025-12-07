@@ -14,7 +14,7 @@
 
         <a href="../"><button class="btn btn-primary" type="button">Zpět</button></a>
 
-        <h1 class="nadpis">Procvičování - úprava kódu</h1>
+        <h1 class="nadpis">Procvičování - oprava kódu</h1>
 
         <p>
             Dnes se zaměříme na procvičování. Níže je několik zadání, které se skládají z kódu a zadání, jenž je

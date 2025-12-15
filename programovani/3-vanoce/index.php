@@ -77,7 +77,7 @@ TimeSpan rozdil = jinejDateTime - narozeniny;</code></pre>
         <pre><code class="language-csharp">// vypíše TimeSpan, který jsme nastavili výše, ve dnech.
 Console.WriteLine(rozdil.Days);</code></pre>
 
-        <h3>Nezapomeňte odevzdat váš kód na Google Učebnu: <a target="_blank" href="https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzQxNDk4NTk0Nzk4/details">https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzQxNDk4NTk0Nzk4/details</a></h3>
+        <h3>Nezapomeňte odevzdat váš kód na Google Učebnu: <a target="_blank" href="https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODM2NDM3NzU1OTg0/details">https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODM2NDM3NzU1OTg0/details</a></h3>
 
     </div>
 

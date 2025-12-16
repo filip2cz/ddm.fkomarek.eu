@@ -65,7 +65,7 @@ Console.WriteLine(&quot;. den v měs&iacute;ci&quot;);</code></pre>
         <h2>Příliš snadné?</h2>
 
         <p>
-            Vytvořte program, který vypíše uživateli, kolik dní žije. Budou se vám pro to hodit následující věci, které jsme zatím nezmínili:
+            Pokud jste to ještě neudělali, zařiďte, aby program ukazoval správné informace např. v listopadu, či po těchto Vánocích. Budou se vám pro to hodit následující věci, které jsme zatím nezmínili:
         </p>
 
         <pre><code class="language-csharp">// nastaví naši proměnnou typu DateTime na nějaké konkrétní datum

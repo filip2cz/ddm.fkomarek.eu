@@ -26,8 +26,10 @@
         </p>
 
         <h2>
-            Kód nezapomeňte uložit na Google Učebnu: <a href="https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzM1MzA2ODU0NzU5/details" target="_blank">https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzM1MzA2ODU0NzU5/details</a>
+            Kód nezapomeňte uložit na Google Učebnu: <a href="https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODM3ODQxNjAyODkw/details" target="_blank">https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODM3ODQxNjAyODkw/details</a>
         </h2>
+
+        
 
     </div>
 

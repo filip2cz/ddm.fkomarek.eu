@@ -124,12 +124,16 @@
             největší.
         </p>
 
-        <h2>
-            Nezapomeňte odevzdat váš nákres do Google Učebny:
-            <a href="https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODA4MjI5Nzg0ODk4/details" target="_blank">
-                https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODA4MjI5Nzg0ODk4/details
-            </a>
-        </h2>
+        <?php
+        $filename = './odevzdani.txt';
+        if (file_exists($filename)) {
+            echo "<h3>Nezapomeňte odevzdat váš nákres na Google učebnu: " . '<a href="';
+            include($filename);
+            echo '"target="_blank">';
+            include($filename);
+            echo '</a></h3>';
+        }
+        ?>
 
         <br><br><br><br><br><br><br><br><br>
 

@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <?php include ("../../src/link.html"); ?>
+    <?php include("../../src/link.html"); ?>
 
     <div class="container">
 
@@ -143,8 +143,16 @@ Nepodařilo se načíst kód. Máte povolený JavaScript?
 
         <p>Pokud máte hotovo, zkuste ošetřit, aby nešlo dělit nulou.</p>
 
-        <h2>Nezapomeňte odevzdat váš kód do Google Učebny: <a href="https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODE1ODIzODQzNzUz/details" target="_blank">https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODE1ODIzODQzNzUz/details</a></h2>
-
+        <?php
+        $filename = './odevzdani.txt';
+        if (file_exists($filename)) {
+            echo "<h3>Nezapomeňte odevzdat váš nákres na Google učebnu: " . '<a href="';
+            include($filename);
+            echo '"target="_blank">';
+            include($filename);
+            echo '</a></h3>';
+        }
+        ?>
         <!--
 
         <script>
@@ -171,7 +179,8 @@ Nepodařilo se načíst kód. Máte povolený JavaScript?
         <p>
             Doplňující úloha je dneska logického charakteru.
             Můžete ji dělat v jakémkoliv jazyku chcete, pokud preferujete něco jiného než C#,
-            ale možná vám nebudu poté schopen pomoct s řešením nebo s problémy, pokud si vyberete něco co neznám.<br><br>
+            ale možná vám nebudu poté schopen pomoct s řešením nebo s problémy, pokud si vyberete něco co
+            neznám.<br><br>
 
             Máte dvě číselné proměnné X a Y. Úkol je prohodit je bez toho, aby jste na to použili nějakou existující
             funkci, nebo aby jste použili jinou proměnnou, ukládání do

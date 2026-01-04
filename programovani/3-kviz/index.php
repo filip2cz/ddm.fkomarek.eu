@@ -53,9 +53,16 @@ Správně!
 Vaše známka: 3 (správně máte 2 ze 4 otázek)
         </pre>
 
-        <p>
-            Kód nezapomeňte uložit na <a href="https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODMwNzU2NDY0NzQz/details" target="_blank">Google Učebnu</a>.
-        </p>
+        <?php
+        $filename = './odevzdani.txt';
+        if (file_exists($filename)) {
+            echo "<h3>Nezapomeňte odevzdat váš nákres na Google učebnu: " . '<a href="';
+            include($filename);
+            echo '"target="_blank">';
+            include($filename);
+            echo '</a></h3>';
+        }
+        ?>
 
     </div>
 

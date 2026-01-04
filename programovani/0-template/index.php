@@ -39,28 +39,16 @@
             <pre>řešení</pre>
         </div>
 
-        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#popis1">Podrobný popis kódu</button>
-        <div id="popis1" class="collapse mt-3">
-            <ul>
-                <li>
-                    Nějaký popis
-                </li>
-
-                <br>
-                <h5>První část:</h5>
-
-                <li>
-                    Popis první části
-                </li>
-
-                <br>
-                <h5>Druhá část:</h5>
-
-                <li>
-                    Popis druhé části
-                </li>
-            </ul>
-        </div>
+        <?php
+        $filename = './odevzdani.txt';
+        if (file_exists($filename)) {
+            echo "<h3>Nezapomeňte odevzdat váš kód na Google učebnu:<br>" . '<a href="';
+            include($filename);
+            echo '"target="_blank">';
+            include($filename);
+            echo '</a></h3>';
+        }
+        ?>
 
         -->
 

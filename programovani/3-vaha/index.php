@@ -25,11 +25,16 @@
                 target="_blank">https://www.astrovm.cz/cz/pro-navstevniky/aktuality-ak/kolik-bychom-vazili-na-jinych-planetach.html</a>
         </p>
 
-        <h2>
-            Kód nezapomeňte uložit na Google Učebnu: <a href="https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODM3ODQxNjAyODkw/details" target="_blank">https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODM3ODQxNjAyODkw/details</a>
-        </h2>
-
-        
+        <?php
+        $filename = './odevzdani.txt';
+        if (file_exists($filename)) {
+            echo "<h3>Nezapomeňte odevzdat váš kód na Google učebnu:<br>" . '<a href="';
+            include($filename);
+            echo '"target="_blank">';
+            include($filename);
+            echo '</a></h3>';
+        }
+        ?>
 
     </div>
 

@@ -86,7 +86,16 @@ Zadejte operaci (+,-,*,/): /
 Výsledek: 7,28571428571429
         </pre>
 
-        <a href="https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODIzNjU3NDI3MTA5/details" target="_blank"><h2>Nezapomeňte odezvdat na Google Učebnu:<br>https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODIzNjU3NDI3MTA5/details</h2></a>
+        <?php
+        $filename = './odevzdani.txt';
+        if (file_exists($filename)) {
+            echo "<h3>Nezapomeňte odevzdat váš nákres na Google učebnu: " . '<a href="';
+            include($filename);
+            echo '"target="_blank">';
+            include($filename);
+            echo '</a></h3>';
+        }
+        ?>
 
         <!--
 

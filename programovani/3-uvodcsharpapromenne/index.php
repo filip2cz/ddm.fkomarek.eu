@@ -292,8 +292,17 @@ Za dva roky váš věk bude: 18
         <p>
             Použijte internet a zkuste do této kalkulačky přidat mocninu (například 2 na 3 = 8), případně další matematické operace.
         </p>
-
-        <h2>Nezapomeňte odevzdat váš kód do Google Učebny: <a href="https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODA5Nzg2ODMzNzEz/details" target="_blank">https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODA5Nzg2ODMzNzEz/details</a></h2>
+        
+        <?php
+        $filename = './odevzdani.txt';
+        if (file_exists($filename)) {
+            echo "<h3>Nezapomeňte odevzdat váš kód na Google učebnu:<br>" . '<a href="';
+            include($filename);
+            echo '"target="_blank">';
+            include($filename);
+            echo '</a></h3>';
+        }
+        ?>
 
     </div>
 

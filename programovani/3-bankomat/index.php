@@ -65,6 +65,17 @@ Zadejte částku: 7
 1 1 1 1 1 1 1
         </pre>
 
+        <?php
+        $filename = './odevzdani.txt';
+        if (file_exists($filename)) {
+            echo "<h3>Nezapomeňte odevzdat váš kód na Google učebnu:<br>" . '<a href="';
+            include($filename);
+            echo '"target="_blank">';
+            include($filename);
+            echo '</a></h3>';
+        }
+        ?>
+
     </div>
 
 </body>

@@ -17,7 +17,7 @@
         <h1 class="nadpis">Zadání: Bankomat</h1>
 
         <p>
-            Zadání: vytvořte program pro bankomat, jenž se uživatele zeptá, kolik chce vybrat a po té mu vydá peníze v
+            Zadání: vytvořte program pro bankomat, jenž se uživatele zeptá, kolik chce vybrat a poté mu vydá peníze v
             co nejméně bankovkách/mincích.
         </p>
 

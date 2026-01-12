@@ -35,6 +35,17 @@ Zadejte částku: 7151
 1
         </pre>
 
+        <?php
+        $filename = './odevzdani.txt';
+        if (file_exists($filename)) {
+            echo "<h3>Nezapomeňte odevzdat váš kód na Google učebnu:<br>" . '<a href="';
+            include($filename);
+            echo '"target="_blank">';
+            include($filename);
+            echo '</a></h3>';
+        }
+        ?>
+
         <h2>Příliš snadné?</h2>
 
         <p>
@@ -64,17 +75,6 @@ Zadejte částku: 7
 2 1 1 1 1 1
 1 1 1 1 1 1 1
         </pre>
-
-        <?php
-        $filename = './odevzdani.txt';
-        if (file_exists($filename)) {
-            echo "<h3>Nezapomeňte odevzdat váš kód na Google učebnu:<br>" . '<a href="';
-            include($filename);
-            echo '"target="_blank">';
-            include($filename);
-            echo '</a></h3>';
-        }
-        ?>
 
     </div>
 

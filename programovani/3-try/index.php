@@ -91,9 +91,16 @@ catch (Exception ex)
             Do vaší kalkulačky, kterou jsme v minulých hodinách dělali, přidejte <code>try</code> a <code>catch</code>, aby uživatel nerozbil aplikaci tím, že zadá text místo čísla.
         </p>
 
-        <p>
-            Nezapomeňte odevzdat váš kód na Google učebnu: <a href="https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODMxNzg5MjQxNjky/details" target="_blank">https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODMxNzg5MjQxNjky/details</a>
-        </p>
+        <?php
+        $filename = './odevzdani.txt';
+        if (file_exists($filename)) {
+            echo "<h3>Nezapomeňte odevzdat váš kód na Google učebnu:<br>" . '<a href="';
+            include($filename);
+            echo '"target="_blank">';
+            include($filename);
+            echo '</a></h3>';
+        }
+        ?>
 
     </div>
 

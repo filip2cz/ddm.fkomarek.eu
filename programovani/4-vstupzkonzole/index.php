@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <?php include ("../../src/link.html"); ?>
+    <?php include("../../src/link.html"); ?>
 
     <div class="container">
 
@@ -43,20 +43,31 @@
         </p>
 
         <pre><code class="language-arduino">void setup() {
-  // put your setup code here, to run once:
+  // spuštění sériové konzole s rychlostí 9600 baudů za sekundu
   Serial.begin(9600);
 
+  // vytvoří proměnnou typu string jménem input
   String input;
+  // čte sériovou konzoli do momentu, kdy se objeví nový řádek a vstup uloží do proměnné input
   input = Serial.readStringUntil('\n');
 
+  // vypíše do sériové konzole proměnnou input
   Serial.println(input);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
 
 }</code></pre>
 
+        <p>
+            <code>input = Serial.readStringUntil('\n');</code> nám přečte vstup ze sériové konzole a uloží nám
+            ho do
+            proměnné <b>input</b>.
+            <b>\n</b> značí, že má přestat číst po tom co mu pošleme celý řádek. Kdybychom zde dali například
+            <b>l</b> a poté poslali text <b>Hello Wolrd!</b>, do proměnné se uloží pouze text <b>He</b>.
+        </p>
+
+        <!--
         <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#popis1">Podrobný popis kódu</button>
         <div id="popis1" class="collapse mt-3">
             <ul>
@@ -88,6 +99,7 @@ void loop() {
                 </li>
             </ul>
         </div>
+        -->
 
         <p>
             Jak si můžete všimnout, tento kód se nechová tak, jak by jsme očekávali. Pokud do konzole zadáme text,
@@ -98,17 +110,21 @@ void loop() {
         </p>
 
         <pre><code class="language-arduino">void setup() {
-  // put your setup code here, to run once:
+  // spuštění sériové konzole s rychlostí 9600 baudů za sekundu
   Serial.begin(9600);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // vytvoří proměnnou typu string jménem input
   String input;
+  // čte sériovou konzoli do momentu, kdy se objeví nový řádek a vstup uloží do proměnné input
   input = Serial.readStringUntil('\n');
 
+  // vypíše do sériové konzole proměnnou input
   Serial.println(input);
 }</code></pre>
+
+        <!--
 
         <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#popis2">Podrobný popis kódu</button>
         <div id="popis2" class="collapse mt-3">
@@ -149,6 +165,8 @@ void loop() {
             </ul>
         </div>
 
+        -->
+
         <p>
             Nyní když spustíme kód, můžeme si všimnout, že můžeme zadat vstup a on se zobrazí, akorát odjede nahoru.
             Toto je způsobeno tím, že v moment kdy je proměnná prázdná, což je kvůli tomů že ji na začátku
@@ -157,62 +175,25 @@ void loop() {
         </p>
 
         <pre><code class="language-arduino">void setup() {
-  // put your setup code here, to run once:
+  // spuštění sériové konzole s rychlostí 9600 baudů za sekundu
   Serial.begin(9600);
+  
+  // vytvoří proměnnou typu string jménem input
+  String input;
+
+  // opakuj, dokud je délka proměnné vstup menší než 1...
+  while (input.length() &lt; 1) {
+    // čte sériovou konzoli do momentu, kdy se objeví nový řádek a vstup uloží do proměnné input
+    input = Serial.readStringUntil('\n');
+  }
+
+  // vypíše do sériové konzole proměnnou input
+  Serial.println(input);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  String input;
-  while (input.length() &lt; 1) {
-    input = Serial.readStringUntil('\n');
-  }
-  Serial.println(input);
+
 }</code></pre>
-
-        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#popis3">Podrobný popis kódu</button>
-        <div id="popis3" class="collapse mt-3">
-            <ul>
-                <li>
-                    Využíváme zde <code>void setup()</code> a <code>void loop()</code>. Kód ve <code>void setup()</code>
-                    se spustí pouze
-                    jednou, zatím co <code>void loop()</code> se bude spouštět opakovaně.
-                </li>
-
-                <br>
-                <h5>Kód ve <code>void setup()</code>:</h5>
-
-                <li>
-                    <code>Serial.begin(9600);</code> nám spustí sériovou konzoli, kterou by bez tohoto řádku nešlo
-                    používat. Číslo 9600 znamená, že rychlost přenosu dat bude 9600 <a href="https://cs.wikipedia.org/wiki/Baud" target="_blank">baudů za sekundu</a>.
-                </li>
-
-                <br>
-                <h5>Kód ve <code>void loop()</code>:</h5>
-
-                <li>
-                    <code>String input;</code> nám vytvoří proměnnou typu <b>String</b> se jménem <b>input</b>, jenž
-                    bude obsahovat text.
-                </li>
-
-                <li>
-                    <code>while (input.length() &lt; 1)</code> nám bude běžet do doby, než bude vstup od uživatele větší
-                    něž 1. Jedničku jsem zvolil proto, že i samotný ENTER který dáme na konci se počítá jako jeden znak.
-                </li>
-
-                <li>
-                    <code>input = Serial.readStringUntil('\n');</code> nám přečte vstup ze sériové konzole a uloží nám
-                    ho do
-                    proměnné <b>input</b>.
-                    <b>\n</b> značí, že má přestat číst po tom co mu pošleme celý řádek. Kdybychom zde dali například
-                    <b>l</b> a poté poslali text <b>Hello Wolrd!</b>, do proměnné se uloží pouze text <b>He</b>.
-                </li>
-
-                <li>
-                    <code>Serial.println(input);</code> nám vypíše obsah proměnné <b>input</b> do konzole.
-                </li>
-            </ul>
-        </div>
 
         <p>
             Tento kód již počká na uživatele a potom co zadá text se pokračuje v běhu programu, kde je vypsání jeho
@@ -225,18 +206,26 @@ void loop() {
         </p>
 
         <pre><code class="language-arduino">void setup() {
-  // put your setup code here, to run once:
+  // spuštění sériové konzole s rychlostí 9600 baudů za sekundu
   Serial.begin(9600);
+
+  // vytvoří proměnnou typu string jménem input
+  String input;
+
+  // opakuj, dokud je délka proměnné vstup menší než 1...
+  while (input.length() &lt; 1) {
+    // čte sériovou konzoli do momentu, kdy se objeví nový řádek a vstup uloží do proměnné input
+    input = Serial.readStringUntil('\n');
+  }
+
+  // převede string input na číslo typu int, vytvoří proměnnou cislo typu int a uloží do něj to číslo
+  int cislo = input.toInt();
+  // vypíše do konzole výsledek cislo + 2
+  Serial.println(cislo + 2);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  String input;
-  while (input.length() &lt; 1) {
-    input = Serial.readStringUntil('\n');
-  }
-  int cislo = input.toInt();
-  Serial.println(cislo + 2);
+    
 }</code></pre>
 
         <h2>Zadání:</h2>
@@ -246,10 +235,16 @@ void loop() {
             vybere (sčítání, odčítání, násobení, dělení).
         </p>
 
-        <p>
-            Nezapomeňte odevzdat váš kód na Google Classroom: <a
-                href="https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/Njg3NzQ5NTEzNTI1/details">https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/Njg3NzQ5NTEzNTI1/details</a>
-        </p>
+        <?php
+        $filename = './odevzdani.txt';
+        if (file_exists($filename)) {
+            echo "<h3>Nezapomeňte odevzdat váš kód na Google učebnu:<br>" . '<a href="';
+            include($filename);
+            echo '"target="_blank">';
+            include($filename);
+            echo '</a></h3>';
+        }
+        ?>
 
     </div>
 

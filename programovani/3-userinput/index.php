@@ -140,7 +140,16 @@ Za dva roky váš věk bude: 18
             Vytvořte geometrickou kalkulačku např. na čtverec nebo obdélník atd., která uživateli spočítá obvod a obsah tvaru.
         </p>
 
-        <h2>Nezapomeňte odevzdat váš kód do Google Učebny: <a href="https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODExMDYzOTI0MTY4/details" target="_blank">https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODExMDYzOTI0MTY4/details</a></h2>
+        <?php
+        $filename = './odevzdani.txt';
+        if (file_exists($filename)) {
+            echo "<h3>Nezapomeňte odevzdat váš kód na Google učebnu:<br>" . '<a href="';
+            include($filename);
+            echo '"target="_blank">';
+            include($filename);
+            echo '</a></h3>';
+        }
+        ?>
 
     </div>
 

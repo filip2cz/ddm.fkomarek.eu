@@ -86,12 +86,16 @@ while (i &lt;= 10)
 
         <h2>Zadání</h2>
 
-        <h5>
-            Nezapomeňte odevzdat všechny 3 zadání (je jedno, jestli v jednom souboru, nebo odděleně) na Google Učebnu:
-            <a href="https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODIyMjA0MDY2NTIz/details" target="_blank">
-                https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODIyMjA0MDY2NTIz/details
-            </a>
-        </h5>
+        <?php
+        $filename = './odevzdani.txt';
+        if (file_exists($filename)) {
+            echo "<h3>Nezapomeňte odevzdat váš kód na Google učebnu:<br>" . '<a href="';
+            include($filename);
+            echo '"target="_blank">';
+            include($filename);
+            echo '</a></h3>';
+        }
+        ?>
 
         <h3>1)</h3>
 

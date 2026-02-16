@@ -77,7 +77,8 @@
             pomocí <code>#define</code>:
         </p>
 
-        <pre><code class="language-arduino">#define led_red 8
+        <pre><code class="language-arduino">//nastavíme, že červená led je na pinu číslo 8
+#define led_red 8
 
 void setup() {
   // put your setup code here, to run once:
@@ -93,16 +94,18 @@ void loop() {
             Poté ji už můžeme rozsvítit při zapnutí:
         </p>
 
-        <pre><code class="language-arduino">#define led_red 8
+        <pre><code class="language-arduino">//nastavíme, že červená led je na pinu číslo 8
+#define led_red 8
 
 void setup() {
-  // put your setup code here, to run once:
+  // nastavíme pin s diodou jako OUTPUT
   pinMode(led_red,OUTPUT);
+
+  // pošleme do pinu s diodou elektřinu
   digitalWrite(led_red, HIGH);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
 
 }</code></pre>
 
@@ -112,21 +115,25 @@ void loop() {
             milisekund).
         </p>
 
-        <pre><code class="language-arduino">#define led_red 8
+        <pre><code class="language-arduino">//nastavíme, že červená led je na pinu číslo 8
+#define led_red 8
 
 void setup() {
-  // put your setup code here, to run once:
+  // nastavíme pin s diodou jako OUTPUT
   pinMode(led_red,OUTPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // pošleme do pinu s diodou elektřinu
   digitalWrite(led_red, HIGH);
 
+  // počkáme 500 ms = 0,5 sekundy
   delay(500);
 
+  // přestaneme posílat elektřinu do pinu s diodou
   digitalWrite(led_red, LOW);
 
+  // počkáme 500 ms = 0,5 sekundy
   delay(500);
 }</code></pre>
 
@@ -142,24 +149,35 @@ void loop() {
             číslo 7 a byla pojmenována <code>led_blue</code>. V tomto příkladu se nám diody v blikání střídají.
         </p>
 
-        <pre><code class="language-arduino">#define led_red 8
+        <pre><code class="language-arduino">//nastavíme, že červená led je na pinu číslo 8
+#define led_red 8
+
+//nastavíme, že modrá led je na pinu číslo 7
 #define led_blue 7
 
 void setup() {
-  // put your setup code here, to run once:
+  // nastavíme pin s červenou diodou jako OUTPUT
   pinMode(led_red,OUTPUT);
+
+  // nastavíme pin s modrou diodou jako OUTPUT
+  pinMode(led_blue,OUTPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // pošleme do pinu s červenou diodou elektřinu
   digitalWrite(led_red, HIGH);
+  // přestaneme posílat elektřinu do pinu s modrou diodou
   digitalWrite(led_blue, LOW);
 
+  // počkáme 500 ms = 0,5 sekundy
   delay(500);
 
+  // přestaneme posílat elektřinu do pinu s červenou diodou
   digitalWrite(led_red, LOW);
+  // pošleme do pinu s modrou diodou elektřinu
   digitalWrite(led_blue, HIGH);
 
+  // počkáme 500 ms = 0,5 sekundy
   delay(500);
 }</code></pre>
 
@@ -177,10 +195,16 @@ void loop() {
             semaforu. K tomu tam bude malý semafor pro chodce, který pustí chodce pokud budou mít auta červenou.
         </p>
 
-        <h3>
-            Nezapomeňte odevzdat váš kód na Google Učebnu:<br>
-            <a href="https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/Njg3OTM2ODc2Mjcx/details">https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/Njg3OTM2ODc2Mjcx/details</a>
-        </h3>
+        <?php
+        $filename = './odevzdani.txt';
+        if (file_exists($filename)) {
+            echo "<h3>Nezapomeňte odevzdat váš kód na Google učebnu:<br>" . '<a href="';
+            include($filename);
+            echo '"target="_blank">';
+            include($filename);
+            echo '</a></h3>';
+        }
+        ?>
 
     </div>
 

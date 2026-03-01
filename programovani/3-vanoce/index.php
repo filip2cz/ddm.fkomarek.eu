@@ -77,7 +77,16 @@ TimeSpan rozdil = jinejDateTime - narozeniny;</code></pre>
         <pre><code class="language-csharp">// vypíše TimeSpan, který jsme nastavili výše, ve dnech.
 Console.WriteLine(rozdil.Days);</code></pre>
 
-        <h3>Nezapomeňte odevzdat váš kód na Google Učebnu: <a target="_blank" href="https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODM2NDM3NzU1OTg0/details">https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODM2NDM3NzU1OTg0/details</a></h3>
+        <?php
+        $filename = './odevzdani.txt';
+        if (file_exists($filename)) {
+            echo "<h3>Nezapomeňte odevzdat váš kód na Google učebnu:<br>" . '<a href="';
+            include($filename);
+            echo '"target="_blank">';
+            include($filename);
+            echo '</a></h3>';
+        }
+        ?>
 
     </div>
 

@@ -74,220 +74,88 @@ https://www.freeformatter.com/html-escape.html
             není, bude se nám vypisovat číslo 1.
         </p>
 
-        <pre><code class="language-arduino">#define button 2
+        <pre><code class="language-arduino">// nastaví, že na pinu číslo 2 máme tlačítko. Díky tomuto můžeme pak rovnou použít button místo čísla pinu
+#define button 2
 
 void setup() {
-    // put your setup code here, to run once:
+    // spustí konzoli s datovým přenosem o rychlosti 9600 baudů za sekundu
     Serial.begin(9600);
+    // nastaví pin tlačítka jako vstupní
     pinMode(button,INPUT_PULLUP);
 }
 
 void loop() {
-    // put your main code here, to run repeatedly:
+    // vytvoří proměnnou typu int (číslo), do které budeme ukládat stav tlačítka. 1 = tlačítko není stisknuto, 0 = tlačítko je stisknuto
     int b = digitalRead(button);
+    // vypíše obsah proměnné b do seriové konzole
     Serial.println(b);
 }</code></pre>
-
-        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#popis1">Podrobný popis kódu</button>
-        <div id="popis1" class="collapse mt-3">
-            <ul>
-                <li>
-                    <code>#define button 2</code> nám nastaví, že na pinu číslo 2 máme tlačítko. Díky tomuto můžeme pak
-                    rovnou použít <code>button</code> místo čísla pinu.
-                </li>
-
-                <br>
-                <h5>void setup()</h5>
-
-                <li>
-                    <code>Serial.begin(9600);</code> nám spustí konzoli s datovým přenosem o rychlosti 9600 <a
-                        href="https://cs.wikipedia.org/wiki/Baud" target="_blank">baudů za sekundu</a>.
-                </li>
-
-                <li>
-                    <code>pinMode(button,INPUT_PULLUP);</code> nám nastaví tlačítko. Podrobný a pro nás nedůležitý
-                    popis:<br>
-                    <i>
-                        Tento kód v jazyce Arduino nastavuje pin s označením "button" jako vstupní s interním pull-up
-                        odporem. To znamená, že pin bude připojen k napájecímu napětí (typicky +5V) přes pull-up odpor,
-                        což pomůže eliminovat vlivy vnějších rušení a zajistí, že pin bude mít definovanou hodnotu
-                        (HIGH), když na něj nebude připojeno nic jiného. Tento kód je často používán při připojení
-                        tlačítka nebo spínače, když je jedno z jeho pólů připojeno k danému pinu a druhý pól k zemi.
-                    </i>
-                </li>
-
-                <br>
-                <h5>void loop()</h5>
-
-                <li>
-                    <code>int b = digitalRead(button);</code> nám vytvoří proměnnou typu int (číslo), do které budeme
-                    ukládat stav tlačítka. 1 = tlačítko není stisknuto, 0 = tlačítko je stisknuto.
-                </li>
-
-                <li>
-                    <code>Serial.println(b);</code> nám vypíše obsah proměnné <b>b</b> do seriové konzole.
-                </li>
-            </ul>
-        </div>
 
         <p>
             Vzhledem k tomu, že víme, že 0 znamená že tlačítko bylo stisknuto a 1 znamená že tlačítko bylo puštěno,
             můžeme si pomocí podmínky výstup trochu zpřehlednit.
         </p>
 
-        <pre><code class="language-arduino">#define button 2
+        <pre><code class="language-arduino">// nastaví, že na pinu číslo 2 máme tlačítko. Díky tomuto můžeme pak rovnou použít button místo čísla pinu
+#define button 2
 
 void setup() {
-    // put your setup code here, to run once:
+    // spustí konzoli s datovým přenosem o rychlosti 9600 baudů za sekundu
     Serial.begin(9600);
+    // nastaví pin tlačítka jako vstupní
     pinMode(button, INPUT_PULLUP);
 }
 
 void loop() {
-    // put your main code here, to run repeatedly:
+    // vytvoří proměnnou typu int (číslo), do které budeme ukládat stav tlačítka. 1 = tlačítko není stisknuto, 0 = tlačítko je stisknuto
     int b = digitalRead(button);
 
+    // Pokud je tlačítko stisknuto, vypíše text v uvozovnách do konzole
     if (b == 0) {
         Serial.println(&quot;Tlač&iacute;tko bylo stisknuto&quot;);
     }
+    // Pokud tlačítko není stisknuto, vypíše text v uvozovnách do konzole
     else if (b == 1) {
         Serial.println(&quot;Tlač&iacute;tko bylo pu&scaron;těno&quot;);
     }
 }</code></pre>
-
-        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#popis2">Podrobný popis kódu</button>
-        <div id="popis2" class="collapse mt-3">
-            <ul>
-                <li>
-                    <code>#define button 2</code> nám nastaví, že na pinu číslo 2 máme tlačítko. Díky tomuto můžeme pak
-                    rovnou použít <code>button</code> místo čísla pinu.
-                </li>
-
-                <br>
-                <h5>void setup()</h5>
-
-                <li>
-                    <code>Serial.begin(9600);</code> nám spustí konzoli s datovým přenosem o rychlosti 9600 <a
-                        href="https://cs.wikipedia.org/wiki/Baud" target="_blank">baudů za sekundu</a>.
-                </li>
-
-                <li>
-                    <code>pinMode(button,INPUT_PULLUP);</code> nám nastaví tlačítko. Podrobný a pro nás nedůležitý
-                    popis:<br>
-                    <i>
-                        Tento kód v jazyce Arduino nastavuje pin s označením "button" jako vstupní s interním pull-up
-                        odporem. To znamená, že pin bude připojen k napájecímu napětí (typicky +5V) přes pull-up odpor,
-                        což pomůže eliminovat vlivy vnějších rušení a zajistí, že pin bude mít definovanou hodnotu
-                        (HIGH), když na něj nebude připojeno nic jiného. Tento kód je často používán při připojení
-                        tlačítka nebo spínače, když je jedno z jeho pólů připojeno k danému pinu a druhý pól k zemi.
-                    </i>
-                </li>
-
-                <br>
-                <h5>void loop()</h5>
-
-                <li>
-                    <code>int b = digitalRead(button);</code> nám vytvoří proměnnou typu int (číslo), do které budeme
-                    ukládat stav tlačítka. 1 = tlačítko není stisknuto, 0 = tlačítko je stisknuto.
-                </li>
-
-                <li>
-                    <code>if (b == 0)</code> a <code>else if (b == 1)</code> nám provede akci pouze pokud je stav
-                    tlačítka 0
-                    nebo 1, neboli stisknuto nebo nestisknuto.
-                </li>
-            </ul>
-        </div>
 
         <p>
             Můžeme si rovnou vytvořit pro uživatele trochu přívětivější kód, kdy se nám do konzole vypíše pouze změna
             stavu:
         </p>
 
-        <pre><code class="language-arduino">#define button 2
+        <pre><code class="language-arduino">// nastaví, že na pinu číslo 2 máme tlačítko. Díky tomuto můžeme pak rovnou použít button místo čísla pinu
+#define button 2
+// vytvoří proměnnou lastState a uloží si do ní číslo 1. Tuto proměnnou budeme později využívat k tomu, aby se nám do konzole vypsala pouze změna stavu tlačítka
 int lastState = 1;
 
 void setup() {
-    // put your setup code here, to run once:
+    // spustí konzoli s datovým přenosem o rychlosti 9600 baudů za sekundu
     Serial.begin(9600);
+    // nastaví pin tlačítka jako vstupní
     pinMode(button,INPUT_PULLUP);
 }
 
 void loop() {
-    // put your main code here, to run repeatedly:
+    // vytvoří proměnnou typu int (číslo), do které budeme ukládat stav tlačítka. 1 = tlačítko není stisknuto, 0 = tlačítko je stisknuto
     int b = digitalRead(button);
 
+    // Pokud se lastState NErovná b
     if (lastState != b){
+        // Pokud je tlačítko stisknuto, vypíše text v uvozovnách do konzole
         if (b == 0) {
             Serial.println(&quot;Tlač&iacute;tko bylo stisknuto&quot;);
         }
+        // Pokud tlačítko není stisknuto, vypíše text v uvozovnách do konzole
         else if (b == 1) {
             Serial.println(&quot;Tlač&iacute;tko bylo pu&scaron;těno&quot;);
         }
+
+        // uloží do proměnné lastState poslední stav. Díky tomuto v kombinaci s if výše se vypíše pouze změna, místo toho aby se vypisoval stav neustále
         lastState = b;
     }
 }</code></pre>
-
-        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#popis3">Podrobný popis kódu</button>
-        <div id="popis3" class="collapse mt-3">
-            <ul>
-                <li>
-                    <code>#define button 2</code> nám nastaví, že na pinu číslo 2 máme tlačítko. Díky tomuto můžeme pak
-                    rovnou použít <code>button</code> místo čísla pinu.
-                </li>
-
-                <li>
-                    <code>int lastState = 1;</code> nám vytvoří proměnnou <b>lastState</b> a uloží si do ní číslo 1.
-                    Tuto proměnnou budeme později využívat k tomu, aby se nám do konzole vypsala pouze změna stavu
-                    tlačítka.
-                </li>
-
-                <br>
-                <h5>void setup()</h5>
-
-                <li>
-                    <code>Serial.begin(9600);</code> nám spustí konzoli s datovým přenosem o rychlosti 9600 <a
-                        href="https://cs.wikipedia.org/wiki/Baud" target="_blank">baudů za sekundu</a>.
-                </li>
-
-                <li>
-                    <code>pinMode(button,INPUT_PULLUP);</code> nám nastaví tlačítko. Podrobný a pro nás nedůležitý
-                    popis:<br>
-                    <i>
-                        Tento kód v jazyce Arduino nastavuje pin s označením "button" jako vstupní s interním pull-up
-                        odporem. To znamená, že pin bude připojen k napájecímu napětí (typicky +5V) přes pull-up odpor,
-                        což pomůže eliminovat vlivy vnějších rušení a zajistí, že pin bude mít definovanou hodnotu
-                        (HIGH), když na něj nebude připojeno nic jiného. Tento kód je často používán při připojení
-                        tlačítka nebo spínače, když je jedno z jeho pólů připojeno k danému pinu a druhý pól k zemi.
-                    </i>
-                </li>
-
-                <br>
-                <h5>void loop()</h5>
-
-                <li>
-                    <code>int b = digitalRead(button);</code> nám vytvoří proměnnou typu int (číslo), do které budeme
-                    ukládat stav tlačítka. 1 = tlačítko není stisknuto, 0 = tlačítko je stisknuto.
-                </li>
-
-                <li>
-                    <code>if (lastState != b)</code> nám porovná aktuální stav s posledním známým stavem. Kdyby byl
-                    tento if vypuštěn, arduino by neustále vypisovalo text. Takto nám ho ukáže pouze jednou, když se
-                    stav změní.
-                </li>
-
-                <li>
-                    <code>if (b == 0)</code> a <code>else if (b == 1)</code> nám provede akci pouze pokud je stav
-                    tlačítka 0
-                    nebo 1, neboli stisknuto nebo nestisknuto.
-                </li>
-
-                <li>
-                    <code>lastState = b;</code> si uloží do proměnné <b>lastState</b> poslední stav. Díky tomuto v
-                    kombinaci s <code>if</code> výše se vypíše pouze změna, místo toho aby se vypisoval stav neustále.
-                </li>
-            </ul>
-        </div>
 
         <h2>Zadání</h2>
 
@@ -301,11 +169,16 @@ void loop() {
             Arduinu řeknete, že tam je led dioda a bude tam posílat vyšší proud -> led dioda bude svítit více.
         </p>
 
-        <p>
-            Nezapomeňte odevzdat váš kód do Google Učebny: <a
-                href="https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/Njc0MTQzNTQ2MTk2/details"
-                target="_blank">https://classroom.google.com/c/NTkwMDUxNjcyMjUy/a/Njc0MTQzNTQ2MTk2/details</a>
-        </p>
+        <?php
+        $filename = './odevzdani.txt';
+        if (file_exists($filename)) {
+            echo "<h3>Nezapomeňte odevzdat váš kód na Google učebnu:<br>" . '<a href="';
+            include($filename);
+            echo '"target="_blank">';
+            include($filename);
+            echo '</a></h3>';
+        }
+        ?>
 
         <h2>Příliš snadné?</h2>
 

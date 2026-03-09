@@ -132,7 +132,7 @@ void loop() {
         <h2>Zadání: vytvořte kód, který bude na diodě střídat barvy</h2>
 
         <p>
-            Vytvořte program, který bude po nějakém časovém intervale (například vteřina) střídat různé barvy.
+            Vytvořte program, který bude po nějakém časovém intervale (například vteřina) střídat různé barvy.<br>
             Toto střídání barev bude možné pozastavit a zase spustit tlačítkem.
         </p>
 

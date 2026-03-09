@@ -133,6 +133,7 @@ void loop() {
 
         <p>
             Vytvořte program, který bude po nějakém časovém intervale (například vteřina) střídat různé barvy.
+            Toto střídání barev bude možné pozastavit a zase spustit tlačítkem.
         </p>
 
         <p>

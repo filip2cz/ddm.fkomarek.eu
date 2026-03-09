@@ -119,6 +119,7 @@ void loop() {
   // put your main code here, to run repeatedly:
 }</code></pre>
 
+        <!--
         <h2>Jak definujeme barvy v RGB</h2>
         <p>
             Jak možná víte ze školy, každá barva je složená ze tří základních barev: červená, zelená a modrá.<br>
@@ -126,6 +127,7 @@ void loop() {
             hodnoty od 0 (nejvíce barvy) do 255 (nejméně barvy). Pokud jste někdy pracovali s HTML, zde probíhá tvorba
             barvy obráceně (html rgb 200 128 0 = arduinu rgb 55 127 255)
         </p>
+        -->
 
         <h2>Zadání: vytvořte kód, který bude na diodě střídat barvy</h2>
 

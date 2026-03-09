@@ -119,23 +119,6 @@ void loop() {
   // put your main code here, to run repeatedly:
 }</code></pre>
 
-        <h2>Zadání: vytvořte kód, který bude na diodě střídat barvy</h2>
-
-        <p>
-            Vytvořte program, který bude po nějakém časovém intervale (například vteřina) střídat všechny barvy.
-        </p>
-
-        <p>
-            Nápověda: Pro kód ohledně nastavování barev budete chtít použít <code>void loop()</code>.<br>
-            Nápověda 2: Pokud chcete běh kódu na chvíli pozastavit, využijte <code>delay()</code>, například <code>delay(500);</code> pozastaví kód na 500 ms = polovina sekundy.
-        </p>
-
-        <p>
-            Nezapomeňte odevzdat váš kód do Google Classroom: <a href="https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzQ4MjY5NDg0MTM1/details" target="_blank">https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzQ4MjY5NDg0MTM1/details</a>
-        </p>
-
-        <!--
-
         <h2>Jak definujeme barvy v RGB</h2>
         <p>
             Jak možná víte ze školy, každá barva je složená ze tří základních barev: červená, zelená a modrá.<br>
@@ -144,7 +127,27 @@ void loop() {
             barvy obráceně (html rgb 200 128 0 = arduinu rgb 55 127 255)
         </p>
 
-        -->
+        <h2>Zadání: vytvořte kód, který bude na diodě střídat barvy</h2>
+
+        <p>
+            Vytvořte program, který bude po nějakém časovém intervale (například vteřina) střídat různé barvy.
+        </p>
+
+        <p>
+            Nápověda: Pro kód ohledně nastavování barev budete chtít použít <code>void loop()</code>.<br>
+            Nápověda 2: Pokud chcete běh kódu na chvíli pozastavit, využijte <code>delay()</code>, například <code>delay(500);</code> pozastaví kód na 500 ms = polovina sekundy.
+        </p>
+
+        <?php
+        $filename = './odevzdani.txt';
+        if (file_exists($filename)) {
+            echo "<h3>Nezapomeňte odevzdat váš kód na Google učebnu:<br>" . '<a href="';
+            include($filename);
+            echo '"target="_blank">';
+            include($filename);
+            echo '</a></h3>';
+        }
+        ?>
 
         <h2>Příliš snadné?</h2>
 

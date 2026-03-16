@@ -66,7 +66,7 @@
         </p>
 
         <p>
-            Opravený kód vkládejte do následujícího zadání na Google učebně: <a href="https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzQ5NTY3NzMxMzEy/details" target="_blank">https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzQ5NTY3NzMxMzEy/details</a>
+            Opravený kód vkládejte do následujícího zadání na Google učebně: <a href="https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODUxODAxNzU4ODAx/details" target="_blank">https://classroom.google.com/c/ODA4MjE5ODMxODM0/a/ODUxODAxNzU4ODAx/details</a>
         </p>
 
         <p>
@@ -208,7 +208,7 @@ void loop() {
         <h2>Máte již hotovo?</h2>
 
         <p>
-            Projděte si zadání na Google učebně, spousta z vás tam nemá něco hotového: <a href="https://classroom.google.com/w/NTkwMDUxNjcyMjUy/t/all" target="_blank">https://classroom.google.com/w/NTkwMDUxNjcyMjUy/t/all</a>
+            Projděte si zadání na Google učebně, spousta z vás tam nemá něco hotového: <a href="https://classroom.google.com/w/ODA4MjE5ODMxODM0/t/all" target="_blank">https://classroom.google.com/w/ODA4MjE5ODMxODM0/t/all</a>
         </p>
 
     </div>

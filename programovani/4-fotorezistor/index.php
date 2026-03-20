@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <?php include ("../../src/link.html"); ?>
+    <?php include("../../src/link.html"); ?>
 
     <div class="container">
 
@@ -88,17 +88,22 @@ void loop() {
 }
 </code></pre>
 
-    <h2>Zadání</h2>
+        <h2>Zadání</h2>
 
-    <p>
-        Nyní, s těmito znalostmi, udělejte program, který rozsvítí led diody na EduShieldu (zelená je na pinu 13, žlutá na pinu 17, červená na pinu 16) tak, že pokud zakryjeme fotorezistor, bude Edushield svítit červeně, pokud bude mít trochu světla, bude svítít žlutě a pokud na něj přímo posvítíte (například telefonem), bude svítit zeleně.
-    </p>
+        <p>
+            Nyní, s těmito znalostmi, udělejte program, který rozsvítí led diody na EduShieldu (zelená je na pinu 13, žlutá na pinu 17, červená na pinu 16) tak, že pokud zakryjeme fotorezistor, bude Edushield svítit červeně, pokud bude mít trochu světla, bude svítít žlutě a pokud na něj přímo posvítíte (například telefonem), bude svítit zeleně.
+        </p>
 
-    <p>
-        <b>
-            Nezapomeňte váš kód odevzdat do Google učebny: <a href="https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzYwNDEwMzQ0MjI4/details" target="_blank">https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzYwNDEwMzQ0MjI4/details</a>
-        </b>
-    </p>
+        <?php
+        $filename = './odevzdani.txt';
+        if (file_exists($filename)) {
+            echo "<h3>Nezapomeňte odevzdat váš kód na Google učebnu:<br>" . '<a href="';
+            include($filename);
+            echo '"target="_blank">';
+            include($filename);
+            echo '</a></h3>';
+        }
+        ?>
 
     </div>
 

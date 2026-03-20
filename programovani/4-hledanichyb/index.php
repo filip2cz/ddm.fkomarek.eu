@@ -157,8 +157,8 @@ void loop() {
 
             <li>
                 <pre><code class="language-arduino" id="allowCopy">// V n&aacute;sleduj&iacute;c&iacute;m k&oacute;du se nach&aacute;z&iacute; 4 chyby
-#define led_yellow 17
-#define led_red 16
+#define led_yellow 4
+#define led_red 7
 void setup() {
   // put your setup code here, to run once:
   pinMode(led_yellow, OUTPUT);
@@ -171,7 +171,7 @@ void loop() {
   // put your main code here, to run repeatedly:
 }
 // Oček&aacute;van&aacute; funkce k&oacute;du:
-// Tento k&oacute;d by měl rozsv&iacute;tit žlutou a červenou led diodu na pinech 4 a 7</code></pre>
+// Tento k&oacute;d by měl rozsv&iacute;tit žlutou a červenou led diodu na pinech 17 a 16</code></pre>
             </li>
 
             <li>

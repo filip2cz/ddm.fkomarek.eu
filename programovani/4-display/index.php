@@ -76,9 +76,16 @@ void loop() {
             Vytvořte program, který při stisknutí tlačítka zvětší číslo na displeji o jedno.
         </p>
 
-        <p><b>
-                Nezapomeňte kód odevzdat na google učebnu: <a href="https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzU2MjkyMzc5OTg4/details" target="_blank">https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/NzU2MjkyMzc5OTg4/details</a>
-            </b></p>
+        <?php
+        $filename = './odevzdani.txt';
+        if (file_exists($filename)) {
+            echo "<h3>Nezapomeňte odevzdat váš kód na Google učebnu:<br>" . '<a href="';
+            include($filename);
+            echo '"target="_blank">';
+            include($filename);
+            echo '</a></h3>';
+        }
+        ?>
 
         <h2>Příliš snadné?</h2>
 

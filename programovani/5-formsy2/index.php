@@ -152,6 +152,17 @@
             Vytvořte přihlašovací stránku s uživatelským jménem a heslem. Pokud je heslo a jméno správné, ukáže se nové okno s libovolným obsahem (staré okno zmizí). Pokud je heslo nebo jméno špatně, zobrazí se vyskakovací okno (MessageBox) s textem "Chybné heslo".
         </p>
 
+        <?php
+        $filename = './odevzdani.txt';
+        if (file_exists($filename)) {
+            echo "<h3>Nezapomeňte odevzdat váš kód na Google učebnu:<br>" . '<a href="';
+            include($filename);
+            echo '"target="_blank">';
+            include($filename);
+            echo '</a></h3>';
+        }
+        ?>
+
     </div>
 
 </body>

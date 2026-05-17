@@ -139,10 +139,10 @@
         <pre><code class="language-csharp" id="allowCopy">private void button1_Click(object sender, EventArgs e)
 {
     var frm = new Form2(); //Vytvoří se nová instance formuláře Form2
-    frm.Location = this.Location; //Pozice frm (nového formuláře) je nastavena na stejnou pozici jako aktuální formulář (this)
-    frm.StartPosition = FormStartPosition.Manual; //Pozice formuláře bude nastavena manuálně, což umožňuje použít hodnotu z předchozího kroku.
-    frm.FormClosing += delegate { this.Show(); }; //Zobrazení předchozího formuláře po zavření Form2 (je možné smazat)
     frm.Show(); //Zobrazení Form2
+    
+    // následující je nepovinné, pokud chceme zavřít předchozí okno, ale chceme, aby se po zavření Form2 znovu zobrazilo, můžeme použít tento kód:
+    frm.FormClosing += delegate { this.Show(); }; //Zobrazení předchozího formuláře po zavření Form2 (je možné smazat)
     this.Hide(); //Skrytí předchozího Formu
 }</code></pre>
 

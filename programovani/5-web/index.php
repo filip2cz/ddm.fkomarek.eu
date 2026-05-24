@@ -81,7 +81,7 @@
 
         <p>
             Řekněme, že máme URL, jenž zní
-            <a href="http://v4.ipv6-test.com/api/myip.php" target="_blank">http://v4.ipv6-test.com/api/myip.php</a>.
+            <a href="https://api.ipify.org" target="_blank">https://api.ipify.org</a>.
             Když tuto stránku navštívíme, uvidíme zde jen naši IP adresu.
         </p>
 

@@ -90,7 +90,7 @@
         </p>
 
         <pre><code class="language-csharp" id="allowCopy">HttpClient client = new HttpClient(); // vytvoření instance HttpClient jménem client
-string url = "http://v4.ipv6-test.com/api/myip.php"; // vytvoření proměnné url, do které jsme uložili url adresu, co využijeme
+string url = "https://api.ipify.org"; // vytvoření proměnné url, do které jsme uložili url adresu, co využijeme
 string data = client.GetStringAsync(url).Result; // dotazování se na url adresu v proměnné a uložení odpovědi do proměnné data
 label1.Text = data; //nastavení textu labelu1 na obsah proměnné data</code></pre>
 
@@ -112,10 +112,10 @@ label1.Text = data; //nastavení textu labelu1 na obsah proměnné data</code></
         </p>
 
         <pre>
-            http://ip-api.com/line/0.0.0.0?fields=country
-            http://ip-api.com/line/0.0.0.0?fields=city
-            http://ip-api.com/line/0.0.0.0?fields=regionName
-            http://ip-api.com/line/0.0.0.0?fields=isp
+http://ip-api.com/line/0.0.0.0?fields=country
+http://ip-api.com/line/0.0.0.0?fields=city
+http://ip-api.com/line/0.0.0.0?fields=regionName
+http://ip-api.com/line/0.0.0.0?fields=isp
         </pre>
 
         <p>
@@ -125,12 +125,16 @@ label1.Text = data; //nastavení textu labelu1 na obsah proměnné data</code></
             </a>
         </p>
 
-        <p>
-            Nezapomeňte odevzdat váš kód do Google Učebny:
-            <a href="https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/Nzc5MTQzMDQ4OTc4/details" target="_blank">
-                https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/Nzc5MTQzMDQ4OTc4/details
-            </a>
-        </p>
+        <?php
+        $filename = './odevzdani.txt';
+        if (file_exists($filename)) {
+            echo "<h3>Nezapomeňte odevzdat váš kód na Google učebnu:<br>" . '<a href="';
+            include($filename);
+            echo '"target="_blank">';
+            include($filename);
+            echo '</a></h3>';
+        }
+        ?>
 
         <h3>Pro připomenutí: jak vkládat string do jiného stringu</h3>
 

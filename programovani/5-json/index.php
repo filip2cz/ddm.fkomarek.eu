@@ -167,12 +167,16 @@ label1.Text = popisek;</code></pre>
             JSON souboru výše získejte url adresu obrázku, jenž společně s popiskem ukažte uživateli.
         </p>
 
-        <p>
-            Nezapomeňte odevzdat váš kód do Google Učebny:
-            <a href="https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/Nzg0ODYxMzUxNzg2/details" target="_blank">
-                https://classroom.google.com/c/NzE5NDk1NjM2NDAw/a/Nzg0ODYxMzUxNzg2/details
-            </a>
-        </p>
+        <?php
+        $filename = './odevzdani.txt';
+        if (file_exists($filename)) {
+            echo "<h3>Nezapomeňte odevzdat váš kód na Google učebnu:<br>" . '<a href="';
+            include($filename);
+            echo '"target="_blank">';
+            include($filename);
+            echo '</a></h3>';
+        }
+        ?>
 
         <h2>Příliš snadné?</h2>
 

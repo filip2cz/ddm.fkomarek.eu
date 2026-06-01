@@ -1,0 +1,7 @@
+API keys for nasa api for learning purposes.
+If you can, get one for yourself instead: https://api.nasa.gov/#signUp
+
+gwwcdfCoIa6bfyYDZvYe7bCcipcUD20ED6VW3h72
+yY5Hx7sYlSYG8FzilZAWuvh9UiGUZYnzzusj9rSr
+M1okIcGslnWSNtXVa68XJCE9XbduZHolRtO66Q0z
+Ph7z9RYxR3Kzz0tP4UM4Vs0H7ff7I46YofnA6ht6
